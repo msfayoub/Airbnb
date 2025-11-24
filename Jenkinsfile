@@ -56,9 +56,9 @@ pipeline {
         stage('Quality Gate') {
             steps {
                 echo 'Skipping Quality Gate for now - view results at http://localhost:9000/dashboard?id=airbnb-booking-app'
-                // timeout(time: 1, unit: 'HOURS') {
-                //     waitForQualityGate abortPipeline: true
-                // }
+                 timeout(time: 1, unit: 'HOURS') {
+                    waitForQualityGate abortPipeline: true
+                 }
             }
         }
         

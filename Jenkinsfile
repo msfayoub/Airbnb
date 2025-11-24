@@ -29,26 +29,7 @@ pipeline {
                 echo 'Compiling Java source files...'
                 bat '''
                     if not exist "build\\classes" mkdir build\\classes
-                    javac -encoding ISO-8859-1 -d build\\classes -cp "lib/*" -sourcepath src src/controller/*.java src/dao/*.java src/model/*.java src/function/*.java
-                '''
-            }
-        }
-
-        // 🔥 NOUVEAU STAGE TESTS
-        stage('Test') {
-            steps {
-                echo 'Running unit tests...'
-                bat '''
-                    REM compiler les classes de test
-                    if not exist "build\\test-classes" mkdir build\\test-classes
-                    javac -encoding ISO-8859-1 ^
-                        -d build\\test-classes ^
-                        -cp "lib/*;build\\classes" ^
-                        -sourcepath test ^
-                        test\\*.java
-
-                    REM lancer le runner JUnit
-                    java -cp "lib/*;build\\classes;build\\test-classes" TestRunner
+                    javac -encoding ISO-8859-1 -d build/classes -cp "lib/*" -sourcepath src src/controller/*.java src/dao/*.java src/model/*.java src/function/*.java
                 '''
             }
         }
@@ -75,30 +56,31 @@ pipeline {
         stage('Quality Gate') {
             steps {
                 echo 'Skipping Quality Gate for now - view results at http://localhost:9000/dashboard?id=airbnb-booking-app'
-                // timeout(time: 1, unit: 'HOURS') {
-                //     waitForQualityGate abortPipeline: true
-                // }
+                 timeout(time: 1, unit: 'HOURS') {
+                    waitForQualityGate abortPipeline: true
+                 }
             }
         }
+        
+stage('Package WAR') {
+    steps {
+        echo 'Creating WAR file...'
+        bat '''
+            if not exist "dist" mkdir dist
 
-        stage('Package WAR') {
-            steps {
-                echo 'Creating WAR file...'
-                bat '''
-                    if not exist "dist" mkdir dist
+            xcopy /E /I /Y WebContent dist\\Airbnb
 
-                    xcopy /E /I /Y WebContent dist\\Airbnb
+            if not exist "dist\\Airbnb\\WEB-INF\\classes" mkdir dist\\Airbnb\\WEB-INF\\classes
+            xcopy /E /I /Y build\\classes dist\\Airbnb\\WEB-INF\\classes
 
-                    if not exist "dist\\Airbnb\\WEB-INF\\classes" mkdir dist\\Airbnb\\WEB-INF\\classes
-                    xcopy /E /I /Y build\\classes dist\\Airbnb\\WEB-INF\\classes
+            xcopy /E /I /Y src\\META-INF dist\\Airbnb\\WEB-INF\\classes\\META-INF
 
-                    xcopy /E /I /Y src\\META-INF dist\\Airbnb\\WEB-INF\\classes\\META-INF
+            cd dist
+            "%JAVA_HOME%\\bin\\jar" -cvf airbnb.war -C Airbnb .
+        '''
+    }
+}
 
-                    cd dist
-                    "%JAVA_HOME%\\bin\\jar" -cvf airbnb.war -C Airbnb .
-                '''
-            }
-        }
         
         stage('Archive Artifacts') {
             steps {

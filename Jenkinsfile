@@ -6,9 +6,10 @@ pipeline {
     }
     
     environment {
-        SONAR_HOST_URL = 'http://localhost:9000'  // Your SonarQube server URL
+        SONAR_HOST_URL = 'http://localhost:9000'
         SONAR_PROJECT_KEY = 'airbnb-booking-app'
         SONAR_PROJECT_NAME = 'Airbnb Booking Application'
+        SONAR_TOKEN = 'sqp_2a96ccebdce00d2859e5255c8bf9ff70a60716f6'
     }
     
     stages {
@@ -31,18 +32,18 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    def scannerHome = tool 'SonarScanner'  // Name of SonarQube Scanner in Jenkins
-                    withSonarQubeEnv('SonarQube') {  // Name of SonarQube server in Jenkins
-                        bat """
-                            ${scannerHome}\\bin\\sonar-scanner.bat ^
-                            -Dsonar.projectKey=${SONAR_PROJECT_KEY} ^
-                            -Dsonar.projectName="${SONAR_PROJECT_NAME}" ^
-                            -Dsonar.sources=src ^
-                            -Dsonar.java.binaries=build/classes ^
-                            -Dsonar.sourceEncoding=ISO-8859-1 ^
-                            -Dsonar.java.libraries=lib/*.jar
-                        """
-                    }
+                    def scannerHome = tool 'SonarScanner'
+                    bat """
+                        ${scannerHome}\\bin\\sonar-scanner.bat ^
+                        -Dsonar.projectKey=${SONAR_PROJECT_KEY} ^
+                        -Dsonar.projectName="${SONAR_PROJECT_NAME}" ^
+                        -Dsonar.host.url=${SONAR_HOST_URL} ^
+                        -Dsonar.token=${SONAR_TOKEN} ^
+                        -Dsonar.sources=src ^
+                        -Dsonar.java.binaries=build/classes ^
+                        -Dsonar.sourceEncoding=ISO-8859-1 ^
+                        -Dsonar.java.libraries=lib/*.jar
+                    """
                 }
             }
         }

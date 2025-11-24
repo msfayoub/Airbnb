@@ -2,6 +2,7 @@ pipeline {
     agent any
     
     tools {
+        maven 'Maven'
         jdk 'JDK-17'
     }
     
@@ -37,18 +38,9 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    def scannerHome = tool 'SonarScanner'
-                    bat """
-                        ${scannerHome}\\bin\\sonar-scanner.bat ^
-                        -Dsonar.projectKey=${SONAR_PROJECT_KEY} ^
-                        -Dsonar.projectName="${SONAR_PROJECT_NAME}" ^
-                        -Dsonar.host.url=${SONAR_HOST_URL} ^
-                        -Dsonar.token=${SONAR_TOKEN} ^
-                        -Dsonar.sources=src ^
-                        -Dsonar.java.binaries=build/classes ^
-                        -Dsonar.sourceEncoding=ISO-8859-1 ^
-                        -Dsonar.java.libraries=lib/*.jar
-                    """
+                    withSonarQubeEnv('SonarQube') {
+                        bat 'mvn sonar:sonar -Dsonar.projectKey=ecommerce-website -Dsonar.token=sqp_2a96ccebdce00d2859e5255c8bf9ff70a60716f6'
+                    }
                 }
             }
         }

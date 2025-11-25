@@ -38,4 +38,29 @@ public class BookingTest {
         assertEquals(2, booking.getNbPerson());
         assertEquals(200.0, booking.getTotalPrice());
     }
+
+    @Test
+    public void testSetters() {
+        User newUser = new User();
+        Offer newOffer = new Offer();
+        Transaction newTransaction = new Transaction();
+        Date newArrival = new Date(System.currentTimeMillis() + 172800000);
+        Date newDeparture = new Date(System.currentTimeMillis() + 259200000);
+
+        booking.setUser(newUser);
+        booking.setOffer(newOffer);
+        booking.setTransaction(newTransaction);
+        booking.setArrivalDate(newArrival);
+        booking.setDepartureDate(newDeparture);
+        booking.setNbPerson(4);
+        booking.setTotalPrice(400.0);
+
+        assertEquals(newUser, booking.getUser());
+        assertEquals(newOffer, booking.getOffer());
+        assertEquals(newTransaction, booking.getTransaction());
+        assertEquals(newArrival, booking.getArrivalDate());
+        assertEquals(newDeparture, booking.getDepartureDate());
+        assertEquals(4, booking.getNbPerson());
+        assertEquals(400.0, booking.getTotalPrice());
+    }
 }

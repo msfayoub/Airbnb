@@ -22,4 +22,27 @@ public class AddressTest {
         assertEquals("Beverly Hills", address.getCity());
         assertEquals("USA", address.getCountry());
     }
+
+    @Test
+    public void testSetters() {
+        address.setStreetAndNumber("789 New St");
+        address.setComplement("Apt 5");
+        address.setPostalCode("12345");
+        address.setCity("New City");
+        address.setCountry("France");
+
+        assertEquals("789 New St", address.getStreetAndNumber());
+        assertEquals("Apt 5", address.getComplement());
+        assertEquals("12345", address.getPostalCode());
+        assertEquals("New City", address.getCity());
+        assertEquals("France", address.getCountry());
+    }
+
+    @Test
+    public void testToString() {
+        String result = address.toString();
+        assertNotNull(result);
+        assertTrue(result.contains("123 Main St"));
+        assertTrue(result.contains("New York"));
+    }
 }

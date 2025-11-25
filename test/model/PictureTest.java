@@ -41,4 +41,25 @@ public class PictureTest {
         Picture p = new Picture();
         assertNotNull(p);
     }
+
+    @Test
+    public void testSetUrlWithDifferentExtensions() {
+        picture.setUrl("photo.png");
+        assertEquals("photo.png", picture.getUrl());
+        
+        picture.setUrl("image.gif");
+        assertEquals("image.gif", picture.getUrl());
+    }
+
+    @Test
+    public void testSetUrlWithPath() {
+        picture.setUrl("/uploads/images/vacation.jpg");
+        assertEquals("/uploads/images/vacation.jpg", picture.getUrl());
+    }
+
+    @Test
+    public void testEmptyUrl() {
+        picture.setUrl("");
+        assertEquals("", picture.getUrl());
+    }
 }

@@ -47,4 +47,29 @@ public class TransactionTest {
         Transaction t = new Transaction();
         assertNotNull(t);
     }
+
+    @Test
+    public void testTransactionWithDifferentAmounts() {
+        transaction.setAmount(100.0);
+        assertEquals(100.0, transaction.getAmount());
+        
+        transaction.setAmount(1000.0);
+        assertEquals(1000.0, transaction.getAmount());
+    }
+
+    @Test
+    public void testTransactionBetweenSameUser() {
+        User sameUser = new User("same@example.com", "pass", "Same", "User", "1111111111", "customer", 500.0);
+        Transaction sameUserTransaction = new Transaction(sameUser, sameUser, 50.0);
+        
+        assertEquals(sameUser, sameUserTransaction.getSender());
+        assertEquals(sameUser, sameUserTransaction.getReceiver());
+        assertEquals(50.0, sameUserTransaction.getAmount());
+    }
+
+    @Test
+    public void testTransactionWithZeroAmount() {
+        transaction.setAmount(0.0);
+        assertEquals(0.0, transaction.getAmount());
+    }
 }

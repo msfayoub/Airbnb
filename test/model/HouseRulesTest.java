@@ -75,4 +75,32 @@ public class HouseRulesTest {
         HouseRules hr = new HouseRules();
         assertNotNull(hr);
     }
+
+    @Test
+    public void testAllRulesAllowed() {
+        HouseRules permissiveRules = new HouseRules(arrivalTime, departureTime, true, true, true);
+        assertTrue(permissiveRules.isPetAllowed());
+        assertTrue(permissiveRules.isPartyAllowed());
+        assertTrue(permissiveRules.isSmokeAllowed());
+    }
+
+    @Test
+    public void testAllRulesNotAllowed() {
+        HouseRules strictRules = new HouseRules(arrivalTime, departureTime, false, false, false);
+        assertFalse(strictRules.isPetAllowed());
+        assertFalse(strictRules.isPartyAllowed());
+        assertFalse(strictRules.isSmokeAllowed());
+    }
+
+    @Test
+    public void testTimeChanges() {
+        LocalTime earlyArrival = LocalTime.of(12, 0);
+        LocalTime lateCheckout = LocalTime.of(12, 0);
+        
+        houseRules.setArrivalHour(earlyArrival);
+        houseRules.setDepartureHour(lateCheckout);
+        
+        assertEquals(earlyArrival, houseRules.getArrivalHour());
+        assertEquals(lateCheckout, houseRules.getDepartureHour());
+    }
 }

@@ -52,7 +52,7 @@ pipeline {
                 echo 'Compiling test files...'
                 bat '''
                     if not exist "build\\test-classes" mkdir build\\test-classes
-                    javac -encoding ISO-8859-1 -d build/test-classes -cp "lib/*;build/classes" -sourcepath test test/dao/*.java test/function/*.java test/model/*.java
+                    javac -encoding ISO-8859-1 -d build/test-classes -cp "lib/*;build/classes" -sourcepath test test/dao/*.java test/function/*.java test/model/*.java test/controller/*.java
                 '''
             }
         }

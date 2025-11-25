@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,6 +27,7 @@ public class HomeTest {
     private HttpServletResponse mockResponse;
     private RequestDispatcher mockDispatcher;
     private ServletContext mockServletContext;
+    private ServletConfig mockServletConfig;
     private OfferDAO mockOfferDAO;
 
     @BeforeEach
@@ -35,7 +37,12 @@ public class HomeTest {
         mockResponse = mock(HttpServletResponse.class);
         mockDispatcher = mock(RequestDispatcher.class);
         mockServletContext = mock(ServletContext.class);
+        mockServletConfig = mock(ServletConfig.class);
         mockOfferDAO = mock(OfferDAO.class);
+        
+        // Initialize servlet with mock config
+        when(mockServletConfig.getServletContext()).thenReturn(mockServletContext);
+        homeServlet.init(mockServletConfig);
         
         // Inject mock OfferDAO using reflection
         Field offerDAOField = Home.class.getDeclaredField("offerDAO");
@@ -47,7 +54,6 @@ public class HomeTest {
     public void testDoGet() throws Exception {
         List<Offer> mockOffers = new ArrayList<>();
         when(mockOfferDAO.getLastOffer()).thenReturn(mockOffers);
-        when(homeServlet.getServletContext()).thenReturn(mockServletContext);
         when(mockServletContext.getRequestDispatcher("/WEB-INF/home.jsp")).thenReturn(mockDispatcher);
 
         homeServlet.doGet(mockRequest, mockResponse);

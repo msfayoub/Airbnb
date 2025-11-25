@@ -9,7 +9,7 @@ import static org.mockito.Mockito.when;
 import java.lang.reflect.Field;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -57,7 +57,7 @@ public class AccommodationDAOImpTest {
         // Given
         int accommodationId = 1;
         Accommodation accommodation = new Accommodation();
-        Query mockQuery = mock(Query.class);
+        TypedQuery<Accommodation> mockQuery = mock(TypedQuery.class);
         
         when(mockEm.createQuery("SELECT a FROM Accommodation a WHERE a.id = ?1", Accommodation.class)).thenReturn(mockQuery);
         when(mockQuery.setParameter(1, accommodationId)).thenReturn(mockQuery);
@@ -85,7 +85,7 @@ public class AccommodationDAOImpTest {
             e.printStackTrace();
         }
         
-        Query mockQuery = mock(Query.class);
+        TypedQuery<Accommodation> mockQuery = mock(TypedQuery.class);
 
         when(mockEm.createQuery("SELECT a FROM Accommodation a WHERE a.id = ?1", Accommodation.class)).thenReturn(mockQuery);
         when(mockQuery.setParameter(1, accommodationId)).thenReturn(mockQuery);

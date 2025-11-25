@@ -72,4 +72,73 @@ public class OfferDAOImpTest {
         // Then
         verify(mockEm).merge(offer);
     }
+
+    @Test
+    public void testGetOffer() {
+        int offerId = 1;
+        Offer offer = new Offer();
+        when(mockEm.find(Offer.class, offerId)).thenReturn(offer);
+
+        Offer result = offerDAO.getOffer(offerId);
+
+        assertNotNull(result);
+        verify(mockEm).find(Offer.class, offerId);
+    }
+
+    @Test
+    public void testDeleteOffer() {
+        Offer offer = new Offer();
+        try {
+            Field idField = Offer.class.getDeclaredField("id");
+            idField.setAccessible(true);
+            idField.set(offer, 1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        when(mockEm.find(Offer.class, 1)).thenReturn(offer);
+
+        offerDAO.deleteOffer(offer);
+
+        verify(mockEm).find(Offer.class, 1);
+        verify(mockEm).remove(offer);
+    }
+
+    @Test
+    public void testGetAllOffer() {
+        TypedQuery<Offer> mockQuery = mock(TypedQuery.class);
+        when(mockEm.createQuery("SELECT o FROM Offer o", Offer.class)).thenReturn(mockQuery);
+        when(mockQuery.getResultList()).thenReturn(Arrays.asList(new Offer(), new Offer()));
+
+        offerDAO.getAllOffer();
+
+        verify(mockEm).createQuery("SELECT o FROM Offer o", Offer.class);
+        verify(mockQuery).getResultList();
+    }
+
+    @Test
+    public void testGetUserOffer() {
+        User user = new User();
+        TypedQuery<Offer> mockQuery = mock(TypedQuery.class);
+        when(mockEm.createQuery("SELECT o FROM Offer o WHERE o.user = ?1", Offer.class)).thenReturn(mockQuery);
+        when(mockQuery.setParameter(1, user)).thenReturn(mockQuery);
+        when(mockQuery.getResultList()).thenReturn(Arrays.asList(new Offer()));
+
+        offerDAO.getUserOffer(user);
+
+        verify(mockEm).createQuery("SELECT o FROM Offer o WHERE o.user = ?1", Offer.class);
+        verify(mockQuery).setParameter(1, user);
+        verify(mockQuery).getResultList();
+    }
+
+    @Test
+    public void testGetLastOffer() {
+        TypedQuery<Offer> mockQuery = mock(TypedQuery.class);
+        when(mockEm.createQuery("SELECT o FROM Offer o ORDER BY o.id DESC", Offer.class)).thenReturn(mockQuery);
+        when(mockQuery.getResultList()).thenReturn(Arrays.asList(new Offer()));
+
+        offerDAO.getLastOffer();
+
+        verify(mockEm).createQuery("SELECT o FROM Offer o ORDER BY o.id DESC", Offer.class);
+        verify(mockQuery).getResultList();
+    }
 }

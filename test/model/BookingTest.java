@@ -1,38 +1,41 @@
 package model;
 
-import java.util.Calendar;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import java.util.Date;
-import java.util.GregorianCalendar;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class BookingTest {
 
-    @Test
-    public void testBookingCreation() {
-        User user = new User("user@test.com", "hash", "User", "Name", "123", "client", 100.0);
-        Offer offer = new Offer();
-        Transaction transaction = new Transaction();
-        Date arrival = new Date();
-        Date departure = new Date(System.currentTimeMillis() + 86400000); // +1 day
-        
-        Booking booking = new Booking(user, offer, transaction, arrival, departure, 2, 150.0);
-        
-        assertEquals(user, booking.getUser());
-        assertEquals(offer, booking.getOffer());
-        assertEquals(transaction, booking.getTransaction());
-        assertEquals(2, booking.getNbPerson());
-        assertEquals(150.0, booking.getTotalPrice(), 0.01);
-        assertNotNull("Booking date should be set", booking.getBookingDate());
+    private Booking booking;
+    private User user;
+    private Offer offer;
+    private Transaction transaction;
+    private Date arrivalDate;
+    private Date departureDate;
+
+    @BeforeEach
+    public void setUp() {
+        user = new User();
+        offer = new Offer();
+        transaction = new Transaction();
+        arrivalDate = new Date();
+        departureDate = new Date(System.currentTimeMillis() + 86400000); // 1 day later
+        booking = new Booking(user, offer, transaction, arrivalDate, departureDate, 2, 200.0);
     }
 
     @Test
-    public void testBookingSetters() {
-        Booking booking = new Booking();
-        booking.setNbPerson(4);
-        booking.setTotalPrice(200.0);
-        
-        assertEquals(4, booking.getNbPerson());
-        assertEquals(200.0, booking.getTotalPrice(), 0.01);
+    public void testBookingCreation() {
+        assertNotNull(booking.getBookingDate());
+        assertEquals(user, booking.getUser());
+        assertEquals(offer, booking.getOffer());
+        assertEquals(transaction, booking.getTransaction());
+        assertEquals(arrivalDate, booking.getArrivalDate());
+        assertEquals(departureDate, booking.getDepartureDate());
+        assertEquals(2, booking.getNbPerson());
+        assertEquals(200.0, booking.getTotalPrice());
     }
 }

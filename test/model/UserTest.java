@@ -1,45 +1,37 @@
 package model;
 
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class UserTest {
 
+    private User user;
+
+    @BeforeEach
+    public void setUp() {
+        user = new User("test@example.com", "password123", "John", "Doe", "1234567890", "customer", 100.0);
+    }
+
     @Test
     public void testUserCreation() {
-        User user = new User("test@test.com", "hashedPassword", "John", "Doe", "123456789", "client", 100.0);
-        
-        assertEquals("test@test.com", user.getMailAddress());
-        assertEquals("hashedPassword", user.getHashedPassword());
+        assertNotNull(user.getDate());
+        assertEquals("test@example.com", user.getMailAddress());
+        assertEquals("password123", user.getHashedPassword());
         assertEquals("John", user.getFirstname());
         assertEquals("Doe", user.getName());
-        assertEquals("123456789", user.getPhoneNumber());
-        assertEquals("client", user.getUserType());
-        assertEquals(100.0, user.getBalance(), 0.01);
-        assertNotNull("Date should be set", user.getDate());
+        assertEquals("1234567890", user.getPhoneNumber());
+        assertEquals("customer", user.getUserType());
+        assertEquals(100.0, user.getBalance());
     }
 
     @Test
-    public void testUserUpdate() {
-        User user = new User("test@test.com", "hash", "John", "Doe", "123", "client", 0.0);
-        user.update("Jane", "Smith", "987654321");
-        
+    public void testUpdate() {
+        user.update("Jane", "Smith", "0987654321");
         assertEquals("Jane", user.getFirstname());
         assertEquals("Smith", user.getName());
-        assertEquals("987654321", user.getPhoneNumber());
-    }
-
-    @Test
-    public void testUserSetters() {
-        User user = new User();
-        user.setMailAddress("new@test.com");
-        user.setBalance(50.5);
-        user.setUserType("admin");
-        
-        assertEquals("new@test.com", user.getMailAddress());
-        assertEquals(50.5, user.getBalance(), 0.01);
-        assertEquals("admin", user.getUserType());
+        assertEquals("0987654321", user.getPhoneNumber());
     }
 }

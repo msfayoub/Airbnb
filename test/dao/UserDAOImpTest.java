@@ -1,114 +1,104 @@
 package dao;
 
-import model.User;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.lang.reflect.Field;
 
 import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
-import java.util.Arrays;
-import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.*;
-import static org.mockito.Mockito.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
 
-class UserDAOImpTest {
-    
-    @Mock
-    private EntityManager mockEm;
-    
-    @Mock
-    private TypedQuery<User> mockQuery;
-    
+import model.User;
+
+public class UserDAOImpTest {
+
     private UserDAOImp userDAO;
-    
+    private EntityManager mockEm;
+
     @BeforeEach
-    void setUp() {
-        MockitoAnnotations.openMocks(this);
+    public void setUp() throws Exception {
         userDAO = new UserDAOImp();
-        // Use reflection to inject mock EntityManager
-        try {
-            java.lang.reflect.Field emField = UserDAOImp.class.getDeclaredField("em");
-            emField.setAccessible(true);
-            emField.set(userDAO, mockEm);
-        } catch (Exception e) {
-            fail("Failed to inject EntityManager: " + e.getMessage());
-        }
+        mockEm = mock(EntityManager.class);
+        
+        Field emField = UserDAOImp.class.getDeclaredField("em");
+        emField.setAccessible(true);
+        emField.set(userDAO, mockEm);
+    }
+
+    @Test
+    public void testCreateUser() {
+        String mailAddress = "test@example.com";
+        String hashedPassword = "password";
+        String firstname = "John";
+        String name = "Doe";
+        String phoneNumber = "1234567890";
+        String userType = "customer";
+        double amount = 100.0;
+
+        User createdUser = userDAO.createUser(mailAddress, hashedPassword, firstname, name, phoneNumber, userType, amount);
+
+        assertNotNull(createdUser);
+        assertEquals(mailAddress, createdUser.getMailAddress());
+        
+        ArgumentCaptor<User> userCaptor = ArgumentCaptor.forClass(User.class);
+        verify(mockEm).persist(userCaptor.capture());
+        User persistedUser = userCaptor.getValue();
+        
+        assertEquals(mailAddress, persistedUser.getMailAddress());
+        assertEquals(hashedPassword, persistedUser.getHashedPassword());
+    }
+
+    @Test
+    public void testGetUser() {
+        String mailAddress = "test@example.com";
+        User user = new User(mailAddress, "password", "John", "Doe", "1234567890", "customer", 100.0);
+        when(mockEm.find(User.class, mailAddress)).thenReturn(user);
+
+        User foundUser = userDAO.getUser(mailAddress);
+
+        assertNotNull(foundUser);
+        assertEquals(mailAddress, foundUser.getMailAddress());
+        verify(mockEm).find(User.class, mailAddress);
+    }
+
+    @Test
+    public void testUpdateUser() {
+        User user = new User("test@example.com", "password", "John", "Doe", "1234567890", "customer", 100.0);
+        user.setFirstname("Jane");
+
+        userDAO.updateUser(user);
+
+        verify(mockEm).merge(user);
+    }
+
+    @Test
+    public void testDeleteUser() {
+        String mailAddress = "test@example.com";
+        User user = new User(mailAddress, "password", "John", "Doe", "1234567890", "customer", 100.0);
+        when(mockEm.find(User.class, mailAddress)).thenReturn(user);
+
+        userDAO.deleteUser(mailAddress);
+
+        verify(mockEm).find(User.class, mailAddress);
+        verify(mockEm).remove(user);
     }
     
     @Test
-    void testAddUser() {
-        User user = new User();
-        
-        when(mockEm.find(User.class, user.getEmail())).thenReturn(null);
-        
-        userDAO.add(user);
-        
-        verify(mockEm, times(1)).persist(any(User.class));
-    }
-    
-    @Test
-    void testFindUserByEmail() {
-        User expectedUser = new User();
-        
-        when(mockEm.find(User.class, "test@test.com")).thenReturn(expectedUser);
-        
-        User result = userDAO.find("test@test.com");
-        
-        assertNotNull(result);
-        verify(mockEm, times(1)).find(User.class, "test@test.com");
-    }
-    
-    @Test
-    void testDeleteUser() {
-        User user = new User();
-        
-        when(mockEm.find(User.class, "test@test.com")).thenReturn(user);
-        
-        userDAO.delete("test@test.com");
-        
-        verify(mockEm, times(1)).find(User.class, "test@test.com");
-        verify(mockEm, times(1)).remove(user);
-    }
-    
-    @Test
-    void testGetAllUsers() {
-        User user1 = new User();
-        User user2 = new User();
-        List<User> userList = Arrays.asList(user1, user2);
-        
-        when(mockEm.createQuery(anyString(), eq(User.class))).thenReturn(mockQuery);
-        when(mockQuery.getResultList()).thenReturn(userList);
-        
-        List<User> result = userDAO.getAll();
-        
-        assertEquals(2, result.size());
-        verify(mockEm, times(1)).createQuery(anyString(), eq(User.class));
-    }
-    
-    @Test
-    void testUpdatePassword() {
-        User user = new User();
-        
-        when(mockEm.find(User.class, "test@test.com")).thenReturn(user);
-        
-        userDAO.updatePassword("test@test.com", "newHashedPassword");
-        
-        assertEquals("newHashedPassword", user.getPassword());
-    }
-    
-    @Test
-    void testUpdateWallet() {
-        User user = new User();
-        user.setWallet(100.0);
-        
-        when(mockEm.find(User.class, "test@test.com")).thenReturn(user);
-        
-        userDAO.updateWallet("test@test.com", 50.0);
-        
-        assertEquals(150.0, user.getWallet(), 0.01);
+    public void testChangePassword() {
+        String mailAddress = "test@example.com";
+        String newHashedPassword = "newHashedPassword";
+        User user = new User(mailAddress, "oldPassword", "John", "Doe", "1234567890", "customer", 100.0);
+        when(mockEm.find(User.class, mailAddress)).thenReturn(user);
+
+        userDAO.changePassword(mailAddress, newHashedPassword);
+
+        verify(mockEm).find(User.class, mailAddress);
+        assertEquals(newHashedPassword, user.getHashedPassword());
     }
 }

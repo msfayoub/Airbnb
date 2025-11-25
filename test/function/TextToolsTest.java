@@ -24,4 +24,26 @@ public class TextToolsTest {
         assertEquals("Oui", textTools.getTextFromBool(true));
         assertEquals("Non", textTools.getTextFromBool(false));
     }
+
+    @Test
+    public void testGetTextFromDBEntryAllKeys() {
+        assertEquals("Chambre", textTools.getTextFromDBEntry("bedroom"));
+        assertEquals("Cuisine", textTools.getTextFromDBEntry("kitchen"));
+        assertEquals("Salle de bain", textTools.getTextFromDBEntry("bathroom"));
+        assertEquals("Horloge", textTools.getTextFromDBEntry("clock"));
+    }
+
+    @Test
+    public void testGetTextFromDBEntryCaseSensitive() {
+        assertNull("Uppercase should not match", textTools.getTextFromDBEntry("BEDROOM"));
+        assertNull("Mixed case should not match", textTools.getTextFromDBEntry("Bedroom"));
+    }
+
+    @Test
+    public void testGetTextFromBoolMultipleCalls() {
+        assertEquals("Oui", textTools.getTextFromBool(true));
+        assertEquals("Oui", textTools.getTextFromBool(true));
+        assertEquals("Non", textTools.getTextFromBool(false));
+        assertEquals("Non", textTools.getTextFromBool(false));
+    }
 }

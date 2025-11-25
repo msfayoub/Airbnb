@@ -57,22 +57,37 @@ pipeline {
             }
         }
         
-        stage('Run Tests') {
+        stage('Run Tests with Coverage') {
             steps {
-                echo 'Running JUnit tests...'
+                echo 'Running JUnit tests with JaCoCo coverage...'
                 bat '''
                     if not exist "test-results" mkdir test-results
+                    if not exist "coverage" mkdir coverage
                     
-                    java -cp "lib/*;build/classes;build/test-classes" ^
+                    REM Run tests with JaCoCo agent
+                    java -javaagent:lib/jacocoagent.jar=destfile=coverage/jacoco.exec ^
+                    -cp "lib/*;build/classes;build/test-classes" ^
                     org.junit.platform.console.ConsoleLauncher ^
                     --scan-classpath ^
                     --reports-dir=test-results ^
                     --disable-banner
+                    
+                    REM Generate JaCoCo reports
+                    java -jar lib/jacococli.jar report coverage/jacoco.exec ^
+                    --classfiles build/classes ^
+                    --sourcefiles src ^
+                    --html coverage/html ^
+                    --xml coverage/jacoco.xml ^
+                    --csv coverage/jacoco.csv
                 '''
             }
             post {
                 always {
                     junit allowEmptyResults: true, testResults: 'test-results/*.xml'
+                    jacoco execPattern: 'coverage/jacoco.exec',
+                           classPattern: 'build/classes',
+                           sourcePattern: 'src',
+                           exclusionPattern: '**/*Test*.class'
                 }
             }
         }
@@ -92,7 +107,8 @@ pipeline {
                             -Dsonar.java.test.binaries=build/test-classes ^
                             -Dsonar.sourceEncoding=ISO-8859-1 ^
                             -Dsonar.java.libraries=lib/*.jar ^
-                            -Dsonar.junit.reportPaths=test-results
+                            -Dsonar.junit.reportPaths=test-results ^
+                            -Dsonar.coverage.jacoco.xmlReportPaths=coverage/jacoco.xml
                         """
                     }
                     echo 'SonarQube analysis completed! View results at: http://localhost:9000/dashboard?id=airbnb-booking-app'
@@ -133,6 +149,7 @@ pipeline {
             echo '✓ Pipeline completed successfully!'
             echo '========================================='
             echo 'Test Results: Check Jenkins test report'
+            echo 'Code Coverage: Check JaCoCo report in Jenkins'
             echo 'Artifacts:'
             echo '  - WAR file: Check Jenkins artifacts'
             echo '  - SonarQube: http://localhost:9000/dashboard?id=airbnb-booking-app'

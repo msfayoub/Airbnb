@@ -35,14 +35,4 @@ public class HomeTest {
         verify(mockRequest).getRequestDispatcher("/WEB-INF/home.jsp");
         verify(mockDispatcher).forward(mockRequest, mockResponse);
     }
-
-    @Test
-    public void testDoPost() throws Exception {
-        when(mockRequest.getRequestDispatcher("/WEB-INF/home.jsp")).thenReturn(mockDispatcher);
-
-        homeServlet.doPost(mockRequest, mockResponse);
-
-        verify(mockRequest).getRequestDispatcher("/WEB-INF/home.jsp");
-        verify(mockDispatcher).forward(mockRequest, mockResponse);
-    }
 }

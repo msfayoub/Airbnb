@@ -42,8 +42,8 @@ class LoginTest {
     @Test
     void testSuccessfulLogin() throws Exception {
         User user = new User();
-        user.setEmail("test@test.com");
-        user.setPassword("hashedPassword");
+        user.setMailAddress("test@test.com");
+        user.setHashedPassword("hashedPassword");
         
         when(request.getParameter("email")).thenReturn("test@test.com");
         when(request.getParameter("password")).thenReturn("password123");

@@ -62,7 +62,6 @@ class AddRoomsTest {
 		MockitoAnnotations.openMocks(this);
 		testUser = new User("test@test.com", "hash", "John", "Doe", "0123456789", "Client", 100.0);
 		accommodation = new Accommodation();
-		accommodation.setId(1);
 		accommodations = Arrays.asList(accommodation);
 		testRoom = new Room();
 		testRoom.setId(1);

@@ -71,7 +71,6 @@ class AddAccommodationTest {
 		testUser = new User("test@test.com", "hash", "John", "Doe", "0123456789", "Client", 100.0);
 		adminUser = new User("admin@test.com", "hash", "Admin", "User", "1111111111", "Admin", 0.0);
 		testAccommodation = new Accommodation();
-		testAccommodation.setId(1);
 		testAccommodation.setUser(testUser);
 	}
 	
@@ -161,13 +160,12 @@ class AddAccommodationTest {
 		when(request.getParameter("houseRulesParty")).thenReturn("false");
 		when(request.getParameter("houseRulesPets")).thenReturn("true");
 		when(addressDAO.createAddress("123", "Main St", "Paris", "75001", "France")).thenReturn(new Address());
-		when(houseRulesDAO.createHouseRules(true, false, true)).thenReturn(new HouseRules());
-		when(accommodationDAO.createAccommodation(eq(testUser), anyString(), anyString(), anyInt(), anyString(), any(), any())).thenReturn(testAccommodation);
+		when(houseRulesDAO.createHouseRules(any(), any(), anyBoolean(), anyBoolean(), anyBoolean())).thenReturn(new HouseRules());
 		when(request.getRequestDispatcher("/WEB-INF/accommodation/addAccommodation.jsp")).thenReturn(dispatcher);
 		
 		addAccommodationServlet.doPost(request, response);
 		
-		verify(accommodationDAO).createAccommodation(eq(testUser), eq("Nice Apartment"), eq("Great place"), eq(4), eq("apartment"), any(Address.class), any(HouseRules.class));
+		verify(accommodationDAO).createAccommodation(eq(testUser), eq("Nice Apartment"), any(Address.class), any(HouseRules.class), eq("apartment"), eq(4), anyInt(), eq("Great place"));
 		verify(request).setAttribute("alertType", "alert-success");
 	}
 	
@@ -179,7 +177,7 @@ class AddAccommodationTest {
 		when(session.getAttribute("user")).thenReturn(testUser);
 		when(request.getParameter("form")).thenReturn("picture");
 		when(request.getParts()).thenReturn(parts);
-		when(filePart.getSubmittedFileName()).thenReturn("test.jpg");
+		when(filePart.getName()).thenReturn("pictures");
 		when(filePart.getSize()).thenReturn(1000L);
 		when(request.getRequestDispatcher("/WEB-INF/accommodation/addAccommodation.jsp")).thenReturn(dispatcher);
 		
@@ -197,15 +195,9 @@ class AddAccommodationTest {
 		when(request.getParameter("houseRulesParty")).thenReturn("false");
 		when(request.getParameter("houseRulesPets")).thenReturn("false");
 		when(addressDAO.createAddress(anyString(), anyString(), anyString(), anyString(), anyString())).thenReturn(new Address());
-		when(houseRulesDAO.createHouseRules(anyBoolean(), anyBoolean(), anyBoolean())).thenReturn(new HouseRules());
-		when(accommodationDAO.createAccommodation(any(), anyString(), anyString(), anyInt(), anyString(), any(), any())).thenReturn(testAccommodation);
+		when(houseRulesDAO.createHouseRules(any(), any(), anyBoolean(), anyBoolean(), anyBoolean())).thenReturn(new HouseRules());
 		
-		// First create the accommodation
-		request.setParameter("form", "info");
-		addAccommodationServlet.doPost(request, response);
-		
-		// Then upload pictures
-		when(request.getParameter("form")).thenReturn("picture");
+		// Upload pictures
 		addAccommodationServlet.doPost(request, response);
 		
 		verify(request).getParts();

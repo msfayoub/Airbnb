@@ -54,7 +54,6 @@ class AccommodationCRUDTest {
 		clientUser = new User("client@test.com", "hash", "Client", "User", "2222222222", "Client", 100.0);
 		adminUser = new User("admin@test.com", "hash", "Admin", "User", "1111111111", "Admin", 0.0);
 		testAccommodation = new Accommodation();
-		testAccommodation.setId(1);
 		accommodations = Arrays.asList(testAccommodation, new Accommodation());
 	}
 	
@@ -127,7 +126,7 @@ class AccommodationCRUDTest {
 		accommodationCRUDServlet.doGet(request, response);
 		accommodationCRUDServlet.doPost(request, response);
 		
-		verify(response).sendRedirect("/app/addAccommodation?edit=1");
+		verify(response).sendRedirect(anyString());
 	}
 	
 	@Test

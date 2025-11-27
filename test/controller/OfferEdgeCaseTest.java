@@ -86,7 +86,6 @@ class OfferEdgeCaseTest {
 		offerOwner = new User("owner@test.com", "hash", "Owner", "User", "1111111111", "Client", 0.0);
 		testUser = new User("test@test.com", "hash", "John", "Doe", "0123456789", "Client", 500.0);
 		accommodation = new Accommodation();
-		accommodation.setId(1);
 		testOffer = new model.Offer();
 		testOffer.setId(1);
 		testOffer.setUser(offerOwner);

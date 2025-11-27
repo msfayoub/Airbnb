@@ -63,7 +63,6 @@ class AddOfferTest {
 		testUser = new User("test@test.com", "hash", "John", "Doe", "0123456789", "Client", 100.0);
 		adminUser = new User("admin@test.com", "hash", "Admin", "User", "1111111111", "Admin", 0.0);
 		accommodation = new Accommodation();
-		accommodation.setId(1);
 		accommodations = Arrays.asList(accommodation);
 		testOffer = new Offer();
 		testOffer.setId(1);

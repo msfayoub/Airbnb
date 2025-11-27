@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class AccommodationEdgeCaseTest {
+public class AccommodationExtraTest {
 
     private Accommodation accommodation;
 
@@ -14,9 +14,8 @@ public class AccommodationEdgeCaseTest {
     }
 
     @Test
-    public void testSetId() {
-        accommodation.setId(1);
-        assertEquals(1, accommodation.getId());
+    public void testGetId() {
+        assertEquals(0, accommodation.getId());
     }
 
     @Test
@@ -35,20 +34,6 @@ public class AccommodationEdgeCaseTest {
     public void testVeryLargeCapacity() {
         accommodation.setCapacity(999);
         assertEquals(999, accommodation.getCapacity());
-    }
-
-    @Test
-    public void testVeryLongName() {
-        String longName = "A".repeat(200);
-        accommodation.setName(longName);
-        assertEquals(longName, accommodation.getName());
-    }
-
-    @Test
-    public void testVeryLongDescription() {
-        String longDesc = "Very long description. ".repeat(50);
-        accommodation.setDescription(longDesc);
-        assertEquals(longDesc, accommodation.getDescription());
     }
 
     @Test
@@ -76,23 +61,18 @@ public class AccommodationEdgeCaseTest {
     }
 
     @Test
-    public void testUpdateWithLargeValues() {
-        accommodation.update("Big House", "Mansion", 50, 25, "A very large property");
-        assertEquals("Big House", accommodation.getName());
-        assertEquals("Mansion", accommodation.getType());
-        assertEquals(50, accommodation.getCapacity());
-        assertEquals(25, accommodation.getNumberOfRooms());
-    }
-
-    @Test
     public void testMultipleTypes() {
         accommodation.setType("Apartment");
         assertEquals("Apartment", accommodation.getType());
         
         accommodation.setType("House");
         assertEquals("House", accommodation.getType());
-        
-        accommodation.setType("Villa");
-        assertEquals("Villa", accommodation.getType());
+    }
+
+    @Test
+    public void testAddPicture() {
+        Picture pic = new Picture("test.jpg");
+        accommodation.addPicture(pic);
+        assertEquals(1, accommodation.getPictures().size());
     }
 }

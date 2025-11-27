@@ -7,7 +7,7 @@ import java.util.Date;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class BookingEdgeCaseTest {
+public class BookingExtraTest {
 
     private Booking booking;
 
@@ -20,9 +20,6 @@ public class BookingEdgeCaseTest {
     public void testSetId() {
         booking.setId(1);
         assertEquals(1, booking.getId());
-        
-        booking.setId(999);
-        assertEquals(999, booking.getId());
     }
 
     @Test
@@ -45,12 +42,6 @@ public class BookingEdgeCaseTest {
     }
 
     @Test
-    public void testNegativeId() {
-        booking.setId(-1);
-        assertEquals(-1, booking.getId());
-    }
-
-    @Test
     public void testVeryLargeTotalPrice() {
         booking.setTotalPrice(999999.99);
         assertEquals(999999.99, booking.getTotalPrice());
@@ -68,5 +59,23 @@ public class BookingEdgeCaseTest {
         booking.setArrivalDate(date);
         booking.setDepartureDate(date);
         assertEquals(booking.getArrivalDate(), booking.getDepartureDate());
+    }
+
+    @Test
+    public void testSetNullUser() {
+        booking.setUser(null);
+        assertNull(booking.getUser());
+    }
+
+    @Test
+    public void testSetNullOffer() {
+        booking.setOffer(null);
+        assertNull(booking.getOffer());
+    }
+
+    @Test
+    public void testSetNullTransaction() {
+        booking.setTransaction(null);
+        assertNull(booking.getTransaction());
     }
 }

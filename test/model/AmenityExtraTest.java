@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class AmenityEdgeCaseTest {
+public class AmenityExtraTest {
 
     private Amenity amenity;
 
@@ -15,8 +15,8 @@ public class AmenityEdgeCaseTest {
 
     @Test
     public void testSetId() {
-        amenity.setId(1);
-        assertEquals(1, amenity.getId());
+        amenity.setId(1L);
+        assertEquals(1L, amenity.getId());
     }
 
     @Test
@@ -26,21 +26,9 @@ public class AmenityEdgeCaseTest {
     }
 
     @Test
-    public void testSetType() {
-        amenity.setType("Technology");
-        assertEquals("Technology", amenity.getType());
-    }
-
-    @Test
     public void testEmptyName() {
         amenity.setName("");
         assertEquals("", amenity.getName());
-    }
-
-    @Test
-    public void testEmptyType() {
-        amenity.setType("");
-        assertEquals("", amenity.getType());
     }
 
     @Test
@@ -57,20 +45,17 @@ public class AmenityEdgeCaseTest {
     }
 
     @Test
-    public void testMultipleTypes() {
-        amenity.setType("Bedroom");
-        assertEquals("Bedroom", amenity.getType());
-        
-        amenity.setType("Bathroom");
-        assertEquals("Bathroom", amenity.getType());
-        
-        amenity.setType("Kitchen");
-        assertEquals("Kitchen", amenity.getType());
+    public void testMultipleNameChanges() {
+        amenity.setName("WiFi");
+        amenity.setName("Pool");
+        amenity.setName("Gym");
+        assertEquals("Gym", amenity.getName());
     }
 
     @Test
-    public void testSetNullRoom() {
-        amenity.setRoom(null);
-        assertNull(amenity.getRoom());
+    public void testConstructorWithRoom() {
+        Room room = new Room();
+        Amenity newAmenity = new Amenity(room, "Heating");
+        assertEquals("Heating", newAmenity.getName());
     }
 }

@@ -3,8 +3,9 @@ package model;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import java.util.Calendar;
 
-public class UserEdgeCaseTest {
+public class UserExtraTest {
 
     private User user;
 
@@ -17,6 +18,13 @@ public class UserEdgeCaseTest {
     public void testSetDateWithNull() {
         user.setDate(null);
         assertNull(user.getDate());
+    }
+
+    @Test
+    public void testSetDateWithCalendar() {
+        Calendar cal = Calendar.getInstance();
+        user.setDate(cal);
+        assertEquals(cal, user.getDate());
     }
 
     @Test

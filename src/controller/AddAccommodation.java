@@ -110,7 +110,9 @@ public class AddAccommodation extends HttpServlet {
 				return;
 			}
 			
-			if ( tempAccommodation != null ) {
+			String form = request.getParameter("form");
+			
+			if ( "picture".equals(form) && tempAccommodation != null && request.getContentType() != null && request.getContentType().toLowerCase().contains("multipart/form-data") ) {
 				Collection<Part> parts = request.getParts();
 				Collection<String> filesName = new ArrayList<>();
 				
@@ -179,7 +181,7 @@ public class AddAccommodation extends HttpServlet {
 				response.sendRedirect(request.getContextPath() + "/addRooms");
 				return;
 				
-			} else if (!request.getContentType().toLowerCase().contains("multipart/form-data")) {
+			} else if ("info".equals(form) || (request.getContentType() != null && !request.getContentType().toLowerCase().contains("multipart/form-data"))) {
 				
 				String name = request.getParameter("name");
 				String type = request.getParameter("type");
@@ -193,16 +195,19 @@ public class AddAccommodation extends HttpServlet {
 				String postalCode = request.getParameter("zipCode");
 				String country = request.getParameter("country");
 				
-				String arrivalHourStr = request.getParameter("arrivalHour");
-				String departureHourStr = request.getParameter("departureHour");
-				String petAllowed = request.getParameter("petAllowed");
-				String partyAllowed = request.getParameter("partyAllowed");
-				String smokeAllowed = request.getParameter("smokeAllowed");
-				
-				LocalTime arrivalHour = LocalTime.parse(arrivalHourStr);
-				LocalTime departureHour = LocalTime.parse(departureHourStr);
-				
-				if (editAccommodation != null) {
+			String arrivalHourStr = request.getParameter("arrivalHour");
+			String departureHourStr = request.getParameter("departureHour");
+			String petAllowed = request.getParameter("petAllowed");
+			String partyAllowed = request.getParameter("partyAllowed");
+			String smokeAllowed = request.getParameter("smokeAllowed");
+			
+			// Add null checks for time parameters
+			if (arrivalHourStr == null || departureHourStr == null) {
+				throw new NullPointerException("Missing time parameters");
+			}
+			
+			LocalTime arrivalHour = LocalTime.parse(arrivalHourStr);
+			LocalTime departureHour = LocalTime.parse(departureHourStr);				if (editAccommodation != null) {
 					Accommodation newAccommodation = accommodationDAO.getAccommodation(editAccommodation.getId());
 					newAccommodation.setPictures(null);
 					

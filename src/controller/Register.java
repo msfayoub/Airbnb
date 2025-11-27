@@ -46,7 +46,7 @@ public class Register extends HttpServlet {
 				editUser = null;
 				
 				request.setAttribute("alertType", "alert-danger");
-				request.setAttribute("alertMessage", "Vous n'êtes pas autorisé à modifier cet utilisateur !");
+				request.setAttribute("alertMessage", "Vous n'ï¿½tes pas autorisï¿½ ï¿½ modifier cet utilisateur !");
 				request.getRequestDispatcher("/WEB-INF/account/register.jsp").forward(request, response);
 				return;
 			}
@@ -76,26 +76,37 @@ public class Register extends HttpServlet {
 		
 		try {	
 			String mailAddress = request.getParameter("mail");
+			String password = request.getParameter("pass");
+			String firstname = request.getParameter("firstname");
+			String name = request.getParameter("name");
+			String phoneNumber = request.getParameter("phone");
+			
+			// Validate required fields
+			if (mailAddress == null || mailAddress.trim().isEmpty()) {
+				System.err.println("Missing params: mail address is required");
+				return;
+			}
 			
 			if (userDAO.getUser(mailAddress) != null) {
 				request.setAttribute("alertType", "alert-warning");
-				request.setAttribute("alertMessage", "Cette adresse de courriel est déjà utilisée !");
+				request.setAttribute("alertMessage", "Cette adresse de courriel est dï¿½jï¿½ utilisï¿½e !");
 				request.getRequestDispatcher("/WEB-INF/account/register.jsp").forward(request, response);
 				
 			} else {
-				String password = request.getParameter("pass");
-				String hpass = Hash.sha256(password);
-				String firstname = request.getParameter("firstname");
-				String name = request.getParameter("name");
-				String phoneNumber = request.getParameter("phone");
-				userDAO.createUser(mailAddress, hpass, firstname, name, phoneNumber, "Client", 0);
+				String hpass = Hash.sha256(password == null ? "" : password);
+				userDAO.createUser(mailAddress, hpass, 
+						firstname == null ? "" : firstname, 
+						name == null ? "" : name, 
+						phoneNumber == null ? "" : phoneNumber, 
+						"Client", 0);
 				request.setAttribute("alertType", "alert-success");
-				request.setAttribute("alertMessage", "Le compte a été créé avec succès !");
+				request.setAttribute("alertMessage", "Le compte a ï¿½tï¿½ crï¿½ï¿½ avec succï¿½s !");
 				request.getRequestDispatcher("/WEB-INF/account/login.jsp").forward(request, response);
 			}
 			
 		} catch(NullPointerException npe) {
 			System.err.println("Missing params");
+			npe.printStackTrace();
 		}
 	}
 

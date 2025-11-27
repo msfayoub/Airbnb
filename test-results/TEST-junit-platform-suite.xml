@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Platform Suite" tests="0" skipped="0" failures="0" errors="0" time="0" hostname="DESKTOP-2IK5BJN" timestamp="2025-11-27T23:38:11">
+<properties>
+<property name="file.encoding" value="Cp1252"/>
+<property name="file.separator" value="\"/>
+<property name="java.class.path" value="lib/byte-buddy-1.14.11.jar;lib/byte-buddy-agent-1.14.11.jar;lib/jacocoagent.jar;lib/jacococli.jar;lib/javax.annotation.jar;lib/javax.ejb.jar;lib/javax.jms.jar;lib/javax.persistence.jar;lib/javax.resource.jar;lib/javax.servlet.jar;lib/javax.servlet.jsp.jar;lib/javax.servlet.jsp.jstl.jar;lib/javax.transaction.jar;lib/junit-platform-console-standalone-1.10.1.jar;lib/mockito-core-5.8.0.jar;lib/objenesis-3.3.jar;build/classes;build/test-classes"/>
+<property name="java.class.version" value="61.0"/>
+<property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+<property name="java.io.tmpdir" value="C:\Users\Ayoub\AppData\Local\Temp\"/>
+<property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;c:\Users\Ayoub\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\Ayoub\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\msys64\mingw64\bin;C:\Program Files\nodejs\;C:\Program Files\Neovim\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\apache-maven-3.9.6\bin;C:\Program Files\cursor\resources\app\bin;C:\Program Files\Kubernetes\Minikube;C:\Users\Ayoub\scoop\shims;C:\Users\Ayoub\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Ayoub\AppData\Local\Programs\Python\Python313\;C:\Users\Ayoub\AppData\Local\Microsoft\WindowsApps;C:\Users\Ayoub\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ayoub\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\Ayoub\AppData\Roaming\npm;C:\Program Files\MySQL\MySQL Server 8.0\bin;;."/>
+<property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+<property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="17"/>
+<property name="java.vendor" value="Oracle Corporation"/>
+<property name="java.vendor.url" value="https://java.oracle.com/"/>
+<property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+<property name="java.version" value="17.0.12"/>
+<property name="java.version.date" value="2024-07-16"/>
+<property name="java.vm.compressedOopsMode" value="Zero based"/>
+<property name="java.vm.info" value="mixed mode, sharing"/>
+<property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="17"/>
+<property name="java.vm.vendor" value="Oracle Corporation"/>
+<property name="java.vm.version" value="17.0.12+8-LTS-286"/>
+<property name="jdk.debug" value="release"/>
+<property name="line.separator" value="
+"/>
+<property name="native.encoding" value="Cp1252"/>
+<property name="os.arch" value="amd64"/>
+<property name="os.name" value="Windows 11"/>
+<property name="os.version" value="10.0"/>
+<property name="path.separator" value=";"/>
+<property name="sun.arch.data.model" value="64"/>
+<property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+<property name="sun.cpu.endian" value="little"/>
+<property name="sun.cpu.isalist" value="amd64"/>
+<property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --select-class=controller.DisplaySearchTest --select-class=controller.ImgServTest --select-class=controller.ProfileTest --select-class=controller.ProfileEdgeCaseTest --select-class=controller.WalletTest --select-class=controller.WalletEdgeCaseTest --reports-dir=test-results --disable-banner"/>
+<property name="sun.java.launcher" value="SUN_STANDARD"/>
+<property name="sun.jnu.encoding" value="Cp1252"/>
+<property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+<property name="sun.os.patch.level" value=""/>
+<property name="user.country" value="US"/>
+<property name="user.dir" value="C:\Users\Ayoub\s5\Java\build\Airbnb\BookingApp_JavaEE"/>
+<property name="user.home" value="C:\Users\Ayoub"/>
+<property name="user.language" value="en"/>
+<property name="user.name" value="Ayoub"/>
+<property name="user.script" value=""/>
+<property name="user.timezone" value="Africa/Casablanca"/>
+<property name="user.variant" value=""/>
+</properties>
+<system-out><![CDATA[
+unique-id: [engine:junit-platform-suite]
+display-name: JUnit Platform Suite
+]]></system-out>
+</testsuite>

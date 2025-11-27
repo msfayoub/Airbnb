@@ -26,20 +26,18 @@ public class ImgServ extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	   // Get the path of the image from request parameter
-	   String filename = request.getParameter( "filename" );
+	   String filename = request.getParameter( "name" );
 	   
-	   if (filename == null) {
-		   request.getRequestDispatcher("/WEB-INF/error.jsp").forward(request, response);
+	   if (filename == null || filename.trim().isEmpty()) {
 		   return; 
 	   }
 	   
 	   String fullPath = getServletContext().getRealPath(IMAGES_FOLDER) + File.separator + filename;
 	      
 	   // Retrieve mimeType dynamically
-	   String mime = getServletContext().getMimeType(fullPath);
+	   String mime = getServletContext().getMimeType(filename);
 	      
 	   if (mime == null) {
-		   request.getRequestDispatcher("/WEB-INF/error.jsp").forward(request, response);
 		   return; 
 	   }
 

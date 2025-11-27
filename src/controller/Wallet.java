@@ -31,30 +31,33 @@ public class Wallet extends HttpServlet {
 		
 		if (user == null) {
 			response.sendRedirect(request.getContextPath() + "/login?redirect=wallet");
-			
-		} else {
-    		RequestDispatcher vue = getServletContext().getRequestDispatcher("/WEB-INF/account/wallet.jsp");
-    		vue.forward(request, response);
-    	}	
+			return;
+		}
+		
+		RequestDispatcher vue = getServletContext().getRequestDispatcher("/WEB-INF/account/wallet.jsp");
+		vue.forward(request, response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		final HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
 		
-		String am = request.getParameter("amount");
-		double amount = 0;
-		
-		try {
-			amount = Double.parseDouble(am);
-			userDAO.credit(user.getMailAddress(), amount);
-			session.setAttribute("user", userDAO.getUser(user.getMailAddress()));
-			
-		} catch (NumberFormatException nfe) {
-			nfe.printStackTrace();
-			
-		} finally {
-			doGet(request, response);
+		if (user == null) {
+			return;
 		}
+		
+		String am = request.getParameter("amount");
+		
+		if (am != null && !am.trim().isEmpty()) {
+			try {
+				double amount = Double.parseDouble(am);
+				userDAO.credit(user.getMailAddress(), amount);
+				session.setAttribute("user", userDAO.getUser(user.getMailAddress()));
+			} catch (NumberFormatException nfe) {
+				nfe.printStackTrace();
+			}
+		}
+		
+		doGet(request, response);
 	}
 }

@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Jupiter" tests="36" skipped="0" failures="0" errors="36" time="4.397" hostname="DESKTOP-2IK5BJN" timestamp="2025-11-27T23:38:11">
+<properties>
+<property name="file.encoding" value="Cp1252"/>
+<property name="file.separator" value="\"/>
+<property name="java.class.path" value="lib/byte-buddy-1.14.11.jar;lib/byte-buddy-agent-1.14.11.jar;lib/jacocoagent.jar;lib/jacococli.jar;lib/javax.annotation.jar;lib/javax.ejb.jar;lib/javax.jms.jar;lib/javax.persistence.jar;lib/javax.resource.jar;lib/javax.servlet.jar;lib/javax.servlet.jsp.jar;lib/javax.servlet.jsp.jstl.jar;lib/javax.transaction.jar;lib/junit-platform-console-standalone-1.10.1.jar;lib/mockito-core-5.8.0.jar;lib/objenesis-3.3.jar;build/classes;build/test-classes"/>
+<property name="java.class.version" value="61.0"/>
+<property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+<property name="java.io.tmpdir" value="C:\Users\Ayoub\AppData\Local\Temp\"/>
+<property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;c:\Users\Ayoub\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\Ayoub\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\msys64\mingw64\bin;C:\Program Files\nodejs\;C:\Program Files\Neovim\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\apache-maven-3.9.6\bin;C:\Program Files\cursor\resources\app\bin;C:\Program Files\Kubernetes\Minikube;C:\Users\Ayoub\scoop\shims;C:\Users\Ayoub\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Ayoub\AppData\Local\Programs\Python\Python313\;C:\Users\Ayoub\AppData\Local\Microsoft\WindowsApps;C:\Users\Ayoub\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ayoub\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\Ayoub\AppData\Roaming\npm;C:\Program Files\MySQL\MySQL Server 8.0\bin;;."/>
+<property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+<property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="17"/>
+<property name="java.vendor" value="Oracle Corporation"/>
+<property name="java.vendor.url" value="https://java.oracle.com/"/>
+<property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+<property name="java.version" value="17.0.12"/>
+<property name="java.version.date" value="2024-07-16"/>
+<property name="java.vm.compressedOopsMode" value="Zero based"/>
+<property name="java.vm.info" value="mixed mode, sharing"/>
+<property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="17"/>
+<property name="java.vm.vendor" value="Oracle Corporation"/>
+<property name="java.vm.version" value="17.0.12+8-LTS-286"/>
+<property name="jdk.debug" value="release"/>
+<property name="line.separator" value="
+"/>
+<property name="native.encoding" value="Cp1252"/>
+<property name="os.arch" value="amd64"/>
+<property name="os.name" value="Windows 11"/>
+<property name="os.version" value="10.0"/>
+<property name="path.separator" value=";"/>
+<property name="sun.arch.data.model" value="64"/>
+<property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+<property name="sun.cpu.endian" value="little"/>
+<property name="sun.cpu.isalist" value="amd64"/>
+<property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --select-class=controller.DisplaySearchTest --select-class=controller.ImgServTest --select-class=controller.ProfileTest --select-class=controller.ProfileEdgeCaseTest --select-class=controller.WalletTest --select-class=controller.WalletEdgeCaseTest --reports-dir=test-results --disable-banner"/>
+<property name="sun.java.launcher" value="SUN_STANDARD"/>
+<property name="sun.jnu.encoding" value="Cp1252"/>
+<property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+<property name="sun.os.patch.level" value=""/>
+<property name="user.country" value="US"/>
+<property name="user.dir" value="C:\Users\Ayoub\s5\Java\build\Airbnb\BookingApp_JavaEE"/>
+<property name="user.home" value="C:\Users\Ayoub"/>
+<property name="user.language" value="en"/>
+<property name="user.name" value="Ayoub"/>
+<property name="user.script" value=""/>
+<property name="user.timezone" value="Africa/Casablanca"/>
+<property name="user.variant" value=""/>
+</properties>
+<testcase name="testDoGet_NullFilename_DoesNotServe()" classname="controller.ImgServTest" time="0.007">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ImgServTest.setUp(ImgServTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testDoGet_NullFilename_DoesNotServe()]
+display-name: testDoGet_NullFilename_DoesNotServe()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_ChangePassword_IncorrectCurrentPassword()" classname="controller.ProfileTest" time="0.336">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_ChangePassword_IncorrectCurrentPassword()]
+display-name: testDoPost_ChangePassword_IncorrectCurrentPassword()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_ChangePassword_Successful()" classname="controller.ProfileTest" time="0.001">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_ChangePassword_Successful()]
+display-name: testDoPost_ChangePassword_Successful()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_VeryLargeAmount_Credits()" classname="controller.WalletEdgeCaseTest" time="0.006">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:testDoPost_VeryLargeAmount_Credits()]
+display-name: testDoPost_VeryLargeAmount_Credits()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoUserInSession_RedirectsToLogin()" classname="controller.ProfileTest" time="0.011">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoGet_NoUserInSession_RedirectsToLogin()]
+display-name: testDoGet_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_ValidAmount_CreditsAccount()" classname="controller.WalletTest" time="0.008">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletTest.setUp(WalletTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoPost_ValidAmount_CreditsAccount()]
+display-name: testDoPost_ValidAmount_CreditsAccount()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UpdateInfo_ChangesName()" classname="controller.ProfileTest" time="0.005">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_UpdateInfo_ChangesName()]
+display-name: testDoPost_UpdateInfo_ChangesName()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoUserInSession_RedirectsToLogin()" classname="controller.WalletTest" time="0">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletTest.setUp(WalletTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoGet_NoUserInSession_RedirectsToLogin()]
+display-name: testDoGet_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_ValidFilename_ServesImage()" classname="controller.ImgServTest" time="0.007">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ImgServTest.setUp(ImgServTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testDoGet_ValidFilename_ServesImage()]
+display-name: testDoGet_ValidFilename_ServesImage()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UpdateAllInfoFields()" classname="controller.ProfileEdgeCaseTest" time="0.015">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileEdgeCaseTest]/[method:testDoPost_UpdateAllInfoFields()]
+display-name: testDoPost_UpdateAllInfoFields()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_ExternalUser_ShowsExternalProfile()" classname="controller.ProfileTest" time="0.007">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoGet_ExternalUser_ShowsExternalProfile()]
+display-name: testDoGet_ExternalUser_ShowsExternalProfile()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_MissingParameters_HandlesException()" classname="controller.ProfileTest" time="0.009">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_MissingParameters_HandlesException()]
+display-name: testDoPost_MissingParameters_HandlesException()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NoChanges_DoesNotUpdate()" classname="controller.ProfileEdgeCaseTest" time="0">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileEdgeCaseTest]/[method:testDoPost_NoChanges_DoesNotUpdate()]
+display-name: testDoPost_NoChanges_DoesNotUpdate()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.ImgServTest" time="0.007">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ImgServTest.setUp(ImgServTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.DisplaySearchTest" time="0.01">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_CallsDoGet()" classname="controller.ImgServTest" time="0.238">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ImgServTest.setUp(ImgServTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testDoPost_CallsDoGet()]
+display-name: testDoPost_CallsDoGet()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_AmountWithSpaces_HandlesException()" classname="controller.WalletEdgeCaseTest" time="0.006">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:testDoPost_AmountWithSpaces_HandlesException()]
+display-name: testDoPost_AmountWithSpaces_HandlesException()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NegativeAmount_CreditsNegative()" classname="controller.WalletTest" time="0.01">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletTest.setUp(WalletTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoPost_NegativeAmount_CreditsNegative()]
+display-name: testDoPost_NegativeAmount_CreditsNegative()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_ZeroAmount_Credits()" classname="controller.WalletTest" time="0.005">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletTest.setUp(WalletTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoPost_ZeroAmount_Credits()]
+display-name: testDoPost_ZeroAmount_Credits()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NullAmount_HandlesException()" classname="controller.WalletEdgeCaseTest" time="0.003">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:testDoPost_NullAmount_HandlesException()]
+display-name: testDoPost_NullAmount_HandlesException()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_ValidSearch_DisplaysOffers()" classname="controller.DisplaySearchTest" time="0.013">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:testDoGet_ValidSearch_DisplaysOffers()]
+display-name: testDoGet_ValidSearch_DisplaysOffers()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_InvalidAmount_HandlesException()" classname="controller.WalletTest" time="0.006">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletTest.setUp(WalletTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoPost_InvalidAmount_HandlesException()]
+display-name: testDoPost_InvalidAmount_HandlesException()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_DecimalAmount_CreditsExactly()" classname="controller.WalletEdgeCaseTest" time="0.012">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:testDoPost_DecimalAmount_CreditsExactly()]
+display-name: testDoPost_DecimalAmount_CreditsExactly()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_UserInSession_ShowsProfile()" classname="controller.ProfileTest" time="0.015">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoGet_UserInSession_ShowsProfile()]
+display-name: testDoGet_UserInSession_ShowsProfile()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UnknownType_DoesNothing()" classname="controller.ProfileEdgeCaseTest" time="0.003">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileEdgeCaseTest]/[method:testDoPost_UnknownType_DoesNothing()]
+display-name: testDoPost_UnknownType_DoesNothing()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_EmptyCity_RedirectsToHome()" classname="controller.DisplaySearchTest" time="3.242">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:testDoGet_EmptyCity_RedirectsToHome()]
+display-name: testDoGet_EmptyCity_RedirectsToHome()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_MissingParameters_RedirectsToHome()" classname="controller.DisplaySearchTest" time="0.011">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:testDoGet_MissingParameters_RedirectsToHome()]
+display-name: testDoGet_MissingParameters_RedirectsToHome()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_ImageExtension_SetsCorrectMimeType()" classname="controller.ImgServTest" time="0.009">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ImgServTest.setUp(ImgServTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testDoGet_ImageExtension_SetsCorrectMimeType()]
+display-name: testDoGet_ImageExtension_SetsCorrectMimeType()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_UserInSession_ShowsWallet()" classname="controller.WalletTest" time="0.008">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletTest.setUp(WalletTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoGet_UserInSession_ShowsWallet()]
+display-name: testDoGet_UserInSession_ShowsWallet()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.WalletTest" time="0.005">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletTest.setUp(WalletTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_InvalidCapacity_HandlesException()" classname="controller.DisplaySearchTest" time="0.009">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:testDoGet_InvalidCapacity_HandlesException()]
+display-name: testDoGet_InvalidCapacity_HandlesException()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UpdateInfo_ChangesFirstname()" classname="controller.ProfileTest" time="0.013">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_UpdateInfo_ChangesFirstname()]
+display-name: testDoPost_UpdateInfo_ChangesFirstname()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_ExternalUserNotFound_HandlesGracefully()" classname="controller.ProfileEdgeCaseTest" time="0.01">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileEdgeCaseTest]/[method:testDoGet_ExternalUserNotFound_HandlesGracefully()]
+display-name: testDoGet_ExternalUserNotFound_HandlesGracefully()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UpdateInfo_ChangesPhone()" classname="controller.ProfileTest" time="0.018">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_UpdateInfo_ChangesPhone()]
+display-name: testDoPost_UpdateInfo_ChangesPhone()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.ProfileTest" time="0.005">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_EmptyAmount_HandlesException()" classname="controller.WalletEdgeCaseTest" time="0.015">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:testDoPost_EmptyAmount_HandlesException()]
+display-name: testDoPost_EmptyAmount_HandlesException()
+]]></system-out>
+</testcase>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]
+display-name: JUnit Jupiter
+]]></system-out>
+</testsuite>

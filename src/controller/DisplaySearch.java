@@ -35,15 +35,29 @@ public class DisplaySearch extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
-		
-		try {
-
+	
+	try {
 		String searchedVille = request.getParameter("ville");
 		String searchedStartAvailabilityStr = request.getParameter("startStay");
 		String searchedEndAvailabilityStr = request.getParameter("endStay");
-		int searchedCapacity = Integer.parseInt(request.getParameter("capacity"));
+		String capacityStr = request.getParameter("capacity");
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		// Validate parameters
+		if (searchedVille == null || searchedVille.trim().isEmpty() || 
+			searchedStartAvailabilityStr == null || searchedStartAvailabilityStr.trim().isEmpty() ||
+			searchedEndAvailabilityStr == null || searchedEndAvailabilityStr.trim().isEmpty() ||
+			capacityStr == null || capacityStr.trim().isEmpty()) {
+			response.sendRedirect(request.getContextPath() + "/home");
+			return;
+		}
+		
+		int searchedCapacity = Integer.parseInt(capacityStr);
+		
+		// Validate capacity
+		if (searchedCapacity <= 0) {
+			response.sendRedirect(request.getContextPath() + "/home");
+			return;
+		}		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		Calendar searchedStartAvailability = new GregorianCalendar();
 		Calendar searchedEndAvailability = new GregorianCalendar();
 		
@@ -53,22 +67,22 @@ public class DisplaySearch extends HttpServlet {
 			
 		} catch (ParseException e) {
 			e.printStackTrace();
+			response.sendRedirect(request.getContextPath() + "/home");
+			return;
 		}
+		
 		offers = offerDAO.SearchedOffer(searchedVille, searchedStartAvailability, searchedEndAvailability, searchedCapacity);
 		
 		request.setAttribute("offers", offers);
 		request.setAttribute("searchType", "new");
-
-				
-		} catch(NullPointerException npe) {
-			npe.printStackTrace();
-			System.err.println("Missing params: " + npe.getMessage());
-			response.sendRedirect(request.getContextPath() + "/home");
-		}	
 		
 		RequestDispatcher vue = getServletContext().getRequestDispatcher("/WEB-INF/home.jsp");
 		vue.forward(request, response);
-			
-	}
+				
+	} catch(NumberFormatException | NullPointerException e) {
+		e.printStackTrace();
+		System.err.println("Missing params: " + e.getMessage());
+		response.sendRedirect(request.getContextPath() + "/home");
+	}	}
 
 }

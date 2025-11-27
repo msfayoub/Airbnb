@@ -40,7 +40,7 @@ public class Profile extends HttpServlet {
 		RequestDispatcher vue;
 		if (user == null && extUser == null) {
 			request.setAttribute("alertType", "alert-warning");
-			request.setAttribute("alertMessage", "Vous devez d'abord être connecté avant de pouvoir accéder à votre profil !");
+			request.setAttribute("alertMessage", "Vous devez d'abord ï¿½tre connectï¿½ avant de pouvoir accï¿½der ï¿½ votre profil !");
 			vue = getServletContext().getRequestDispatcher("/WEB-INF/login.jsp");
 			vue.forward(request, response);
 		} else if(user != null && extUser == null) {
@@ -58,8 +58,18 @@ public class Profile extends HttpServlet {
 		try {
 			final HttpSession session = request.getSession();
 			User user = (User) session.getAttribute("user");
+			
+			if (user == null) {
+				return;
+			}
+			
 			String mail = user.getMailAddress();
 			String type = request.getParameter("type");
+			
+			if (type == null) {
+				doGet(request, response);
+				return;
+			}
 			
 			switch(type) {
 				
@@ -67,35 +77,37 @@ public class Profile extends HttpServlet {
 				String name = request.getParameter("name");
 				String firstname = request.getParameter("firstname");
 				String phoneNumber = request.getParameter("phone");
-				if (!user.getName().equals(name) && !name.isEmpty()) {
+				if (name != null && !user.getName().equals(name) && !name.isEmpty()) {
 					userDAO.changeName(mail, name);
 					request.setAttribute("alertType", "alert-success");
-					request.setAttribute("alertMessage", "Le nom a été changé avec succès !");
+					request.setAttribute("alertMessage", "Le nom a ï¿½tï¿½ changï¿½ avec succï¿½s !");
 				}
-				if (!user.getFirstname().equals(firstname) && !firstname.isEmpty()) {
+				if (firstname != null && !user.getFirstname().equals(firstname) && !firstname.isEmpty()) {
 					userDAO.changeFirstname(mail, firstname);
 					request.setAttribute("alertType", "alert-success");
-					request.setAttribute("alertMessage", "Le prénom a été changé avec succès !");
+					request.setAttribute("alertMessage", "Le prï¿½nom a ï¿½tï¿½ changï¿½ avec succï¿½s !");
 				}
-				if (!user.getPhoneNumber().equals(phoneNumber) && !phoneNumber.isEmpty()) {
+				if (phoneNumber != null && !user.getPhoneNumber().equals(phoneNumber) && !phoneNumber.isEmpty()) {
 					userDAO.changePhoneNumber(mail, phoneNumber);
 					request.setAttribute("alertType", "alert-success");
-					request.setAttribute("alertMessage", "Le numéro de téléphone a été changé avec succès !");
+					request.setAttribute("alertMessage", "Le numï¿½ro de tï¿½lï¿½phone a ï¿½tï¿½ changï¿½ avec succï¿½s !");
 				}
 				break;
 				
 			case "password":
 				String password = request.getParameter("pass");
 				String newPassword = request.getParameter("newPass");
-				String hashedPassword = Hash.sha256(password);
-				String hashedNewPassword = Hash.sha256(newPassword);
-				if (user.getHashedPassword().equals(hashedPassword)) {
-					userDAO.changePassword(mail, hashedNewPassword);
-					request.setAttribute("alertType", "alert-success");
-					request.setAttribute("alertMessage", "Le mot de passe a été changé avec succès !");
-				} else {
-					request.setAttribute("alertType", "alert-warning");
-					request.setAttribute("alertMessage", "Le mot de passe actuel est incorrect !");
+				if (password != null && newPassword != null) {
+					String hashedPassword = Hash.sha256(password);
+					String hashedNewPassword = Hash.sha256(newPassword);
+					if (user.getHashedPassword().equals(hashedPassword)) {
+						userDAO.changePassword(mail, hashedNewPassword);
+						request.setAttribute("alertType", "alert-success");
+						request.setAttribute("alertMessage", "Le mot de passe a ï¿½tï¿½ changï¿½ avec succï¿½s !");
+					} else {
+						request.setAttribute("alertType", "alert-warning");
+						request.setAttribute("alertMessage", "Le mot de passe actuel est incorrect !");
+					}
 				}
 				break;
 			}
@@ -105,6 +117,7 @@ public class Profile extends HttpServlet {
 			
 		} catch (NullPointerException npe) {
 			System.err.println("Missing params");
+			npe.printStackTrace();
 		}
 	}
 

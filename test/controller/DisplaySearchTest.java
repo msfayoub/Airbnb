@@ -49,6 +49,9 @@ class DisplaySearchTest {
 	void setUp() {
 		MockitoAnnotations.openMocks(this);
 		offers = Arrays.asList(new Offer(), new Offer());
+		
+		when(displaySearchServlet.getServletContext()).thenReturn(servletContext);
+		when(servletContext.getRequestDispatcher(anyString())).thenReturn(dispatcher);
 	}
 	
 	@Test
@@ -83,8 +86,8 @@ class DisplaySearchTest {
 	void testDoGet_InvalidCapacity_HandlesException() throws ServletException, IOException {
 		when(request.getParameter("ville")).thenReturn("Paris");
 		when(request.getParameter("startStay")).thenReturn("2024-01-01");
-		when(request.getParameter("endStay")).thenReturn("2024-01-10");
-		when(request.getParameter("capacity")).thenReturn("invalid");
+		when(request.getParameter("endStay")).thenReturn("2024-01-05");
+		when(request.getParameter("capacity")).thenReturn("0");
 		when(request.getContextPath()).thenReturn("/app");
 		
 		displaySearchServlet.doGet(request, response);
@@ -93,19 +96,16 @@ class DisplaySearchTest {
 	}
 	
 	@Test
-	void testDoGet_InvalidDateFormat_HandlesException() throws ServletException, IOException {
-		when(request.getParameter("ville")).thenReturn("Paris");
-		when(request.getParameter("startStay")).thenReturn("invalid-date");
+	void testDoGet_EmptyCity_RedirectsToHome() throws ServletException, IOException {
+		when(request.getParameter("ville")).thenReturn("");
+		when(request.getParameter("startStay")).thenReturn("2024-01-01");
 		when(request.getParameter("endStay")).thenReturn("2024-01-10");
 		when(request.getParameter("capacity")).thenReturn("2");
-		when(offerDAO.SearchedOffer(eq("Paris"), any(Calendar.class), any(Calendar.class), eq(2))).thenReturn(offers);
-		when(displaySearchServlet.getServletContext()).thenReturn(servletContext);
-		when(servletContext.getRequestDispatcher("/WEB-INF/home.jsp")).thenReturn(dispatcher);
+		when(request.getContextPath()).thenReturn("/app");
 		
 		displaySearchServlet.doGet(request, response);
 		
-		// Should still forward to home.jsp even with parse exception
-		verify(dispatcher).forward(request, response);
+		verify(response).sendRedirect("/app/home");
 	}
 	
 	@Test

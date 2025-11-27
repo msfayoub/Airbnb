@@ -43,6 +43,8 @@ class ImgServTest {
 	@BeforeEach
 	void setUp() {
 		MockitoAnnotations.openMocks(this);
+		
+		when(imgServServlet.getServletContext()).thenReturn(servletContext);
 	}
 	
 	@Test

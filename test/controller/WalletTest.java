@@ -50,6 +50,10 @@ class WalletTest {
 	void setUp() {
 		MockitoAnnotations.openMocks(this);
 		testUser = new User("test@test.com", "hash", "John", "Doe", "0123456789", "Client", 100.0);
+		
+		when(request.getSession()).thenReturn(session);
+		when(walletServlet.getServletContext()).thenReturn(servletContext);
+		when(servletContext.getRequestDispatcher(anyString())).thenReturn(dispatcher);
 	}
 	
 	@Test

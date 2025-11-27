@@ -96,6 +96,10 @@ class OfferTest {
 		testOffer.setCleaningFee(50.0);
 		rooms = Arrays.asList(new Room());
 		amenities = Arrays.asList(new Amenity());
+		
+		when(request.getSession()).thenReturn(session);
+		when(request.getContextPath()).thenReturn("/airbnb");
+		when(request.getRequestDispatcher(anyString())).thenReturn(dispatcher);
 	}
 	
 	@Test

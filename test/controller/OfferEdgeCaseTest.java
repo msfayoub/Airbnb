@@ -93,6 +93,10 @@ class OfferEdgeCaseTest {
 		testOffer.setPricePerNight(50.0);
 		testOffer.setCleaningFee(25.0);
 		rooms = Arrays.asList(new Room());
+		
+		when(request.getSession()).thenReturn(session);
+		when(request.getContextPath()).thenReturn("/airbnb");
+		when(request.getRequestDispatcher(anyString())).thenReturn(dispatcher);
 	}
 	
 	@Test

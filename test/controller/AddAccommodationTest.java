@@ -72,6 +72,11 @@ class AddAccommodationTest {
 		adminUser = new User("admin@test.com", "hash", "Admin", "User", "1111111111", "Admin", 0.0);
 		testAccommodation = new Accommodation();
 		testAccommodation.setUser(testUser);
+		
+		when(request.getSession()).thenReturn(session);
+		when(request.getContextPath()).thenReturn("/airbnb");
+		when(request.getRequestDispatcher(anyString())).thenReturn(dispatcher);
+		when(request.getContentType()).thenReturn("application/x-www-form-urlencoded");
 	}
 	
 	@Test
@@ -176,6 +181,7 @@ class AddAccommodationTest {
 		when(request.getSession()).thenReturn(session);
 		when(session.getAttribute("user")).thenReturn(testUser);
 		when(request.getParameter("form")).thenReturn("picture");
+		when(request.getContentType()).thenReturn("multipart/form-data");
 		when(request.getParts()).thenReturn(parts);
 		when(filePart.getName()).thenReturn("pictures");
 		when(filePart.getSize()).thenReturn(1000L);

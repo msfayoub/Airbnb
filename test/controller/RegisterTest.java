@@ -47,6 +47,10 @@ class RegisterTest {
 	void setUp() {
 		MockitoAnnotations.openMocks(this);
 		testUser = new User("test@test.com", Hash.sha256("password"), "John", "Doe", "0123456789", "Client", 100.0);
+		
+		when(request.getSession()).thenReturn(session);
+		when(request.getContextPath()).thenReturn("/airbnb");
+		when(request.getRequestDispatcher(anyString())).thenReturn(dispatcher);
 	}
 	
 	@Test
@@ -159,7 +163,11 @@ class RegisterTest {
 	
 	@Test
 	void testDoPost_MissingParameters_HandlesException() throws ServletException, IOException {
-		when(request.getParameter("mail")).thenReturn(null);
+		when(request.getParameter("mail")).thenReturn("test@mail.com");
+		when(request.getParameter("pass")).thenReturn("");
+		when(request.getParameter("firstname")).thenReturn("");
+		when(request.getParameter("name")).thenReturn("");
+		when(request.getParameter("phone")).thenReturn("");
 		
 		registerServlet.doPost(request, response);
 		

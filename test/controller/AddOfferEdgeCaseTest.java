@@ -68,6 +68,10 @@ class AddOfferEdgeCaseTest {
 		testOffer = new Offer();
 		testOffer.setId(1);
 		testOffer.setUser(testUser);
+		
+		when(request.getSession()).thenReturn(session);
+		when(request.getContextPath()).thenReturn("/airbnb");
+		when(request.getRequestDispatcher(anyString())).thenReturn(dispatcher);
 	}
 	
 	@Test

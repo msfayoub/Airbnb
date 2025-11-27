@@ -55,6 +55,10 @@ class ProfileTest {
 	void setUp() {
 		MockitoAnnotations.openMocks(this);
 		testUser = new User("test@test.com", Hash.sha256("password"), "John", "Doe", "0123456789", "Client", 100.0);
+		
+		when(request.getSession()).thenReturn(session);
+		when(profileServlet.getServletContext()).thenReturn(servletContext);
+		when(servletContext.getRequestDispatcher(anyString())).thenReturn(dispatcher);
 	}
 	
 	@Test

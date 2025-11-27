@@ -24,19 +24,7 @@ pipeline {
         
         stage('Checkout') {
             steps {
-                retry(3) {
-                    checkout([
-                        $class: 'GitSCM',
-                        branches: [[name: '*/master']],
-                        extensions: [
-                            [$class: 'CloneOption', depth: 0, noTags: false, shallow: false, timeout: 30]
-                        ],
-                        userRemoteConfigs: [[
-                            url: 'https://github.com/msfayoub/Airbnb.git',
-                            credentialsId: 'github-credentials'
-                        ]]
-                    ])
-                }
+                git branch: 'master', url: 'https://github.com/msfayoub/Airbnb.git'
             }
         }
         

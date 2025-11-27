@@ -31,7 +31,10 @@ pipeline {
                         extensions: [
                             [$class: 'CloneOption', depth: 0, noTags: false, shallow: false, timeout: 30]
                         ],
-                        userRemoteConfigs: [[url: 'https://github.com/msfayoub/Airbnb.git']]
+                        userRemoteConfigs: [[
+                            url: 'https://github.com/msfayoub/Airbnb.git',
+                            credentialsId: 'github-credentials'
+                        ]]
                     ])
                 }
             }

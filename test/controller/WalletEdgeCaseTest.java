@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -46,19 +47,23 @@ class WalletEdgeCaseTest {
 	@Mock
 	private ServletContext servletContext;
 	
+	@Mock
+	private ServletConfig servletConfig;
+	
 	@InjectMocks
 	private Wallet walletServlet;
 	
 	private User testUser;
 	
 	@BeforeEach
-	void setUp() {
+	void setUp() throws ServletException {
 		MockitoAnnotations.openMocks(this);
 		testUser = new User("test@test.com", "hash", "John", "Doe", "0123456789", "Client", 100.0);
 		
 		when(request.getSession()).thenReturn(session);
-		when(walletServlet.getServletContext()).thenReturn(servletContext);
+		when(servletConfig.getServletContext()).thenReturn(servletContext);
 		when(servletContext.getRequestDispatcher(anyString())).thenReturn(dispatcher);
+		walletServlet.init(servletConfig);
 	}
 	
 	@Test

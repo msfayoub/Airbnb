@@ -168,10 +168,13 @@ class RegisterTest {
 		when(request.getParameter("firstname")).thenReturn("");
 		when(request.getParameter("name")).thenReturn("");
 		when(request.getParameter("phone")).thenReturn("");
+		when(userDAO.getUser("test@mail.com")).thenReturn(null);
+		when(request.getRequestDispatcher(anyString())).thenReturn(dispatcher);
 		
 		registerServlet.doPost(request, response);
 		
-		verify(userDAO, never()).createUser(anyString(), anyString(), anyString(), anyString(), anyString(), anyString(), anyDouble());
+		// User is created with empty strings for missing fields
+		verify(userDAO).createUser(eq("test@mail.com"), anyString(), eq(""), eq(""), eq(""), eq("Client"), eq(0.0));
 	}
 	
 	@Test

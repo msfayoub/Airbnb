@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -35,16 +36,20 @@ class ImgServTest {
 	private ServletContext servletContext;
 	
 	@Mock
+	private ServletConfig servletConfig;
+	
+	@Mock
 	private ServletOutputStream outputStream;
 	
 	@InjectMocks
 	private ImgServ imgServServlet;
 	
 	@BeforeEach
-	void setUp() {
+	void setUp() throws ServletException {
 		MockitoAnnotations.openMocks(this);
 		
-		when(imgServServlet.getServletContext()).thenReturn(servletContext);
+		when(servletConfig.getServletContext()).thenReturn(servletContext);
+		imgServServlet.init(servletConfig);
 	}
 	
 	@Test

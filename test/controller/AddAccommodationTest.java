@@ -152,61 +152,72 @@ class AddAccommodationTest {
 		when(request.getSession()).thenReturn(session);
 		when(session.getAttribute("user")).thenReturn(testUser);
 		when(request.getParameter("form")).thenReturn("info");
-		when(request.getParameter("title")).thenReturn("Nice Apartment");
+		when(request.getParameter("name")).thenReturn("Nice Apartment");
 		when(request.getParameter("description")).thenReturn("Great place");
 		when(request.getParameter("capacity")).thenReturn("4");
 		when(request.getParameter("type")).thenReturn("apartment");
-		when(request.getParameter("addressNumber")).thenReturn("123");
-		when(request.getParameter("addressStreet")).thenReturn("Main St");
+		when(request.getParameter("numberOfRooms")).thenReturn("2");
+		when(request.getParameter("address")).thenReturn("123 Main St");
 		when(request.getParameter("city")).thenReturn("Paris");
-		when(request.getParameter("postalCode")).thenReturn("75001");
+		when(request.getParameter("zipCode")).thenReturn("75001");
 		when(request.getParameter("country")).thenReturn("France");
-		when(request.getParameter("houseRulesSmoking")).thenReturn("true");
-		when(request.getParameter("houseRulesParty")).thenReturn("false");
-		when(request.getParameter("houseRulesPets")).thenReturn("true");
-		when(addressDAO.createAddress("123", "Main St", "Paris", "75001", "France")).thenReturn(new Address());
-		when(houseRulesDAO.createHouseRules(any(), any(), anyBoolean(), anyBoolean(), anyBoolean())).thenReturn(new HouseRules());
+		when(request.getParameter("arrivalHour")).thenReturn("14:00");
+		when(request.getParameter("departureHour")).thenReturn("11:00");
+		when(request.getParameter("smokeAllowed")).thenReturn("true");
+		when(request.getParameter("partyAllowed")).thenReturn("false");
+		when(request.getParameter("petAllowed")).thenReturn("true");
 		when(request.getRequestDispatcher("/WEB-INF/accommodation/addAccommodation.jsp")).thenReturn(dispatcher);
 		
 		addAccommodationServlet.doPost(request, response);
 		
-		verify(accommodationDAO).createAccommodation(eq(testUser), eq("Nice Apartment"), any(Address.class), any(HouseRules.class), eq("apartment"), eq(4), anyInt(), eq("Great place"));
-		verify(request).setAttribute("alertType", "alert-success");
+		// Info form creates temp accommodation and shows picture form
+		verify(request).setAttribute("pictureForm", true);
+		verify(dispatcher).forward(request, response);
 	}
 	
 	@Test
 	void testDoPost_PictureForm_HandlesPictures() throws ServletException, IOException {
-		Collection<Part> parts = Arrays.asList(filePart);
-		
+		// First create temp accommodation with info form
 		when(request.getSession()).thenReturn(session);
 		when(session.getAttribute("user")).thenReturn(testUser);
+		when(request.getParameter("form")).thenReturn("info");
+		when(request.getParameter("name")).thenReturn("Test");
+		when(request.getParameter("description")).thenReturn("Desc");
+		when(request.getParameter("capacity")).thenReturn("2");
+		when(request.getParameter("numberOfRooms")).thenReturn("1");
+		when(request.getParameter("type")).thenReturn("house");
+		when(request.getParameter("address")).thenReturn("1 St");
+		when(request.getParameter("city")).thenReturn("Paris");
+		when(request.getParameter("zipCode")).thenReturn("75001");
+		when(request.getParameter("country")).thenReturn("France");
+		when(request.getParameter("arrivalHour")).thenReturn("14:00");
+		when(request.getParameter("departureHour")).thenReturn("11:00");
+		when(request.getParameter("smokeAllowed")).thenReturn("false");
+		when(request.getParameter("partyAllowed")).thenReturn("false");
+		when(request.getParameter("petAllowed")).thenReturn("false");
+		when(request.getRequestDispatcher("/WEB-INF/accommodation/addAccommodation.jsp")).thenReturn(dispatcher);
+		
+		// Create temp accommodation
+		addAccommodationServlet.doPost(request, response);
+		
+		// Now test picture upload
+		Collection<Part> parts = Arrays.asList(filePart);
 		when(request.getParameter("form")).thenReturn("picture");
 		when(request.getContentType()).thenReturn("multipart/form-data");
 		when(request.getParts()).thenReturn(parts);
 		when(filePart.getName()).thenReturn("pictures");
 		when(filePart.getSize()).thenReturn(1000L);
-		when(request.getRequestDispatcher("/WEB-INF/accommodation/addAccommodation.jsp")).thenReturn(dispatcher);
+		when(request.getContextPath()).thenReturn("/app");
 		
-		// Need to set up tempAccommodation first
-		when(request.getParameter("title")).thenReturn("Test");
-		when(request.getParameter("description")).thenReturn("Desc");
-		when(request.getParameter("capacity")).thenReturn("2");
-		when(request.getParameter("type")).thenReturn("house");
-		when(request.getParameter("addressNumber")).thenReturn("1");
-		when(request.getParameter("addressStreet")).thenReturn("St");
-		when(request.getParameter("city")).thenReturn("Paris");
-		when(request.getParameter("postalCode")).thenReturn("75001");
-		when(request.getParameter("country")).thenReturn("France");
-		when(request.getParameter("houseRulesSmoking")).thenReturn("false");
-		when(request.getParameter("houseRulesParty")).thenReturn("false");
-		when(request.getParameter("houseRulesPets")).thenReturn("false");
-		when(addressDAO.createAddress(anyString(), anyString(), anyString(), anyString(), anyString())).thenReturn(new Address());
-		when(houseRulesDAO.createHouseRules(any(), any(), anyBoolean(), anyBoolean(), anyBoolean())).thenReturn(new HouseRules());
+		// Mock file part to have a valid filename
+		when(filePart.getSubmittedFileName()).thenReturn("test.jpg");
 		
 		// Upload pictures
 		addAccommodationServlet.doPost(request, response);
 		
-		verify(request).getParts();
+		// Verify accommodation was created and redirect happened
+		verify(accommodationDAO).createAccommodation(any(Accommodation.class));
+		verify(response).sendRedirect("/app/addRooms");
 	}
 	
 	@Test

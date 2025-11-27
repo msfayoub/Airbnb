@@ -1,0 +1,1844 @@
+﻿java : Java HotSpot(TM) 64-Bit 
+Server VM warning: Sharing is 
+only supported for boot loader 
+classes because bootstrap 
+classpath has been appended
+At line:1 char:1
++ java -cp "lib/*;build/classes;
+build/test-classes" 
+org.junit.platform. ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo          : N 
+   otSpecified: (Java HotSpot(  
+  TM...s been appended:String   
+ ) [], RemoteException
+    + FullyQualifiedErrorId : N 
+   ativeCommandError
+ 
+Offer ID: 1
+Offer ID: 1
+Offer ID: 1
+Offer ID: 1
+You must add Accommodation first
+Offer ID: 1
+Offer ID: 1
+Offer ID: 1
+Offer ID: 1
+Offer ID: 1
+java.lang.NumberFormatException:
+ For input string: 
+"not-a-number"
+	at java.base/java.lang.NumberFo
+rmatException.forInputString(Num
+berFormatException.java:67)
+	at java.base/java.lang.Integer.
+parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.
+parseInt(Integer.java:786)
+	at controller.AddRooms.doPost(A
+ddRooms.java:85)
+	at controller.AddRoomsEdgeCaseT
+est.testDoPost_InvalidBedNumbers
+_HandlesException(AddRoomsEdgeCa
+seTest.java:121)
+	at java.base/jdk.internal.refle
+ct.NativeMethodAccessorImpl.invo
+ke0(Native Method)
+	at java.base/jdk.internal.refle
+ct.NativeMethodAccessorImpl.invo
+ke(NativeMethodAccessorImpl.java
+:77)
+	at java.base/jdk.internal.refle
+ct.DelegatingMethodAccessorImpl.
+invoke(DelegatingMethodAccessorI
+mpl.java:43)
+	at java.base/java.lang.reflect.
+Method.invoke(Method.java:568)
+	at org.junit.platform.commons.u
+til.ReflectionUtils.invokeMethod
+(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.exe
+cution.MethodInvocation.proceed(
+MethodInvocation.java:60)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n$ValidatingInvocation.proceed(I
+nvocationInterceptorChain.java:1
+31)
+	at org.junit.jupiter.engine.ext
+ension.TimeoutExtension.intercep
+t(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.ext
+ension.TimeoutExtension.intercep
+tTestableMethod(TimeoutExtension
+.java:147)
+	at org.junit.jupiter.engine.ext
+ension.TimeoutExtension.intercep
+tTestMethod(TimeoutExtension.jav
+a:86)
+	at org.junit.jupiter.engine.exe
+cution.InterceptingExecutableInv
+oker$ReflectiveInterceptorCall.l
+ambda$ofVoidMethod$0(Interceptin
+gExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.exe
+cution.InterceptingExecutableInv
+oker.lambda$invoke$0(Interceptin
+gExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n$InterceptedInvocation.proceed(
+InvocationInterceptorChain.java:
+106)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n.proceed(InvocationInterceptorC
+hain.java:64)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n.chainAndInvoke(InvocationInter
+ceptorChain.java:45)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n.invoke(InvocationInterceptorCh
+ain.java:37)
+	at org.junit.jupiter.engine.exe
+cution.InterceptingExecutableInv
+oker.invoke(InterceptingExecutab
+leInvoker.java:92)
+	at org.junit.jupiter.engine.exe
+cution.InterceptingExecutableInv
+oker.invoke(InterceptingExecutab
+leInvoker.java:86)
+	at org.junit.jupiter.engine.des
+criptor.TestMethodTestDescriptor
+.lambda$invokeTestMethod$7(TestM
+ethodTestDescriptor.java:218)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.jupiter.engine.des
+criptor.TestMethodTestDescriptor
+.invokeTestMethod(TestMethodTest
+Descriptor.java:214)
+	at org.junit.jupiter.engine.des
+criptor.TestMethodTestDescriptor
+.execute(TestMethodTestDescripto
+r.java:139)
+	at org.junit.jupiter.engine.des
+criptor.TestMethodTestDescriptor
+.execute(TestMethodTestDescripto
+r.java:69)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$6(Node
+TestTask.java:151)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$8(Node
+TestTask.java:141)
+	at org.junit.platform.engine.su
+pport.hierarchical.Node.around(N
+ode.java:137)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$9(Node
+TestTask.java:139)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+executeRecursively(NodeTestTask.
+java:138)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayLis
+t.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.su
+pport.hierarchical.SameThreadHie
+rarchicalTestExecutorService.inv
+okeAll(SameThreadHierarchicalTes
+tExecutorService.java:41)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$6(Node
+TestTask.java:155)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$8(Node
+TestTask.java:141)
+	at org.junit.platform.engine.su
+pport.hierarchical.Node.around(N
+ode.java:137)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$9(Node
+TestTask.java:139)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+executeRecursively(NodeTestTask.
+java:138)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayLis
+t.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.su
+pport.hierarchical.SameThreadHie
+rarchicalTestExecutorService.inv
+okeAll(SameThreadHierarchicalTes
+tExecutorService.java:41)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$6(Node
+TestTask.java:155)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$8(Node
+TestTask.java:141)
+	at org.junit.platform.engine.su
+pport.hierarchical.Node.around(N
+ode.java:137)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$9(Node
+TestTask.java:139)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+executeRecursively(NodeTestTask.
+java:138)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.su
+pport.hierarchical.SameThreadHie
+rarchicalTestExecutorService.sub
+mit(SameThreadHierarchicalTestEx
+ecutorService.java:35)
+	at org.junit.platform.engine.su
+pport.hierarchical.HierarchicalT
+estExecutor.execute(Hierarchical
+TestExecutor.java:57)
+	at org.junit.platform.engine.su
+pport.hierarchical.HierarchicalT
+estEngine.execute(HierarchicalTe
+stEngine.java:54)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.execute(EngineExecutionOrchestr
+ator.java:198)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.execute(EngineExecutionOrchestr
+ator.java:169)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.execute(EngineExecutionOrchestr
+ator.java:93)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.lambda$execute$0(EngineExecutio
+nOrchestrator.java:58)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.withInterceptedStreams(EngineEx
+ecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.execute(EngineExecutionOrchestr
+ator.java:57)
+	at org.junit.platform.launcher.
+core.DefaultLauncher.execute(Def
+aultLauncher.java:103)
+	at org.junit.platform.launcher.
+core.DefaultLauncher.execute(Def
+aultLauncher.java:85)
+	at org.junit.platform.launcher.
+core.DelegatingLauncher.execute(
+DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.
+core.SessionPerRequestLauncher.e
+xecute(SessionPerRequestLauncher
+.java:63)
+	at org.junit.platform.console.t
+asks.ConsoleTestExecutor.execute
+Tests(ConsoleTestExecutor.java:1
+02)
+	at org.junit.platform.console.t
+asks.ConsoleTestExecutor.lambda$
+execute$1(ConsoleTestExecutor.ja
+va:71)
+	at org.junit.platform.console.t
+asks.CustomContextClassLoaderExe
+cutor.invoke(CustomContextClassL
+oaderExecutor.java:35)
+	at org.junit.platform.console.t
+asks.ConsoleTestExecutor.execute
+(ConsoleTestExecutor.java:71)
+	at org.junit.platform.console.o
+ptions.ExecuteTestsCommand.execu
+te(ExecuteTestsCommand.java:61)
+	at org.junit.platform.console.o
+ptions.ExecuteTestsCommand.execu
+te(ExecuteTestsCommand.java:27)
+	at org.junit.platform.console.o
+ptions.BaseCommand.call(BaseComm
+and.java:74)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.execut
+eUserObject(CommandLine.java:204
+1)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.access
+$1500(CommandLine.java:148)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.executeUserObjectOfLastSubcomm
+andWithSameParent(CommandLine.ja
+va:2461)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.handle(CommandLine.java:2453)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.handle(CommandLine.java:2415)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$Abstra
+ctParseResultHandler.execute(Com
+mandLine.java:2273)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.execute(CommandLine.java:2417)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.execut
+e(CommandLine.java:2170)
+	at org.junit.platform.console.o
+ptions.MainCommand.runCommand(Ma
+inCommand.java:137)
+	at org.junit.platform.console.o
+ptions.MainCommand.runCommand(Ma
+inCommand.java:129)
+	at org.junit.platform.console.o
+ptions.MainCommand.runCommand(Ma
+inCommand.java:93)
+	at org.junit.platform.console.o
+ptions.MainCommand.call(MainComm
+and.java:77)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.execut
+eUserObject(CommandLine.java:204
+1)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.access
+$1500(CommandLine.java:148)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.executeUserObjectOfLastSubcomm
+andWithSameParent(CommandLine.ja
+va:2461)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.handle(CommandLine.java:2453)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.handle(CommandLine.java:2415)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$Abstra
+ctParseResultHandler.execute(Com
+mandLine.java:2273)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.execute(CommandLine.java:2417)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.execut
+e(CommandLine.java:2170)
+	at org.junit.platform.console.o
+ptions.MainCommand.runCommand(Ma
+inCommand.java:137)
+	at org.junit.platform.console.o
+ptions.MainCommand.run(MainComma
+nd.java:125)
+	at org.junit.platform.console.o
+ptions.CommandFacade.run(Command
+Facade.java:36)
+	at org.junit.platform.console.C
+onsoleLauncher.run(ConsoleLaunch
+er.java:57)
+	at org.junit.platform.console.C
+onsoleLauncher.run(ConsoleLaunch
+er.java:42)
+	at org.junit.platform.console.C
+onsoleLauncher.main(ConsoleLaunc
+her.java:35)
+java.text.ParseException: 
+Unparseable date: "invalid-date"
+	at java.base/java.text.DateForm
+at.parse(DateFormat.java:399)
+	at controller.AddOffer.doPost(A
+ddOffer.java:112)
+	at controller.AddOfferEdgeCaseT
+est.testDoPost_InvalidDateFormat
+(AddOfferEdgeCaseTest.java:137)
+	at java.base/jdk.internal.refle
+ct.NativeMethodAccessorImpl.invo
+ke0(Native Method)
+	at java.base/jdk.internal.refle
+ct.NativeMethodAccessorImpl.invo
+ke(NativeMethodAccessorImpl.java
+:77)
+	at java.base/jdk.internal.refle
+ct.DelegatingMethodAccessorImpl.
+invoke(DelegatingMethodAccessorI
+mpl.java:43)
+	at java.base/java.lang.reflect.
+Method.invoke(Method.java:568)
+	at org.junit.platform.commons.u
+til.ReflectionUtils.invokeMethod
+(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.exe
+cution.MethodInvocation.proceed(
+MethodInvocation.java:60)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n$ValidatingInvocation.proceed(I
+nvocationInterceptorChain.java:1
+31)
+	at org.junit.jupiter.engine.ext
+ension.TimeoutExtension.intercep
+t(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.ext
+ension.TimeoutExtension.intercep
+tTestableMethod(TimeoutExtension
+.java:147)
+	at org.junit.jupiter.engine.ext
+ension.TimeoutExtension.intercep
+tTestMethod(TimeoutExtension.jav
+a:86)
+	at org.junit.jupiter.engine.exe
+cution.InterceptingExecutableInv
+oker$ReflectiveInterceptorCall.l
+ambda$ofVoidMethod$0(Interceptin
+gExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.exe
+cution.InterceptingExecutableInv
+oker.lambda$invoke$0(Interceptin
+gExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n$InterceptedInvocation.proceed(
+InvocationInterceptorChain.java:
+106)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n.proceed(InvocationInterceptorC
+hain.java:64)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n.chainAndInvoke(InvocationInter
+ceptorChain.java:45)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n.invoke(InvocationInterceptorCh
+ain.java:37)
+	at org.junit.jupiter.engine.exe
+cution.InterceptingExecutableInv
+oker.invoke(InterceptingExecutab
+leInvoker.java:92)
+	at org.junit.jupiter.engine.exe
+cution.InterceptingExecutableInv
+oker.invoke(InterceptingExecutab
+leInvoker.java:86)
+	at org.junit.jupiter.engine.des
+criptor.TestMethodTestDescriptor
+.lambda$invokeTestMethod$7(TestM
+ethodTestDescriptor.java:218)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.jupiter.engine.des
+criptor.TestMethodTestDescriptor
+.invokeTestMethod(TestMethodTest
+Descriptor.java:214)
+	at org.junit.jupiter.engine.des
+criptor.TestMethodTestDescriptor
+.execute(TestMethodTestDescripto
+r.java:139)
+	at org.junit.jupiter.engine.des
+criptor.TestMethodTestDescriptor
+.execute(TestMethodTestDescripto
+r.java:69)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$6(Node
+TestTask.java:151)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$8(Node
+TestTask.java:141)
+	at org.junit.platform.engine.su
+pport.hierarchical.Node.around(N
+ode.java:137)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$9(Node
+TestTask.java:139)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+executeRecursively(NodeTestTask.
+java:138)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayLis
+t.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.su
+pport.hierarchical.SameThreadHie
+rarchicalTestExecutorService.inv
+okeAll(SameThreadHierarchicalTes
+tExecutorService.java:41)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$6(Node
+TestTask.java:155)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$8(Node
+TestTask.java:141)
+	at org.junit.platform.engine.su
+pport.hierarchical.Node.around(N
+ode.java:137)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$9(Node
+TestTask.java:139)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+executeRecursively(NodeTestTask.
+java:138)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayLis
+t.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.su
+pport.hierarchical.SameThreadHie
+rarchicalTestExecutorService.inv
+okeAll(SameThreadHierarchicalTes
+tExecutorService.java:41)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$6(Node
+TestTask.java:155)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$8(Node
+TestTask.java:141)
+	at org.junit.platform.engine.su
+pport.hierarchical.Node.around(N
+ode.java:137)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$9(Node
+TestTask.java:139)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+executeRecursively(NodeTestTask.
+java:138)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.su
+pport.hierarchical.SameThreadHie
+rarchicalTestExecutorService.sub
+mit(SameThreadHierarchicalTestEx
+ecutorService.java:35)
+	at org.junit.platform.engine.su
+pport.hierarchical.HierarchicalT
+estExecutor.execute(Hierarchical
+TestExecutor.java:57)
+	at org.junit.platform.engine.su
+pport.hierarchical.HierarchicalT
+estEngine.execute(HierarchicalTe
+stEngine.java:54)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.execute(EngineExecutionOrchestr
+ator.java:198)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.execute(EngineExecutionOrchestr
+ator.java:169)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.execute(EngineExecutionOrchestr
+ator.java:93)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.lambda$execute$0(EngineExecutio
+nOrchestrator.java:58)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.withInterceptedStreams(EngineEx
+ecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.execute(EngineExecutionOrchestr
+ator.java:57)
+	at org.junit.platform.launcher.
+core.DefaultLauncher.execute(Def
+aultLauncher.java:103)
+	at org.junit.platform.launcher.
+core.DefaultLauncher.execute(Def
+aultLauncher.java:85)
+	at org.junit.platform.launcher.
+core.DelegatingLauncher.execute(
+DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.
+core.SessionPerRequestLauncher.e
+xecute(SessionPerRequestLauncher
+.java:63)
+	at org.junit.platform.console.t
+asks.ConsoleTestExecutor.execute
+Tests(ConsoleTestExecutor.java:1
+02)
+	at org.junit.platform.console.t
+asks.ConsoleTestExecutor.lambda$
+execute$1(ConsoleTestExecutor.ja
+va:71)
+	at org.junit.platform.console.t
+asks.CustomContextClassLoaderExe
+cutor.invoke(CustomContextClassL
+oaderExecutor.java:35)
+	at org.junit.platform.console.t
+asks.ConsoleTestExecutor.execute
+(ConsoleTestExecutor.java:71)
+	at org.junit.platform.console.o
+ptions.ExecuteTestsCommand.execu
+te(ExecuteTestsCommand.java:61)
+	at org.junit.platform.console.o
+ptions.ExecuteTestsCommand.execu
+te(ExecuteTestsCommand.java:27)
+	at org.junit.platform.console.o
+ptions.BaseCommand.call(BaseComm
+and.java:74)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.execut
+eUserObject(CommandLine.java:204
+1)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.access
+$1500(CommandLine.java:148)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.executeUserObjectOfLastSubcomm
+andWithSameParent(CommandLine.ja
+va:2461)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.handle(CommandLine.java:2453)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.handle(CommandLine.java:2415)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$Abstra
+ctParseResultHandler.execute(Com
+mandLine.java:2273)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.execute(CommandLine.java:2417)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.execut
+e(CommandLine.java:2170)
+	at org.junit.platform.console.o
+ptions.MainCommand.runCommand(Ma
+inCommand.java:137)
+	at org.junit.platform.console.o
+ptions.MainCommand.runCommand(Ma
+inCommand.java:129)
+	at org.junit.platform.console.o
+ptions.MainCommand.runCommand(Ma
+inCommand.java:93)
+	at org.junit.platform.console.o
+ptions.MainCommand.call(MainComm
+and.java:77)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.execut
+eUserObject(CommandLine.java:204
+1)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.access
+$1500(CommandLine.java:148)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.executeUserObjectOfLastSubcomm
+andWithSameParent(CommandLine.ja
+va:2461)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.handle(CommandLine.java:2453)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.handle(CommandLine.java:2415)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$Abstra
+ctParseResultHandler.execute(Com
+mandLine.java:2273)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.execute(CommandLine.java:2417)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.execut
+e(CommandLine.java:2170)
+	at org.junit.platform.console.o
+ptions.MainCommand.runCommand(Ma
+inCommand.java:137)
+	at org.junit.platform.console.o
+ptions.MainCommand.run(MainComma
+nd.java:125)
+	at org.junit.platform.console.o
+ptions.CommandFacade.run(Command
+Facade.java:36)
+	at org.junit.platform.console.C
+onsoleLauncher.run(ConsoleLaunch
+er.java:57)
+	at org.junit.platform.console.C
+onsoleLauncher.run(ConsoleLaunch
+er.java:42)
+	at org.junit.platform.console.C
+onsoleLauncher.main(ConsoleLaunc
+her.java:35)
+java.lang.NullPointerException: 
+Missing time parameters
+	at controller.AddAccommodation.
+doPost(AddAccommodation.java:206
+)
+	at controller.AddAccommodationT
+est.testDoPost_InfoForm_CreatesA
+ccommodation(AddAccommodationTes
+t.java:171)
+	at java.base/jdk.internal.refle
+ct.NativeMethodAccessorImpl.invo
+ke0(Native Method)
+	at java.base/jdk.internal.refle
+ct.NativeMethodAccessorImpl.invo
+ke(NativeMethodAccessorImpl.java
+:77)
+	at java.base/jdk.internal.refle
+ct.DelegatingMethodAccessorImpl.
+invoke(DelegatingMethodAccessorI
+mpl.java:43)
+	at java.base/java.lang.reflect.
+Method.invoke(Method.java:568)
+	at org.junit.platform.commons.u
+til.ReflectionUtils.invokeMethod
+(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.exe
+cution.MethodInvocation.proceed(
+MethodInvocation.java:60)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n$ValidatingInvocation.proceed(I
+nvocationInterceptorChain.java:1
+31)
+	at org.junit.jupiter.engine.ext
+ension.TimeoutExtension.intercep
+t(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.ext
+ension.TimeoutExtension.intercep
+tTestableMethod(TimeoutExtension
+.java:147)
+	at org.junit.jupiter.engine.ext
+ension.TimeoutExtension.intercep
+tTestMethod(TimeoutExtension.jav
+a:86)
+	at org.junit.jupiter.engine.exe
+cution.InterceptingExecutableInv
+oker$ReflectiveInterceptorCall.l
+ambda$ofVoidMethod$0(Interceptin
+gExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.exe
+cution.InterceptingExecutableInv
+oker.lambda$invoke$0(Interceptin
+gExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n$InterceptedInvocation.proceed(
+InvocationInterceptorChain.java:
+106)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n.proceed(InvocationInterceptorC
+hain.java:64)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n.chainAndInvoke(InvocationInter
+ceptorChain.java:45)
+	at org.junit.jupiter.engine.exe
+cution.InvocationInterceptorChai
+n.invoke(InvocationInterceptorCh
+ain.java:37)
+	at org.junit.jupiter.engine.exe
+cution.InterceptingExecutableInv
+oker.invoke(InterceptingExecutab
+leInvoker.java:92)
+	at org.junit.jupiter.engine.exe
+cution.InterceptingExecutableInv
+oker.invoke(InterceptingExecutab
+leInvoker.java:86)
+	at org.junit.jupiter.engine.des
+criptor.TestMethodTestDescriptor
+.lambda$invokeTestMethod$7(TestM
+ethodTestDescriptor.java:218)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.jupiter.engine.des
+criptor.TestMethodTestDescriptor
+.invokeTestMethod(TestMethodTest
+Descriptor.java:214)
+	at org.junit.jupiter.engine.des
+criptor.TestMethodTestDescriptor
+.execute(TestMethodTestDescripto
+r.java:139)
+	at org.junit.jupiter.engine.des
+criptor.TestMethodTestDescriptor
+.execute(TestMethodTestDescripto
+r.java:69)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$6(Node
+TestTask.java:151)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$8(Node
+TestTask.java:141)
+	at org.junit.platform.engine.su
+pport.hierarchical.Node.around(N
+ode.java:137)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$9(Node
+TestTask.java:139)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+executeRecursively(NodeTestTask.
+java:138)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayLis
+t.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.su
+pport.hierarchical.SameThreadHie
+rarchicalTestExecutorService.inv
+okeAll(SameThreadHierarchicalTes
+tExecutorService.java:41)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$6(Node
+TestTask.java:155)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$8(Node
+TestTask.java:141)
+	at org.junit.platform.engine.su
+pport.hierarchical.Node.around(N
+ode.java:137)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$9(Node
+TestTask.java:139)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+executeRecursively(NodeTestTask.
+java:138)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayLis
+t.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.su
+pport.hierarchical.SameThreadHie
+rarchicalTestExecutorService.inv
+okeAll(SameThreadHierarchicalTes
+tExecutorService.java:41)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$6(Node
+TestTask.java:155)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$8(Node
+TestTask.java:141)
+	at org.junit.platform.engine.su
+pport.hierarchical.Node.around(N
+ode.java:137)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+lambda$executeRecursively$9(Node
+TestTask.java:139)
+	at org.junit.platform.engine.su
+pport.hierarchical.ThrowableColl
+ector.execute(ThrowableCollector
+.java:73)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+executeRecursively(NodeTestTask.
+java:138)
+	at org.junit.platform.engine.su
+pport.hierarchical.NodeTestTask.
+execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.su
+pport.hierarchical.SameThreadHie
+rarchicalTestExecutorService.sub
+mit(SameThreadHierarchicalTestEx
+ecutorService.java:35)
+	at org.junit.platform.engine.su
+pport.hierarchical.HierarchicalT
+estExecutor.execute(Hierarchical
+TestExecutor.java:57)
+	at org.junit.platform.engine.su
+pport.hierarchical.HierarchicalT
+estEngine.execute(HierarchicalTe
+stEngine.java:54)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.execute(EngineExecutionOrchestr
+ator.java:198)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.execute(EngineExecutionOrchestr
+ator.java:169)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.execute(EngineExecutionOrchestr
+ator.java:93)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.lambda$execute$0(EngineExecutio
+nOrchestrator.java:58)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.withInterceptedStreams(EngineEx
+ecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.
+core.EngineExecutionOrchestrator
+.execute(EngineExecutionOrchestr
+ator.java:57)
+	at org.junit.platform.launcher.
+core.DefaultLauncher.execute(Def
+aultLauncher.java:103)
+	at org.junit.platform.launcher.
+core.DefaultLauncher.execute(Def
+aultLauncher.java:85)
+	at org.junit.platform.launcher.
+core.DelegatingLauncher.execute(
+DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.
+core.SessionPerRequestLauncher.e
+xecute(SessionPerRequestLauncher
+.java:63)
+	at org.junit.platform.console.t
+asks.ConsoleTestExecutor.execute
+Tests(ConsoleTestExecutor.java:1
+02)
+	at org.junit.platform.console.t
+asks.ConsoleTestExecutor.lambda$
+execute$1(ConsoleTestExecutor.ja
+va:71)
+	at org.junit.platform.console.t
+asks.CustomContextClassLoaderExe
+cutor.invoke(CustomContextClassL
+oaderExecutor.java:35)
+	at org.junit.platform.console.t
+asks.ConsoleTestExecutor.execute
+(ConsoleTestExecutor.java:71)
+	at org.junit.platform.console.o
+ptions.ExecuteTestsCommand.execu
+te(ExecuteTestsCommand.java:61)
+	at org.junit.platform.console.o
+ptions.ExecuteTestsCommand.execu
+te(ExecuteTestsCommand.java:27)
+	at org.junit.platform.console.o
+ptions.BaseCommand.call(BaseComm
+and.java:74)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.execut
+eUserObject(CommandLine.java:204
+1)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.access
+$1500(CommandLine.java:148)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.executeUserObjectOfLastSubcomm
+andWithSameParent(CommandLine.ja
+va:2461)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.handle(CommandLine.java:2453)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.handle(CommandLine.java:2415)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$Abstra
+ctParseResultHandler.execute(Com
+mandLine.java:2273)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.execute(CommandLine.java:2417)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.execut
+e(CommandLine.java:2170)
+	at org.junit.platform.console.o
+ptions.MainCommand.runCommand(Ma
+inCommand.java:137)
+	at org.junit.platform.console.o
+ptions.MainCommand.runCommand(Ma
+inCommand.java:129)
+	at org.junit.platform.console.o
+ptions.MainCommand.runCommand(Ma
+inCommand.java:93)
+	at org.junit.platform.console.o
+ptions.MainCommand.call(MainComm
+and.java:77)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.execut
+eUserObject(CommandLine.java:204
+1)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.access
+$1500(CommandLine.java:148)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.executeUserObjectOfLastSubcomm
+andWithSameParent(CommandLine.ja
+va:2461)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.handle(CommandLine.java:2453)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.handle(CommandLine.java:2415)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$Abstra
+ctParseResultHandler.execute(Com
+mandLine.java:2273)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine$RunLas
+t.execute(CommandLine.java:2417)
+	at org.junit.platform.console.s
+hadow.picocli.CommandLine.execut
+e(CommandLine.java:2170)
+	at org.junit.platform.console.o
+ptions.MainCommand.runCommand(Ma
+inCommand.java:137)
+	at org.junit.platform.console.o
+ptions.MainCommand.run(MainComma
+nd.java:125)
+	at org.junit.platform.console.o
+ptions.CommandFacade.run(Command
+Facade.java:36)
+	at org.junit.platform.console.C
+onsoleLauncher.run(ConsoleLaunch
+er.java:57)
+	at org.junit.platform.console.C
+onsoleLauncher.run(ConsoleLaunch
+er.java:42)
+	at org.junit.platform.console.C
+onsoleLauncher.main(ConsoleLaunc
+her.java:35)
+Missing params: Missing time 
+parameters
+You must add Accommodation first
+[36m.[0m
+[36m+--[0m [36mJUnit Jupiter[0m [32m[OK][0m
+[36m| +--[0m [36mOfferEdgeCaseTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_ExactBalance_SucceedsBooking()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_OneDayStay_CalculatesCorrectPrice()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_OfferWithMultipleRooms_LoadsAllAmenities()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDoPost_LongStay_CalculatesCorrectly()[0m [32m[OK][0m
+[36m| +--[0m [36mPictureTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestToString()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestNoArgsConstructor()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSetUrlWithDifferentExtensions()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSetUrlWithPath()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSetUrl()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestPictureCreation()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestEmptyUrl()[0m [32m[OK][0m
+[36m| +--[0m [36mAmenityTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDifferentAmenities()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestNoArgsConstructor()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestAmenityCreation()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestMultipleAmenitiesForSameRoom()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestAmenityWithEmptyName()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestSetName()[0m [32m[OK][0m
+[36m| +--[0m [36mDisplaySearchTest[0m [32m[OK][0m
+[36m| | +--[0m [31mtestDoGet_EmptyCity_RedirectsToHome()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoGet_InvalidCapacity_HandlesException()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoGet_MissingParameters_RedirectsToHome()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoGet_ValidSearch_DisplaysOffers()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | '--[0m [31mtestConstructor()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| +--[0m [36mTransactionDAOImpTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestGetTransaction()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestCreateTransaction()[0m [32m[OK][0m
+[36m| +--[0m [36mLogoutTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestLogoutClearsUserSession()[0m [32m[OK][0m
+[36m| +--[0m [36mTransactionTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestTransactionWithDifferentAmounts()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestTransactionCreation()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestNoArgsConstructor()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestTransactionWithZeroAmount()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestTransactionBetweenSameUser()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestSetters()[0m [32m[OK][0m
+[36m| +--[0m [36mAccommodationCRUDTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_ClientUser_ShowsOwnAccommodations()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_EditAction_RedirectsToAddAccommodation()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_NoUserInSession_RedirectsToLogin()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_AdminUser_ShowsAllAccommodations()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_DeleteAction_DeletesAccommodation()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_NoUserInSession_RedirectsToLogin()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mOfferTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestOfferCreation()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSetters()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestUpdate()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDefaultConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mLoginTest[0m [32m[OK][0m
+[36m| | '--[0m [34mtestSuccessfulLogin()[0m [32m[OK][0m
+[36m| +--[0m [36mOfferDAOImpTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDeleteOffer()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestGetOffer()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestGetLastOffer()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestUpdateOffer()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestCreateOffer()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestGetAllOffer()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestGetUserOffer()[0m [32m[OK][0m
+[36m| +--[0m [36mAddressTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestToString()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestUpdateWithEmptyComplement()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestAddressCreation()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSetters()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestUpdate()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDefaultConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mHouseRulesTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestToString()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestNoArgsConstructor()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestAllRulesNotAllowed()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestAllRulesAllowed()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestHouseRulesCreation()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestTimeChanges()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSetters()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestUpdate()[0m [32m[OK][0m
+[36m| +--[0m [36mProfileEdgeCaseTest[0m [32m[OK][0m
+[36m| | +--[0m [31mtestDoGet_ExternalUserNotFound_HandlesGracefully()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoPost_UnknownType_DoesNothing()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoPost_NoChanges_DoesNotUpdate()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | '--[0m [31mtestDoPost_UpdateAllInfoFields()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| +--[0m [36mAddRoomsTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_NoUserInSession_RedirectsToLogin()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_AddBedroom_WithBeds()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_AddBathroom()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_WithAccommodations_ShowsForm()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_NoAccommodations_ShowsWarning()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_NoAmenities_ShowsWarning()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_AddKitchen()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mPictureDAOImpTest[0m [32m[OK][0m
+[36m| | '--[0m [34mtestCreatePicture()[0m [32m[OK][0m
+[36m| +--[0m [36mOfferCRUDTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_ClientUser_ShowsOwnOffers()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_DeleteAction_DeletesOffer()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_NoUserInSession_RedirectsToLogin()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_EditAction_RedirectsToAddOffer()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_AdminUser_ShowsAllOffers()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_NoUserInSession_RedirectsToLogin()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mAdminSearchTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_UserFound_DisplaysResults()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_NonAdminUser_RedirectsToHome()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_AdminUser_ShowsSearchPage()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_NoUserInSession_RedirectsToLogin()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_UserNotFound_ShowsWarning()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_NoUserInSession_RedirectsToLogin()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_NonAdminUser_RedirectsToHome()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mAmenityDAOImpTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestCreateAmenity()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestGetAmenity()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDeleteAmenity()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestGetRoomAmenity()[0m [32m[OK][0m
+[36m| +--[0m [36mUserCRUDTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_NoUserInSession_RedirectsToLogin()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_EditAction_RedirectsToRegister()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_DeleteAction_DeletesUser()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_NoUserInSession_RedirectsToLogin()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_AdminUser_ShowsUserList()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_NonAdminUser_RedirectsToHome()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mOfferTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_SuccessfulBooking_CreatesBooking()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_DisplaysOffer()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_UserTriesToBookOwnOffer_ShowsWarning()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_InsufficientBalance_ShowsError()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_NoUserInSession_RedirectsToLogin()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mRoomDAOImpTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestGetNumberOfRoomsInAccommodation()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestGetRoom()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestGetAccommodationRoom()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestCreateRoom()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDeleteRoom()[0m [32m[OK][0m
+[36m| +--[0m [36mUserTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestBalanceOperations()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSetters()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestUpdate()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestUserTypeChange()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestUserCreation()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDefaultConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mWalletTest[0m [32m[OK][0m
+[36m| | +--[0m [31mtestDoPost_ValidAmount_CreditsAccount()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoGet_UserInSession_ShowsWallet()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoPost_NegativeAmount_CreditsNegative()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoGet_NoUserInSession_RedirectsToLogin()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoPost_InvalidAmount_HandlesException()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoPost_ZeroAmount_Credits()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | '--[0m [31mtestConstructor()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| +--[0m [36mImgServTest[0m [32m[OK][0m
+[36m| | +--[0m [31mtestDoPost_CallsDoGet()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoGet_ValidFilename_ServesImage()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoGet_ImageExtension_SetsCorrectMimeType()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoGet_NullFilename_DoesNotServe()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | '--[0m [31mtestConstructor()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| +--[0m [36mAddRoomsEdgeCaseTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_BedroomWithOnlyDoubleBeds()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_BedroomWithOnlySingleBeds()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_InvalidBedNumbers_HandlesException()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_BedroomWithBedsAndAmenities()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDoPost_BathroomWithMultipleAmenities()[0m [32m[OK][0m
+[36m| +--[0m [36mRegisterTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_EditUserNotFound_ShowsWarning()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_AdminCanEditAnyUser()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_UserInSession_RedirectsToHome()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_EditUserNotAuthorized_ShowsError()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_UserAlreadyExists_ShowsWarning()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_NewUser_CreatesSuccessfully()[0m [32m[OK][0m
+[36m| | +--[0m [31mtestDoPost_MissingParameters_HandlesException()[0m [31m[X][0m [31m[0m
+[36m| | |   [0m[31m  userDAO.createUser([0m
+[36m| | |   [0m[31m      <any string>,[0m
+[36m| | |   [0m[31m      <any string>,[0m
+[36m| | |   [0m[31m      <any string>,[0m
+[36m| | |   [0m[31m      <any string>,[0m
+[36m| | |   [0m[31m      <any string>,[0m
+[36m| | |   [0m[31m      <any string>,[0m
+[36m| | |   [0m[31m      <any double>[0m
+[36m| | |   [0m[31m  );[0m
+[36m| | |   [0m[31m  Never wanted here:[0m
+[36m| | |   [0m[31m  -> at controller.RegisterTest.testDoPost_MissingParameters_HandlesException(RegisterTest.java:174)[0m
+[36m| | |   [0m[31m  But invoked here:[0m
+[36m| | |   [0m[31m  -> at controller.Register.doPost(Register.java:97) with arguments: [test@mail.com, e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855, , , , Client, 0.0][0m
+[36m| | +--[0m [34mtestDoGet_NoUserInSession_ShowsRegisterPage()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mHomeTest[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDoGet()[0m [32m[OK][0m
+[36m| +--[0m [36mAccommodationDAOImpTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestCreateAccommodation()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestGetAccommodation()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDeleteAccommodation()[0m [32m[OK][0m
+[36m| +--[0m [36mProfileTest[0m [32m[OK][0m
+[36m| | +--[0m [31mtestDoPost_ChangePassword_IncorrectCurrentPassword()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoGet_UserInSession_ShowsProfile()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoPost_UpdateInfo_ChangesPhone()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoGet_NoUserInSession_RedirectsToLogin()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoGet_ExternalUser_ShowsExternalProfile()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoPost_UpdateInfo_ChangesFirstname()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoPost_ChangePassword_Successful()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoPost_UpdateInfo_ChangesName()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoPost_MissingParameters_HandlesException()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | '--[0m [31mtestConstructor()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| +--[0m [36mBookingTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestBookingPriceChange()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestBookingCreation()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestBookingWithDifferentNumberOfPersons()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSetters()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDefaultConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mAddOfferEdgeCaseTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_UpdateExistingOffer()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_InvalidDateFormat()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_NullPriceParameters()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDoGet_UserOwnsOffer_CanEdit()[0m [32m[OK][0m
+[36m| +--[0m [36mRegisterEdgeCaseTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_SpecialCharactersInName_CreatesUser()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_EmptyPassword_CreatesUser()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_EditOwnProfile_ShowsEditForm()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDoPost_VeryLongEmail_CreatesUser()[0m [32m[OK][0m
+[36m| +--[0m [36mBookingDAOImpTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestCreateBooking()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDeleteBooking()[0m [32m[OK][0m
+[36m| +--[0m [36mAddressDAOImpTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestCreateAddress()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestCreateAddressWithParameters()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestUpdateAddress()[0m [32m[OK][0m
+[36m| +--[0m [36mAddAccommodationTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_AdminCanEditAny()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_NoUserInSession_RedirectsToLogin()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_UserInSession_ShowsForm()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_EditAccommodationNotFound_ShowsWarning()[0m [32m[OK][0m
+[36m| | +--[0m [31mtestDoPost_InfoForm_CreatesAccommodation()[0m [31m[X][0m [31m[0m
+[36m| | |   [0m[31m  Wanted but not invoked:[0m
+[36m| | |   [0m[31m  accommodationDAO.createAccommodation([0m
+[36m| | |   [0m[31m      model.User@6ad1701a,[0m
+[36m| | |   [0m[31m      "Nice Apartment",[0m
+[36m| | |   [0m[31m      <any model.Address>,[0m
+[36m| | |   [0m[31m      <any model.HouseRules>,[0m
+[36m| | |   [0m[31m      "apartment",[0m
+[36m| | |   [0m[31m      4,[0m
+[36m| | |   [0m[31m      <any integer>,[0m
+[36m| | |   [0m[31m      "Great place"[0m
+[36m| | |   [0m[31m  );[0m
+[36m| | |   [0m[31m  -> at controller.AddAccommodationTest.testDoPost_InfoForm_CreatesAccommodation(AddAccommodationTest.java:173)[0m
+[36m| | |   [0m[31m  Actually, there were zero interactions with this mock.[0m
+[36m| | +--[0m [34mtestDoGet_EditNotAuthorized_ShowsError()[0m [32m[OK][0m
+[36m| | +--[0m [31mtestDoPost_PictureForm_HandlesPictures()[0m [31m[X][0m [31m[0m
+[36m| | |   [0m[31m  Wanted but not invoked:[0m
+[36m| | |   [0m[31m  request.getParts();[0m
+[36m| | |   [0m[31m  -> at controller.AddAccommodationTest.testDoPost_PictureForm_HandlesPictures(AddAccommodationTest.java:209)[0m
+[36m| | |   [0m
+[36m| | |   [0m[31m  However, there were exactly 5 interactions with this mock:[0m
+[36m| | |   [0m[31m  request.getSession();[0m
+[36m| | |   [0m[31m  -> at controller.AddAccommodation.doPost(AddAccommodation.java:106)[0m
+[36m| | |   [0m
+[36m| | |   [0m[31m  request.getParameter("form");[0m
+[36m| | |   [0m[31m  -> at controller.AddAccommodation.doPost(AddAccommodation.java:113)[0m
+[36m| | |   [0m
+[36m| | |   [0m[31m  request.getContentType();[0m
+[36m| | |   [0m[31m  -> at controller.AddAccommodation.doPost(AddAccommodation.java:184)[0m
+[36m| | |   [0m
+[36m| | |   [0m[31m  request.getContentType();[0m
+[36m| | |   [0m[31m  -> at controller.AddAccommodation.doPost(AddAccommodation.java:184)[0m
+[36m| | |   [0m
+[36m| | |   [0m[31m  request.getRequestDispatcher([0m
+[36m| | |   [0m[31m      "/WEB-INF/accommodation/addAccommodation.jsp"[0m
+[36m| | |   [0m[31m  );[0m
+[36m| | |   [0m[31m  -> at controller.AddAccommodation.doPost(AddAccommodation.java:234)[0m
+[36m| | '--[0m [34mtestConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mBookingCRUDTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_NoUserInSession_RedirectsToLogin()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_ClientUser_ShowsOwnBookings()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_AdminUser_ShowsAllBookings()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_RedirectsToDoGet()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mUserDAOImpTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestChangePhoneNumber()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDebit()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestUpdateUser()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestGetAllUser()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestGetUser()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestChangePassword()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestChangeFirstname()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestCreateUser()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDeleteUser()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestCredit()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestChangeName()[0m [32m[OK][0m
+[36m| +--[0m [36mAddOfferTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_EditOfferNotFound_ShowsWarning()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoPost_CreateNewOffer_Success()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_NoUserInSession_RedirectsToLogin()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_EditOfferNotAuthorized_ShowsError()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_WithAccommodations_ShowsForm()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_NoAccommodations_ShowsWarning()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestDoGet_AdminCanEditAnyOffer()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mWalletEdgeCaseTest[0m [32m[OK][0m
+[36m| | +--[0m [31mtestDoPost_DecimalAmount_CreditsExactly()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoPost_VeryLargeAmount_Credits()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoPost_NullAmount_HandlesException()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | +--[0m [31mtestDoPost_AmountWithSpaces_HandlesException()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| | '--[0m [31mtestDoPost_EmptyAmount_HandlesException()[0m [31m[X][0m [31mServletConfig has not been initialized[0m
+[36m| +--[0m [36mRoomTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestRoomCreation()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSetAccommodation()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestRoomWithDifferentTypes()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSetType()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDefaultConstructor()[0m [32m[OK][0m
+[36m| +--[0m [36mAccommodationTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestAccommodationCreation()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestGetters()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestUpdateWithDifferentValues()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSetters()[0m [32m[OK][0m
+[36m| | +--[0m [34mtestUpdate()[0m [32m[OK][0m
+[36m| | '--[0m [34mtestDefaultConstructor()[0m [32m[OK][0m
+[36m| '--[0m [36mHouseRulesDAOImpTest[0m [32m[OK][0m
+[36m|   +--[0m [34mtestCreateHouseRules()[0m [32m[OK][0m
+[36m|   +--[0m [34mtestUpdateHouseRules()[0m [32m[OK][0m
+[36m|   '--[0m [34mtestCreateHouseRulesWithParameters()[0m [32m[OK][0m
+[36m+--[0m [36mJUnit Vintage[0m [32m[OK][0m
+[36m| +--[0m [36mHashTest[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSha256Hash[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSha256DifferentInputs[0m [32m[OK][0m
+[36m| | +--[0m [34mtestSha256EmptyString[0m [32m[OK][0m
+[36m| | '--[0m [34mtestSha256Consistency[0m [32m[OK][0m
+[36m| '--[0m [36mTextToolsTest[0m [32m[OK][0m
+[36m|   +--[0m [34mtestGetTextFromBool[0m [32m[OK][0m
+[36m|   +--[0m [34mtestGetTextFromDBEntryNotFound[0m [32m[OK][0m
+[36m|   +--[0m [34mtestGetTextFromBoolMultipleCalls[0m [32m[OK][0m
+[36m|   +--[0m [34mtestGetTextFromDBEntry[0m [32m[OK][0m
+[36m|   +--[0m [34mtestGetTextFromDBEntryCaseSensitive[0m [32m[OK][0m
+[36m|   '--[0m [34mtestGetTextFromDBEntryAllKeys[0m [32m[OK][0m
+[36m'--[0m [36mJUnit Platform Suite[0m [32m[OK][0m
+
+Failures (39):
+  JUnit Jupiter:DisplaySearchTest:testDoGet_EmptyCity_RedirectsToHome()
+    MethodSource [className = 'controller.DisplaySearchTest', methodName = 'testDoGet_EmptyCity_RedirectsToHome', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:DisplaySearchTest:testDoGet_InvalidCapacity_HandlesException()
+    MethodSource [className = 'controller.DisplaySearchTest', methodName = 'testDoGet_InvalidCapacity_HandlesException', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:DisplaySearchTest:testDoGet_MissingParameters_RedirectsToHome()
+    MethodSource [className = 'controller.DisplaySearchTest', methodName = 'testDoGet_MissingParameters_RedirectsToHome', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:DisplaySearchTest:testDoGet_ValidSearch_DisplaysOffers()
+    MethodSource [className = 'controller.DisplaySearchTest', methodName = 'testDoGet_ValidSearch_DisplaysOffers', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:DisplaySearchTest:testConstructor()
+    MethodSource [className = 'controller.DisplaySearchTest', methodName = 'testConstructor', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileEdgeCaseTest:testDoGet_ExternalUserNotFound_HandlesGracefully()
+    MethodSource [className = 'controller.ProfileEdgeCaseTest', methodName = 'testDoGet_ExternalUserNotFound_HandlesGracefully', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileEdgeCaseTest:testDoPost_UnknownType_DoesNothing()
+    MethodSource [className = 'controller.ProfileEdgeCaseTest', methodName = 'testDoPost_UnknownType_DoesNothing', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileEdgeCaseTest:testDoPost_NoChanges_DoesNotUpdate()
+    MethodSource [className = 'controller.ProfileEdgeCaseTest', methodName = 'testDoPost_NoChanges_DoesNotUpdate', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileEdgeCaseTest:testDoPost_UpdateAllInfoFields()
+    MethodSource [className = 'controller.ProfileEdgeCaseTest', methodName = 'testDoPost_UpdateAllInfoFields', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:WalletTest:testDoPost_ValidAmount_CreditsAccount()
+    MethodSource [className = 'controller.WalletTest', methodName = 'testDoPost_ValidAmount_CreditsAccount', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.WalletTest.setUp(WalletTest.java:55)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:WalletTest:testDoGet_UserInSession_ShowsWallet()
+    MethodSource [className = 'controller.WalletTest', methodName = 'testDoGet_UserInSession_ShowsWallet', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.WalletTest.setUp(WalletTest.java:55)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:WalletTest:testDoPost_NegativeAmount_CreditsNegative()
+    MethodSource [className = 'controller.WalletTest', methodName = 'testDoPost_NegativeAmount_CreditsNegative', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.WalletTest.setUp(WalletTest.java:55)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:WalletTest:testDoGet_NoUserInSession_RedirectsToLogin()
+    MethodSource [className = 'controller.WalletTest', methodName = 'testDoGet_NoUserInSession_RedirectsToLogin', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.WalletTest.setUp(WalletTest.java:55)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:WalletTest:testDoPost_InvalidAmount_HandlesException()
+    MethodSource [className = 'controller.WalletTest', methodName = 'testDoPost_InvalidAmount_HandlesException', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.WalletTest.setUp(WalletTest.java:55)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:WalletTest:testDoPost_ZeroAmount_Credits()
+    MethodSource [className = 'controller.WalletTest', methodName = 'testDoPost_ZeroAmount_Credits', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.WalletTest.setUp(WalletTest.java:55)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:WalletTest:testConstructor()
+    MethodSource [className = 'controller.WalletTest', methodName = 'testConstructor', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.WalletTest.setUp(WalletTest.java:55)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ImgServTest:testDoPost_CallsDoGet()
+    MethodSource [className = 'controller.ImgServTest', methodName = 'testDoPost_CallsDoGet', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ImgServTest.setUp(ImgServTest.java:47)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ImgServTest:testDoGet_ValidFilename_ServesImage()
+    MethodSource [className = 'controller.ImgServTest', methodName = 'testDoGet_ValidFilename_ServesImage', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ImgServTest.setUp(ImgServTest.java:47)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ImgServTest:testDoGet_ImageExtension_SetsCorrectMimeType()
+    MethodSource [className = 'controller.ImgServTest', methodName = 'testDoGet_ImageExtension_SetsCorrectMimeType', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ImgServTest.setUp(ImgServTest.java:47)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ImgServTest:testDoGet_NullFilename_DoesNotServe()
+    MethodSource [className = 'controller.ImgServTest', methodName = 'testDoGet_NullFilename_DoesNotServe', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ImgServTest.setUp(ImgServTest.java:47)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ImgServTest:testConstructor()
+    MethodSource [className = 'controller.ImgServTest', methodName = 'testConstructor', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ImgServTest.setUp(ImgServTest.java:47)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:RegisterTest:testDoPost_MissingParameters_HandlesException()
+    MethodSource [className = 'controller.RegisterTest', methodName = 'testDoPost_MissingParameters_HandlesException', methodParameterTypes = '']
+    => org.mockito.exceptions.verification.NeverWantedButInvoked: 
+userDAO.createUser(
+    <any string>,
+    <any string>,
+    <any string>,
+    <any string>,
+    <any string>,
+    <any string>,
+    <any double>
+);
+Never wanted here:
+-> at controller.RegisterTest.testDoPost_MissingParameters_HandlesException(RegisterTest.java:174)
+But invoked here:
+-> at controller.Register.doPost(Register.java:97) with arguments: [test@mail.com, e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855, , , , Client, 0.0]
+
+       controller.RegisterTest.testDoPost_MissingParameters_HandlesException(RegisterTest.java:174)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileTest:testDoPost_ChangePassword_IncorrectCurrentPassword()
+    MethodSource [className = 'controller.ProfileTest', methodName = 'testDoPost_ChangePassword_IncorrectCurrentPassword', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileTest.setUp(ProfileTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileTest:testDoGet_UserInSession_ShowsProfile()
+    MethodSource [className = 'controller.ProfileTest', methodName = 'testDoGet_UserInSession_ShowsProfile', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileTest.setUp(ProfileTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileTest:testDoPost_UpdateInfo_ChangesPhone()
+    MethodSource [className = 'controller.ProfileTest', methodName = 'testDoPost_UpdateInfo_ChangesPhone', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileTest.setUp(ProfileTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileTest:testDoGet_NoUserInSession_RedirectsToLogin()
+    MethodSource [className = 'controller.ProfileTest', methodName = 'testDoGet_NoUserInSession_RedirectsToLogin', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileTest.setUp(ProfileTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileTest:testDoGet_ExternalUser_ShowsExternalProfile()
+    MethodSource [className = 'controller.ProfileTest', methodName = 'testDoGet_ExternalUser_ShowsExternalProfile', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileTest.setUp(ProfileTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileTest:testDoPost_UpdateInfo_ChangesFirstname()
+    MethodSource [className = 'controller.ProfileTest', methodName = 'testDoPost_UpdateInfo_ChangesFirstname', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileTest.setUp(ProfileTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileTest:testDoPost_ChangePassword_Successful()
+    MethodSource [className = 'controller.ProfileTest', methodName = 'testDoPost_ChangePassword_Successful', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileTest.setUp(ProfileTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileTest:testDoPost_UpdateInfo_ChangesName()
+    MethodSource [className = 'controller.ProfileTest', methodName = 'testDoPost_UpdateInfo_ChangesName', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileTest.setUp(ProfileTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileTest:testDoPost_MissingParameters_HandlesException()
+    MethodSource [className = 'controller.ProfileTest', methodName = 'testDoPost_MissingParameters_HandlesException', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileTest.setUp(ProfileTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:ProfileTest:testConstructor()
+    MethodSource [className = 'controller.ProfileTest', methodName = 'testConstructor', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.ProfileTest.setUp(ProfileTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:AddAccommodationTest:testDoPost_InfoForm_CreatesAccommodation()
+    MethodSource [className = 'controller.AddAccommodationTest', methodName = 'testDoPost_InfoForm_CreatesAccommodation', methodParameterTypes = '']
+    => Wanted but not invoked:
+accommodationDAO.createAccommodation(
+    model.User@6ad1701a,
+    "Nice Apartment",
+    <any model.Address>,
+    <any model.HouseRules>,
+    "apartment",
+    4,
+    <any integer>,
+    "Great place"
+);
+-> at controller.AddAccommodationTest.testDoPost_InfoForm_CreatesAccommodation(AddAccommodationTest.java:173)
+Actually, there were zero interactions with this mock.
+
+       controller.AddAccommodationTest.testDoPost_InfoForm_CreatesAccommodation(AddAccommodationTest.java:173)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:AddAccommodationTest:testDoPost_PictureForm_HandlesPictures()
+    MethodSource [className = 'controller.AddAccommodationTest', methodName = 'testDoPost_PictureForm_HandlesPictures', methodParameterTypes = '']
+    => Wanted but not invoked:
+request.getParts();
+-> at controller.AddAccommodationTest.testDoPost_PictureForm_HandlesPictures(AddAccommodationTest.java:209)
+
+However, there were exactly 5 interactions with this mock:
+request.getSession();
+-> at controller.AddAccommodation.doPost(AddAccommodation.java:106)
+
+request.getParameter("form");
+-> at controller.AddAccommodation.doPost(AddAccommodation.java:113)
+
+request.getContentType();
+-> at controller.AddAccommodation.doPost(AddAccommodation.java:184)
+
+request.getContentType();
+-> at controller.AddAccommodation.doPost(AddAccommodation.java:184)
+
+request.getRequestDispatcher(
+    "/WEB-INF/accommodation/addAccommodation.jsp"
+);
+-> at controller.AddAccommodation.doPost(AddAccommodation.java:234)
+
+
+       controller.AddAccommodationTest.testDoPost_PictureForm_HandlesPictures(AddAccommodationTest.java:209)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:WalletEdgeCaseTest:testDoPost_DecimalAmount_CreditsExactly()
+    MethodSource [className = 'controller.WalletEdgeCaseTest', methodName = 'testDoPost_DecimalAmount_CreditsExactly', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:WalletEdgeCaseTest:testDoPost_VeryLargeAmount_Credits()
+    MethodSource [className = 'controller.WalletEdgeCaseTest', methodName = 'testDoPost_VeryLargeAmount_Credits', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:WalletEdgeCaseTest:testDoPost_NullAmount_HandlesException()
+    MethodSource [className = 'controller.WalletEdgeCaseTest', methodName = 'testDoPost_NullAmount_HandlesException', methodParameterTypes = '']
+
+WARNING: Delegated to the 
+'execute' command.
+         This behaviour has 
+been deprecated and will be 
+removed in a future release.
+         Please use the 
+'execute' command directly.
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:WalletEdgeCaseTest:testDoPost_AmountWithSpaces_HandlesException()
+    MethodSource [className = 'controller.WalletEdgeCaseTest', methodName = 'testDoPost_AmountWithSpaces_HandlesException', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:WalletEdgeCaseTest:testDoPost_EmptyAmount_HandlesException()
+    MethodSource [className = 'controller.WalletEdgeCaseTest', methodName = 'testDoPost_EmptyAmount_HandlesException', methodParameterTypes = '']
+    => java.lang.IllegalStateException: ServletConfig has not been initialized
+       javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+       controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+       java.base/java.lang.reflect.Method.invoke(Method.java:568)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+Test run finished after 5801 ms
+[        48 containers found      ]
+[         0 containers skipped    ]
+[        48 containers started    ]
+[         0 containers aborted    ]
+[        48 containers successful ]
+[         0 containers failed     ]
+[       240 tests found           ]
+[         0 tests skipped         ]
+[       240 tests started         ]
+[         0 tests aborted         ]
+[       201 tests successful      ]
+[        39 tests failed          ]
+

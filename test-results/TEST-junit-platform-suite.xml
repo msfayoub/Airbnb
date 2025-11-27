@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JUnit Platform Suite" tests="0" skipped="0" failures="0" errors="0" time="0" hostname="DESKTOP-2IK5BJN" timestamp="2025-11-27T23:38:11">
+<testsuite name="JUnit Platform Suite" tests="0" skipped="0" failures="0" errors="0" time="0.003" hostname="DESKTOP-2IK5BJN" timestamp="2025-11-27T23:46:08">
 <properties>
 <property name="file.encoding" value="Cp1252"/>
 <property name="file.separator" value="\"/>
@@ -39,7 +39,7 @@
 <property name="sun.cpu.endian" value="little"/>
 <property name="sun.cpu.isalist" value="amd64"/>
 <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --select-class=controller.DisplaySearchTest --select-class=controller.ImgServTest --select-class=controller.ProfileTest --select-class=controller.ProfileEdgeCaseTest --select-class=controller.WalletTest --select-class=controller.WalletEdgeCaseTest --reports-dir=test-results --disable-banner"/>
+<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --scan-classpath --reports-dir=test-results --disable-banner"/>
 <property name="sun.java.launcher" value="SUN_STANDARD"/>
 <property name="sun.jnu.encoding" value="Cp1252"/>
 <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>

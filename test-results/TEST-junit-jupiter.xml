@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JUnit Jupiter" tests="36" skipped="0" failures="0" errors="36" time="4.397" hostname="DESKTOP-2IK5BJN" timestamp="2025-11-27T23:38:11">
+<testsuite name="JUnit Jupiter" tests="230" skipped="0" failures="3" errors="36" time="5.365" hostname="DESKTOP-2IK5BJN" timestamp="2025-11-27T23:46:07">
 <properties>
 <property name="file.encoding" value="Cp1252"/>
 <property name="file.separator" value="\"/>
@@ -39,7 +39,7 @@
 <property name="sun.cpu.endian" value="little"/>
 <property name="sun.cpu.isalist" value="amd64"/>
 <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --select-class=controller.DisplaySearchTest --select-class=controller.ImgServTest --select-class=controller.ProfileTest --select-class=controller.ProfileEdgeCaseTest --select-class=controller.WalletTest --select-class=controller.WalletEdgeCaseTest --reports-dir=test-results --disable-banner"/>
+<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --scan-classpath --reports-dir=test-results --disable-banner"/>
 <property name="sun.java.launcher" value="SUN_STANDARD"/>
 <property name="sun.jnu.encoding" value="Cp1252"/>
 <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -53,20 +53,19 @@
 <property name="user.timezone" value="Africa/Casablanca"/>
 <property name="user.variant" value=""/>
 </properties>
-<testcase name="testDoGet_NullFilename_DoesNotServe()" classname="controller.ImgServTest" time="0.007">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ImgServTest.setUp(ImgServTest.java:47)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testSetUrlWithDifferentExtensions()" classname="model.PictureTest" time="0.002">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testDoGet_NullFilename_DoesNotServe()]
-display-name: testDoGet_NullFilename_DoesNotServe()
+unique-id: [engine:junit-jupiter]/[class:model.PictureTest]/[method:testSetUrlWithDifferentExtensions()]
+display-name: testSetUrlWithDifferentExtensions()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_ChangePassword_IncorrectCurrentPassword()" classname="controller.ProfileTest" time="0.336">
+<testcase name="testGetRoomAmenity()" classname="dao.AmenityDAOImpTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.AmenityDAOImpTest]/[method:testGetRoomAmenity()]
+display-name: testGetRoomAmenity()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_ChangePassword_IncorrectCurrentPassword()" classname="controller.ProfileTest" time="0.008">
 <error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
 	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
 	at controller.ProfileTest.setUp(ProfileTest.java:60)
@@ -79,7 +78,343 @@ unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoP
 display-name: testDoPost_ChangePassword_IncorrectCurrentPassword()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_ChangePassword_Successful()" classname="controller.ProfileTest" time="0.001">
+<testcase name="testSetters()" classname="model.AddressTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AddressTest]/[method:testSetters()]
+display-name: testSetters()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoUserInSession_RedirectsToLogin()" classname="controller.ProfileTest" time="0.005">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoGet_NoUserInSession_RedirectsToLogin()]
+display-name: testDoGet_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_EditNotAuthorized_ShowsError()" classname="controller.AddAccommodationTest" time="0.008">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddAccommodationTest]/[method:testDoGet_EditNotAuthorized_ShowsError()]
+display-name: testDoGet_EditNotAuthorized_ShowsError()
+]]></system-out>
+</testcase>
+<testcase name="testDeleteBooking()" classname="dao.BookingDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.BookingDAOImpTest]/[method:testDeleteBooking()]
+display-name: testDeleteBooking()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_UserOwnsOffer_CanEdit()" classname="controller.AddOfferEdgeCaseTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddOfferEdgeCaseTest]/[method:testDoGet_UserOwnsOffer_CanEdit()]
+display-name: testDoGet_UserOwnsOffer_CanEdit()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_EditAction_RedirectsToAddOffer()" classname="controller.OfferCRUDTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferCRUDTest]/[method:testDoPost_EditAction_RedirectsToAddOffer()]
+display-name: testDoPost_EditAction_RedirectsToAddOffer()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NonAdminUser_RedirectsToHome()" classname="controller.AdminSearchTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AdminSearchTest]/[method:testDoGet_NonAdminUser_RedirectsToHome()]
+display-name: testDoGet_NonAdminUser_RedirectsToHome()
+]]></system-out>
+</testcase>
+<testcase name="testUpdate()" classname="model.AddressTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AddressTest]/[method:testUpdate()]
+display-name: testUpdate()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_AmountWithSpaces_HandlesException()" classname="controller.WalletEdgeCaseTest" time="0.002">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:testDoPost_AmountWithSpaces_HandlesException()]
+display-name: testDoPost_AmountWithSpaces_HandlesException()
+]]></system-out>
+</testcase>
+<testcase name="testAccommodationCreation()" classname="model.AccommodationTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AccommodationTest]/[method:testAccommodationCreation()]
+display-name: testAccommodationCreation()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NonAdminUser_RedirectsToHome()" classname="controller.UserCRUDTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.UserCRUDTest]/[method:testDoGet_NonAdminUser_RedirectsToHome()]
+display-name: testDoGet_NonAdminUser_RedirectsToHome()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_UserInSession_ShowsForm()" classname="controller.AddAccommodationTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddAccommodationTest]/[method:testDoGet_UserInSession_ShowsForm()]
+display-name: testDoGet_UserInSession_ShowsForm()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_ClientUser_ShowsOwnBookings()" classname="controller.BookingCRUDTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.BookingCRUDTest]/[method:testDoGet_ClientUser_ShowsOwnBookings()]
+display-name: testDoGet_ClientUser_ShowsOwnBookings()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_DisplaysOffer()" classname="controller.OfferTest" time="0.008">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferTest]/[method:testDoGet_DisplaysOffer()]
+display-name: testDoGet_DisplaysOffer()
+]]></system-out>
+</testcase>
+<testcase name="testUpdateWithEmptyComplement()" classname="model.AddressTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AddressTest]/[method:testUpdateWithEmptyComplement()]
+display-name: testUpdateWithEmptyComplement()
+]]></system-out>
+</testcase>
+<testcase name="testUpdateOffer()" classname="dao.OfferDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.OfferDAOImpTest]/[method:testUpdateOffer()]
+display-name: testUpdateOffer()
+]]></system-out>
+</testcase>
+<testcase name="testSetters()" classname="model.AccommodationTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AccommodationTest]/[method:testSetters()]
+display-name: testSetters()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NewUser_CreatesSuccessfully()" classname="controller.RegisterTest" time="0.01">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.RegisterTest]/[method:testDoPost_NewUser_CreatesSuccessfully()]
+display-name: testDoPost_NewUser_CreatesSuccessfully()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UserNotFound_ShowsWarning()" classname="controller.AdminSearchTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AdminSearchTest]/[method:testDoPost_UserNotFound_ShowsWarning()]
+display-name: testDoPost_UserNotFound_ShowsWarning()
+]]></system-out>
+</testcase>
+<testcase name="testSetType()" classname="model.RoomTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.RoomTest]/[method:testSetType()]
+display-name: testSetType()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_EmptyAmount_HandlesException()" classname="controller.WalletEdgeCaseTest" time="0.008">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:testDoPost_EmptyAmount_HandlesException()]
+display-name: testDoPost_EmptyAmount_HandlesException()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_ClientUser_ShowsOwnAccommodations()" classname="controller.AccommodationCRUDTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AccommodationCRUDTest]/[method:testDoGet_ClientUser_ShowsOwnAccommodations()]
+display-name: testDoGet_ClientUser_ShowsOwnAccommodations()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_BedroomWithOnlyDoubleBeds()" classname="controller.AddRoomsEdgeCaseTest" time="0.011">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddRoomsEdgeCaseTest]/[method:testDoPost_BedroomWithOnlyDoubleBeds()]
+display-name: testDoPost_BedroomWithOnlyDoubleBeds()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoAccommodations_ShowsWarning()" classname="controller.AddOfferTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddOfferTest]/[method:testDoGet_NoAccommodations_ShowsWarning()]
+display-name: testDoGet_NoAccommodations_ShowsWarning()
+]]></system-out>
+</testcase>
+<testcase name="testCreateAddressWithParameters()" classname="dao.AddressDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.AddressDAOImpTest]/[method:testCreateAddressWithParameters()]
+display-name: testCreateAddressWithParameters()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NoUserInSession_RedirectsToLogin()" classname="controller.OfferTest" time="0.01">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferTest]/[method:testDoPost_NoUserInSession_RedirectsToLogin()]
+display-name: testDoPost_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testChangePhoneNumber()" classname="dao.UserDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.UserDAOImpTest]/[method:testChangePhoneNumber()]
+display-name: testChangePhoneNumber()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UpdateInfo_ChangesName()" classname="controller.ProfileTest" time="0.006">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_UpdateInfo_ChangesName()]
+display-name: testDoPost_UpdateInfo_ChangesName()
+]]></system-out>
+</testcase>
+<testcase name="testDefaultConstructor()" classname="model.BookingTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.BookingTest]/[method:testDefaultConstructor()]
+display-name: testDefaultConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testPictureCreation()" classname="model.PictureTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.PictureTest]/[method:testPictureCreation()]
+display-name: testPictureCreation()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UserTriesToBookOwnOffer_ShowsWarning()" classname="controller.OfferTest" time="0.014">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferTest]/[method:testDoPost_UserTriesToBookOwnOffer_ShowsWarning()]
+display-name: testDoPost_UserTriesToBookOwnOffer_ShowsWarning()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NoChanges_DoesNotUpdate()" classname="controller.ProfileEdgeCaseTest" time="0.009">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileEdgeCaseTest]/[method:testDoPost_NoChanges_DoesNotUpdate()]
+display-name: testDoPost_NoChanges_DoesNotUpdate()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_OfferWithMultipleRooms_LoadsAllAmenities()" classname="controller.OfferEdgeCaseTest" time="0.026">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferEdgeCaseTest]/[method:testDoGet_OfferWithMultipleRooms_LoadsAllAmenities()]
+display-name: testDoGet_OfferWithMultipleRooms_LoadsAllAmenities()
+]]></system-out>
+</testcase>
+<testcase name="testDefaultConstructor()" classname="model.OfferTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.OfferTest]/[method:testDefaultConstructor()]
+display-name: testDefaultConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_ZeroAmount_Credits()" classname="controller.WalletTest" time="0.004">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletTest.setUp(WalletTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoPost_ZeroAmount_Credits()]
+display-name: testDoPost_ZeroAmount_Credits()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_AdminUser_ShowsAllBookings()" classname="controller.BookingCRUDTest" time="0.007">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.BookingCRUDTest]/[method:testDoGet_AdminUser_ShowsAllBookings()]
+display-name: testDoGet_AdminUser_ShowsAllBookings()
+]]></system-out>
+</testcase>
+<testcase name="testCreateAmenity()" classname="dao.AmenityDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.AmenityDAOImpTest]/[method:testCreateAmenity()]
+display-name: testCreateAmenity()
+]]></system-out>
+</testcase>
+<testcase name="testAddressCreation()" classname="model.AddressTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AddressTest]/[method:testAddressCreation()]
+display-name: testAddressCreation()
+]]></system-out>
+</testcase>
+<testcase name="testBalanceOperations()" classname="model.UserTest" time="0.01">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.UserTest]/[method:testBalanceOperations()]
+display-name: testBalanceOperations()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_EmptyPassword_CreatesUser()" classname="controller.RegisterEdgeCaseTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.RegisterEdgeCaseTest]/[method:testDoPost_EmptyPassword_CreatesUser()]
+display-name: testDoPost_EmptyPassword_CreatesUser()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NullPriceParameters()" classname="controller.AddOfferEdgeCaseTest" time="0.01">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddOfferEdgeCaseTest]/[method:testDoPost_NullPriceParameters()]
+display-name: testDoPost_NullPriceParameters()
+]]></system-out>
+</testcase>
+<testcase name="testCreateAddress()" classname="dao.AddressDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.AddressDAOImpTest]/[method:testCreateAddress()]
+display-name: testCreateAddress()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NoUserInSession_RedirectsToLogin()" classname="controller.OfferCRUDTest" time="0.013">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferCRUDTest]/[method:testDoPost_NoUserInSession_RedirectsToLogin()]
+display-name: testDoPost_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testUpdate()" classname="model.AccommodationTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AccommodationTest]/[method:testUpdate()]
+display-name: testUpdate()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NoAmenities_ShowsWarning()" classname="controller.AddRoomsTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddRoomsTest]/[method:testDoPost_NoAmenities_ShowsWarning()]
+display-name: testDoPost_NoAmenities_ShowsWarning()
+]]></system-out>
+</testcase>
+<testcase name="testUpdateAddress()" classname="dao.AddressDAOImpTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.AddressDAOImpTest]/[method:testUpdateAddress()]
+display-name: testUpdateAddress()
+]]></system-out>
+</testcase>
+<testcase name="testRoomCreation()" classname="model.RoomTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.RoomTest]/[method:testRoomCreation()]
+display-name: testRoomCreation()
+]]></system-out>
+</testcase>
+<testcase name="testCreateHouseRules()" classname="dao.HouseRulesDAOImpTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.HouseRulesDAOImpTest]/[method:testCreateHouseRules()]
+display-name: testCreateHouseRules()
+]]></system-out>
+</testcase>
+<testcase name="testDeleteOffer()" classname="dao.OfferDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.OfferDAOImpTest]/[method:testDeleteOffer()]
+display-name: testDeleteOffer()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_ChangePassword_Successful()" classname="controller.ProfileTest" time="0.005">
 <error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
 	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
 	at controller.ProfileTest.setUp(ProfileTest.java:60)
@@ -90,6 +425,174 @@ display-name: testDoPost_ChangePassword_IncorrectCurrentPassword()
 <system-out><![CDATA[
 unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_ChangePassword_Successful()]
 display-name: testDoPost_ChangePassword_Successful()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.OfferTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testTimeChanges()" classname="model.HouseRulesTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.HouseRulesTest]/[method:testTimeChanges()]
+display-name: testTimeChanges()
+]]></system-out>
+</testcase>
+<testcase name="testUserTypeChange()" classname="model.UserTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.UserTest]/[method:testUserTypeChange()]
+display-name: testUserTypeChange()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_EditAccommodationNotFound_ShowsWarning()" classname="controller.AddAccommodationTest" time="0.007">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddAccommodationTest]/[method:testDoGet_EditAccommodationNotFound_ShowsWarning()]
+display-name: testDoGet_EditAccommodationNotFound_ShowsWarning()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_InfoForm_CreatesAccommodation()" classname="controller.AddAccommodationTest" time="0.019">
+<failure message="
+Wanted but not invoked:
+accommodationDAO.createAccommodation(
+    model.User@6ad1701a,
+    &quot;Nice Apartment&quot;,
+    &lt;any model.Address&gt;,
+    &lt;any model.HouseRules&gt;,
+    &quot;apartment&quot;,
+    4,
+    &lt;any integer&gt;,
+    &quot;Great place&quot;
+);
+-&gt; at controller.AddAccommodationTest.testDoPost_InfoForm_CreatesAccommodation(AddAccommodationTest.java:173)
+Actually, there were zero interactions with this mock.
+" type="org.mockito.exceptions.verification.WantedButNotInvoked"><![CDATA[Wanted but not invoked:
+accommodationDAO.createAccommodation(
+    model.User@6ad1701a,
+    "Nice Apartment",
+    <any model.Address>,
+    <any model.HouseRules>,
+    "apartment",
+    4,
+    <any integer>,
+    "Great place"
+);
+-> at controller.AddAccommodationTest.testDoPost_InfoForm_CreatesAccommodation(AddAccommodationTest.java:173)
+Actually, there were zero interactions with this mock.
+
+	at controller.AddAccommodationTest.testDoPost_InfoForm_CreatesAccommodation(AddAccommodationTest.java:173)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddAccommodationTest]/[method:testDoPost_InfoForm_CreatesAccommodation()]
+display-name: testDoPost_InfoForm_CreatesAccommodation()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoUserInSession_ShowsRegisterPage()" classname="controller.RegisterTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.RegisterTest]/[method:testDoGet_NoUserInSession_ShowsRegisterPage()]
+display-name: testDoGet_NoUserInSession_ShowsRegisterPage()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_MissingParameters_HandlesException()" classname="controller.ProfileTest" time="0.003">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_MissingParameters_HandlesException()]
+display-name: testDoPost_MissingParameters_HandlesException()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NoUserInSession_RedirectsToLogin()" classname="controller.AdminSearchTest" time="0.007">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AdminSearchTest]/[method:testDoPost_NoUserInSession_RedirectsToLogin()]
+display-name: testDoPost_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testAllRulesAllowed()" classname="model.HouseRulesTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.HouseRulesTest]/[method:testAllRulesAllowed()]
+display-name: testAllRulesAllowed()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_DeleteAction_DeletesAccommodation()" classname="controller.AccommodationCRUDTest" time="0.015">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AccommodationCRUDTest]/[method:testDoPost_DeleteAction_DeletesAccommodation()]
+display-name: testDoPost_DeleteAction_DeletesAccommodation()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_UserInSession_ShowsProfile()" classname="controller.ProfileTest" time="0.005">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoGet_UserInSession_ShowsProfile()]
+display-name: testDoGet_UserInSession_ShowsProfile()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_EditOwnProfile_ShowsEditForm()" classname="controller.RegisterEdgeCaseTest" time="0.014">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.RegisterEdgeCaseTest]/[method:testDoGet_EditOwnProfile_ShowsEditForm()]
+display-name: testDoGet_EditOwnProfile_ShowsEditForm()
+]]></system-out>
+</testcase>
+<testcase name="testDeleteAmenity()" classname="dao.AmenityDAOImpTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.AmenityDAOImpTest]/[method:testDeleteAmenity()]
+display-name: testDeleteAmenity()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet()" classname="controller.HomeTest" time="0.084">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.HomeTest]/[method:testDoGet()]
+display-name: testDoGet()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.ProfileTest" time="0.002">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testCreatePicture()" classname="dao.PictureDAOImpTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.PictureDAOImpTest]/[method:testCreatePicture()]
+display-name: testCreatePicture()
+]]></system-out>
+</testcase>
+<testcase name="testCreateBooking()" classname="dao.BookingDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.BookingDAOImpTest]/[method:testCreateBooking()]
+display-name: testCreateBooking()
+]]></system-out>
+</testcase>
+<testcase name="testCreateOffer()" classname="dao.OfferDAOImpTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.OfferDAOImpTest]/[method:testCreateOffer()]
+display-name: testCreateOffer()
+]]></system-out>
+</testcase>
+<testcase name="testChangePassword()" classname="dao.UserDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.UserDAOImpTest]/[method:testChangePassword()]
+display-name: testChangePassword()
 ]]></system-out>
 </testcase>
 <testcase name="testDoPost_VeryLargeAmount_Credits()" classname="controller.WalletEdgeCaseTest" time="0.006">
@@ -105,7 +608,67 @@ unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:
 display-name: testDoPost_VeryLargeAmount_Credits()
 ]]></system-out>
 </testcase>
-<testcase name="testDoGet_NoUserInSession_RedirectsToLogin()" classname="controller.ProfileTest" time="0.011">
+<testcase name="testDefaultConstructor()" classname="model.UserTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.UserTest]/[method:testDefaultConstructor()]
+display-name: testDefaultConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testTransactionCreation()" classname="model.TransactionTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.TransactionTest]/[method:testTransactionCreation()]
+display-name: testTransactionCreation()
+]]></system-out>
+</testcase>
+<testcase name="testUpdate()" classname="model.OfferTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.OfferTest]/[method:testUpdate()]
+display-name: testUpdate()
+]]></system-out>
+</testcase>
+<testcase name="testSetAccommodation()" classname="model.RoomTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.RoomTest]/[method:testSetAccommodation()]
+display-name: testSetAccommodation()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoUserInSession_RedirectsToLogin()" classname="controller.UserCRUDTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.UserCRUDTest]/[method:testDoGet_NoUserInSession_RedirectsToLogin()]
+display-name: testDoGet_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoUserInSession_RedirectsToLogin()" classname="controller.AddAccommodationTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddAccommodationTest]/[method:testDoGet_NoUserInSession_RedirectsToLogin()]
+display-name: testDoGet_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.BookingCRUDTest" time="0.011">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.BookingCRUDTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDifferentAmenities()" classname="model.AmenityTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AmenityTest]/[method:testDifferentAmenities()]
+display-name: testDifferentAmenities()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoUserInSession_RedirectsToLogin()" classname="controller.AccommodationCRUDTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AccommodationCRUDTest]/[method:testDoGet_NoUserInSession_RedirectsToLogin()]
+display-name: testDoGet_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_WithAccommodations_ShowsForm()" classname="controller.AddRoomsTest" time="0.009">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddRoomsTest]/[method:testDoGet_WithAccommodations_ShowsForm()]
+display-name: testDoGet_WithAccommodations_ShowsForm()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_ExternalUser_ShowsExternalProfile()" classname="controller.ProfileTest" time="0.003">
 <error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
 	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
 	at controller.ProfileTest.setUp(ProfileTest.java:60)
@@ -114,11 +677,431 @@ display-name: testDoPost_VeryLargeAmount_Credits()
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ]]></error>
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoGet_NoUserInSession_RedirectsToLogin()]
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoGet_ExternalUser_ShowsExternalProfile()]
+display-name: testDoGet_ExternalUser_ShowsExternalProfile()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.ImgServTest" time="0">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ImgServTest.setUp(ImgServTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_CallsDoGet()" classname="controller.ImgServTest" time="0.123">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ImgServTest.setUp(ImgServTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testDoPost_CallsDoGet()]
+display-name: testDoPost_CallsDoGet()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_WithAccommodations_ShowsForm()" classname="controller.AddOfferTest" time="0.01">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddOfferTest]/[method:testDoGet_WithAccommodations_ShowsForm()]
+display-name: testDoGet_WithAccommodations_ShowsForm()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NegativeAmount_CreditsNegative()" classname="controller.WalletTest" time="0.004">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletTest.setUp(WalletTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoPost_NegativeAmount_CreditsNegative()]
+display-name: testDoPost_NegativeAmount_CreditsNegative()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_OneDayStay_CalculatesCorrectPrice()" classname="controller.OfferEdgeCaseTest" time="0.042">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferEdgeCaseTest]/[method:testDoPost_OneDayStay_CalculatesCorrectPrice()]
+display-name: testDoPost_OneDayStay_CalculatesCorrectPrice()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UserFound_DisplaysResults()" classname="controller.AdminSearchTest" time="0.012">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AdminSearchTest]/[method:testDoPost_UserFound_DisplaysResults()]
+display-name: testDoPost_UserFound_DisplaysResults()
+]]></system-out>
+</testcase>
+<testcase name="testToString()" classname="model.PictureTest" time="0.011">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.PictureTest]/[method:testToString()]
+display-name: testToString()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_RedirectsToDoGet()" classname="controller.BookingCRUDTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.BookingCRUDTest]/[method:testDoPost_RedirectsToDoGet()]
+display-name: testDoPost_RedirectsToDoGet()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_EditAction_RedirectsToAddAccommodation()" classname="controller.AccommodationCRUDTest" time="0.037">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AccommodationCRUDTest]/[method:testDoPost_EditAction_RedirectsToAddAccommodation()]
+display-name: testDoPost_EditAction_RedirectsToAddAccommodation()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_BedroomWithBedsAndAmenities()" classname="controller.AddRoomsEdgeCaseTest" time="0.007">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddRoomsEdgeCaseTest]/[method:testDoPost_BedroomWithBedsAndAmenities()]
+display-name: testDoPost_BedroomWithBedsAndAmenities()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_DecimalAmount_CreditsExactly()" classname="controller.WalletEdgeCaseTest" time="0.002">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:testDoPost_DecimalAmount_CreditsExactly()]
+display-name: testDoPost_DecimalAmount_CreditsExactly()
+]]></system-out>
+</testcase>
+<testcase name="testDefaultConstructor()" classname="model.AccommodationTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AccommodationTest]/[method:testDefaultConstructor()]
+display-name: testDefaultConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testMultipleAmenitiesForSameRoom()" classname="model.AmenityTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AmenityTest]/[method:testMultipleAmenitiesForSameRoom()]
+display-name: testMultipleAmenitiesForSameRoom()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_CreateNewOffer_Success()" classname="controller.AddOfferTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddOfferTest]/[method:testDoPost_CreateNewOffer_Success()]
+display-name: testDoPost_CreateNewOffer_Success()
+]]></system-out>
+</testcase>
+<testcase name="testTransactionWithZeroAmount()" classname="model.TransactionTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.TransactionTest]/[method:testTransactionWithZeroAmount()]
+display-name: testTransactionWithZeroAmount()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoUserInSession_RedirectsToLogin()" classname="controller.AddRoomsTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddRoomsTest]/[method:testDoGet_NoUserInSession_RedirectsToLogin()]
 display-name: testDoGet_NoUserInSession_RedirectsToLogin()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_ValidAmount_CreditsAccount()" classname="controller.WalletTest" time="0.008">
+<testcase name="testDoGet_AdminCanEditAnyUser()" classname="controller.RegisterTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.RegisterTest]/[method:testDoGet_AdminCanEditAnyUser()]
+display-name: testDoGet_AdminCanEditAnyUser()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UpdateInfo_ChangesFirstname()" classname="controller.ProfileTest" time="0.003">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_UpdateInfo_ChangesFirstname()]
+display-name: testDoPost_UpdateInfo_ChangesFirstname()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoUserInSession_RedirectsToLogin()" classname="controller.AddOfferTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddOfferTest]/[method:testDoGet_NoUserInSession_RedirectsToLogin()]
+display-name: testDoGet_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testGetUserOffer()" classname="dao.OfferDAOImpTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.OfferDAOImpTest]/[method:testGetUserOffer()]
+display-name: testGetUserOffer()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_InvalidDateFormat()" classname="controller.AddOfferEdgeCaseTest" time="0.01">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddOfferEdgeCaseTest]/[method:testDoPost_InvalidDateFormat()]
+display-name: testDoPost_InvalidDateFormat()
+]]></system-out>
+</testcase>
+<testcase name="testNoArgsConstructor()" classname="model.TransactionTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.TransactionTest]/[method:testNoArgsConstructor()]
+display-name: testNoArgsConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_AdminUser_ShowsUserList()" classname="controller.UserCRUDTest" time="0.007">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.UserCRUDTest]/[method:testDoGet_AdminUser_ShowsUserList()]
+display-name: testDoGet_AdminUser_ShowsUserList()
+]]></system-out>
+</testcase>
+<testcase name="testBookingCreation()" classname="model.BookingTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.BookingTest]/[method:testBookingCreation()]
+display-name: testBookingCreation()
+]]></system-out>
+</testcase>
+<testcase name="testSetters()" classname="model.TransactionTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.TransactionTest]/[method:testSetters()]
+display-name: testSetters()
+]]></system-out>
+</testcase>
+<testcase name="testNoArgsConstructor()" classname="model.HouseRulesTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.HouseRulesTest]/[method:testNoArgsConstructor()]
+display-name: testNoArgsConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_UserInSession_RedirectsToHome()" classname="controller.RegisterTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.RegisterTest]/[method:testDoGet_UserInSession_RedirectsToHome()]
+display-name: testDoGet_UserInSession_RedirectsToHome()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UpdateAllInfoFields()" classname="controller.ProfileEdgeCaseTest" time="0.005">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileEdgeCaseTest]/[method:testDoPost_UpdateAllInfoFields()]
+display-name: testDoPost_UpdateAllInfoFields()
+]]></system-out>
+</testcase>
+<testcase name="testGetAccommodationRoom()" classname="dao.RoomDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.RoomDAOImpTest]/[method:testGetAccommodationRoom()]
+display-name: testGetAccommodationRoom()
+]]></system-out>
+</testcase>
+<testcase name="testCreateAccommodation()" classname="dao.AccommodationDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.AccommodationDAOImpTest]/[method:testCreateAccommodation()]
+display-name: testCreateAccommodation()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_AdminUser_ShowsAllAccommodations()" classname="controller.AccommodationCRUDTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AccommodationCRUDTest]/[method:testDoGet_AdminUser_ShowsAllAccommodations()]
+display-name: testDoGet_AdminUser_ShowsAllAccommodations()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.RegisterTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.RegisterTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testGetUser()" classname="dao.UserDAOImpTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.UserDAOImpTest]/[method:testGetUser()]
+display-name: testGetUser()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_DeleteAction_DeletesOffer()" classname="controller.OfferCRUDTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferCRUDTest]/[method:testDoPost_DeleteAction_DeletesOffer()]
+display-name: testDoPost_DeleteAction_DeletesOffer()
+]]></system-out>
+</testcase>
+<testcase name="testLogoutClearsUserSession()" classname="controller.LogoutTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.LogoutTest]/[method:testLogoutClearsUserSession()]
+display-name: testLogoutClearsUserSession()
+]]></system-out>
+</testcase>
+<testcase name="testSetters()" classname="model.UserTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.UserTest]/[method:testSetters()]
+display-name: testSetters()
+]]></system-out>
+</testcase>
+<testcase name="testCreateUser()" classname="dao.UserDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.UserDAOImpTest]/[method:testCreateUser()]
+display-name: testCreateUser()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NonAdminUser_RedirectsToHome()" classname="controller.AdminSearchTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AdminSearchTest]/[method:testDoPost_NonAdminUser_RedirectsToHome()]
+display-name: testDoPost_NonAdminUser_RedirectsToHome()
+]]></system-out>
+</testcase>
+<testcase name="testDeleteRoom()" classname="dao.RoomDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.RoomDAOImpTest]/[method:testDeleteRoom()]
+display-name: testDeleteRoom()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_AddBathroom()" classname="controller.AddRoomsTest" time="0.008">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddRoomsTest]/[method:testDoPost_AddBathroom()]
+display-name: testDoPost_AddBathroom()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_AdminCanEditAnyOffer()" classname="controller.AddOfferTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddOfferTest]/[method:testDoGet_AdminCanEditAnyOffer()]
+display-name: testDoGet_AdminCanEditAnyOffer()
+]]></system-out>
+</testcase>
+<testcase name="testUpdateWithDifferentValues()" classname="model.AccommodationTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AccommodationTest]/[method:testUpdateWithDifferentValues()]
+display-name: testUpdateWithDifferentValues()
+]]></system-out>
+</testcase>
+<testcase name="testSetters()" classname="model.HouseRulesTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.HouseRulesTest]/[method:testSetters()]
+display-name: testSetters()
+]]></system-out>
+</testcase>
+<testcase name="testHouseRulesCreation()" classname="model.HouseRulesTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.HouseRulesTest]/[method:testHouseRulesCreation()]
+display-name: testHouseRulesCreation()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_ExternalUserNotFound_HandlesGracefully()" classname="controller.ProfileEdgeCaseTest" time="0.011">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileEdgeCaseTest]/[method:testDoGet_ExternalUserNotFound_HandlesGracefully()]
+display-name: testDoGet_ExternalUserNotFound_HandlesGracefully()
+]]></system-out>
+</testcase>
+<testcase name="testUpdateUser()" classname="dao.UserDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.UserDAOImpTest]/[method:testUpdateUser()]
+display-name: testUpdateUser()
+]]></system-out>
+</testcase>
+<testcase name="testCredit()" classname="dao.UserDAOImpTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.UserDAOImpTest]/[method:testCredit()]
+display-name: testCredit()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UpdateInfo_ChangesPhone()" classname="controller.ProfileTest" time="0">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_UpdateInfo_ChangesPhone()]
+display-name: testDoPost_UpdateInfo_ChangesPhone()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_MissingParameters_HandlesException()" classname="controller.RegisterTest" time="0.03">
+<failure message="
+userDAO.createUser(
+    &lt;any string&gt;,
+    &lt;any string&gt;,
+    &lt;any string&gt;,
+    &lt;any string&gt;,
+    &lt;any string&gt;,
+    &lt;any string&gt;,
+    &lt;any double&gt;
+);
+Never wanted here:
+-&gt; at controller.RegisterTest.testDoPost_MissingParameters_HandlesException(RegisterTest.java:174)
+But invoked here:
+-&gt; at controller.Register.doPost(Register.java:97) with arguments: [test@mail.com, e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855, , , , Client, 0.0]
+" type="org.mockito.exceptions.verification.NeverWantedButInvoked"><![CDATA[org.mockito.exceptions.verification.NeverWantedButInvoked: 
+userDAO.createUser(
+    <any string>,
+    <any string>,
+    <any string>,
+    <any string>,
+    <any string>,
+    <any string>,
+    <any double>
+);
+Never wanted here:
+-> at controller.RegisterTest.testDoPost_MissingParameters_HandlesException(RegisterTest.java:174)
+But invoked here:
+-> at controller.Register.doPost(Register.java:97) with arguments: [test@mail.com, e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855, , , , Client, 0.0]
+
+	at controller.RegisterTest.testDoPost_MissingParameters_HandlesException(RegisterTest.java:174)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.RegisterTest]/[method:testDoPost_MissingParameters_HandlesException()]
+display-name: testDoPost_MissingParameters_HandlesException()
+]]></system-out>
+</testcase>
+<testcase name="testSetters()" classname="model.OfferTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.OfferTest]/[method:testSetters()]
+display-name: testSetters()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_AdminUser_ShowsAllOffers()" classname="controller.OfferCRUDTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferCRUDTest]/[method:testDoGet_AdminUser_ShowsAllOffers()]
+display-name: testDoGet_AdminUser_ShowsAllOffers()
+]]></system-out>
+</testcase>
+<testcase name="testChangeFirstname()" classname="dao.UserDAOImpTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.UserDAOImpTest]/[method:testChangeFirstname()]
+display-name: testChangeFirstname()
+]]></system-out>
+</testcase>
+<testcase name="testGetRoom()" classname="dao.RoomDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.RoomDAOImpTest]/[method:testGetRoom()]
+display-name: testGetRoom()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_BathroomWithMultipleAmenities()" classname="controller.AddRoomsEdgeCaseTest" time="0.007">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddRoomsEdgeCaseTest]/[method:testDoPost_BathroomWithMultipleAmenities()]
+display-name: testDoPost_BathroomWithMultipleAmenities()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.AddOfferTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddOfferTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_ValidAmount_CreditsAccount()" classname="controller.WalletTest" time="0.005">
 <error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
 	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
 	at controller.WalletTest.setUp(WalletTest.java:55)
@@ -131,17 +1114,503 @@ unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoPo
 display-name: testDoPost_ValidAmount_CreditsAccount()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_UpdateInfo_ChangesName()" classname="controller.ProfileTest" time="0.005">
+<testcase name="testDoPost_LongStay_CalculatesCorrectly()" classname="controller.OfferEdgeCaseTest" time="0.019">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferEdgeCaseTest]/[method:testDoPost_LongStay_CalculatesCorrectly()]
+display-name: testDoPost_LongStay_CalculatesCorrectly()
+]]></system-out>
+</testcase>
+<testcase name="testEmptyUrl()" classname="model.PictureTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.PictureTest]/[method:testEmptyUrl()]
+display-name: testEmptyUrl()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.AdminSearchTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AdminSearchTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_InvalidBedNumbers_HandlesException()" classname="controller.AddRoomsEdgeCaseTest" time="0.009">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddRoomsEdgeCaseTest]/[method:testDoPost_InvalidBedNumbers_HandlesException()]
+display-name: testDoPost_InvalidBedNumbers_HandlesException()
+]]></system-out>
+</testcase>
+<testcase name="testSetUrl()" classname="model.PictureTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.PictureTest]/[method:testSetUrl()]
+display-name: testSetUrl()
+]]></system-out>
+</testcase>
+<testcase name="testDeleteAccommodation()" classname="dao.AccommodationDAOImpTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.AccommodationDAOImpTest]/[method:testDeleteAccommodation()]
+display-name: testDeleteAccommodation()
+]]></system-out>
+</testcase>
+<testcase name="testGetAmenity()" classname="dao.AmenityDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.AmenityDAOImpTest]/[method:testGetAmenity()]
+display-name: testGetAmenity()
+]]></system-out>
+</testcase>
+<testcase name="testGetOffer()" classname="dao.OfferDAOImpTest" time="0.007">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.OfferDAOImpTest]/[method:testGetOffer()]
+display-name: testGetOffer()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet()" classname="controller.LogoutTest" time="0.007">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.LogoutTest]/[method:testDoGet()]
+display-name: testDoGet()
+]]></system-out>
+</testcase>
+<testcase name="testSuccessfulLogin()" classname="controller.LoginTest" time="0.009">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.LoginTest]/[method:testSuccessfulLogin()]
+display-name: testSuccessfulLogin()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_ClientUser_ShowsOwnOffers()" classname="controller.OfferCRUDTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferCRUDTest]/[method:testDoGet_ClientUser_ShowsOwnOffers()]
+display-name: testDoGet_ClientUser_ShowsOwnOffers()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_EditAction_RedirectsToRegister()" classname="controller.UserCRUDTest" time="0.01">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.UserCRUDTest]/[method:testDoPost_EditAction_RedirectsToRegister()]
+display-name: testDoPost_EditAction_RedirectsToRegister()
+]]></system-out>
+</testcase>
+<testcase name="testTransactionBetweenSameUser()" classname="model.TransactionTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.TransactionTest]/[method:testTransactionBetweenSameUser()]
+display-name: testTransactionBetweenSameUser()
+]]></system-out>
+</testcase>
+<testcase name="testCreateHouseRulesWithParameters()" classname="dao.HouseRulesDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.HouseRulesDAOImpTest]/[method:testCreateHouseRulesWithParameters()]
+display-name: testCreateHouseRulesWithParameters()
+]]></system-out>
+</testcase>
+<testcase name="testDefaultConstructor()" classname="model.AddressTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AddressTest]/[method:testDefaultConstructor()]
+display-name: testDefaultConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_ValidSearch_DisplaysOffers()" classname="controller.DisplaySearchTest" time="0.01">
 <error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
 	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ProfileTest.setUp(ProfileTest.java:60)
+	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ]]></error>
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_UpdateInfo_ChangesName()]
-display-name: testDoPost_UpdateInfo_ChangesName()
+unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:testDoGet_ValidSearch_DisplaysOffers()]
+display-name: testDoGet_ValidSearch_DisplaysOffers()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoUserInSession_RedirectsToLogin()" classname="controller.AdminSearchTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AdminSearchTest]/[method:testDoGet_NoUserInSession_RedirectsToLogin()]
+display-name: testDoGet_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_InvalidAmount_HandlesException()" classname="controller.WalletTest" time="0.005">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletTest.setUp(WalletTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoPost_InvalidAmount_HandlesException()]
+display-name: testDoPost_InvalidAmount_HandlesException()
+]]></system-out>
+</testcase>
+<testcase name="testUserCreation()" classname="model.UserTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.UserTest]/[method:testUserCreation()]
+display-name: testUserCreation()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UnknownType_DoesNothing()" classname="controller.ProfileEdgeCaseTest" time="0.008">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ProfileEdgeCaseTest]/[method:testDoPost_UnknownType_DoesNothing()]
+display-name: testDoPost_UnknownType_DoesNothing()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_EmptyCity_RedirectsToHome()" classname="controller.DisplaySearchTest" time="0.143">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:testDoGet_EmptyCity_RedirectsToHome()]
+display-name: testDoGet_EmptyCity_RedirectsToHome()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.WalletTest" time="0">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletTest.setUp(WalletTest.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_InvalidCapacity_HandlesException()" classname="controller.DisplaySearchTest" time="0.004">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:testDoGet_InvalidCapacity_HandlesException()]
+display-name: testDoGet_InvalidCapacity_HandlesException()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_AdminCanEditAny()" classname="controller.AddAccommodationTest" time="0.129">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddAccommodationTest]/[method:testDoGet_AdminCanEditAny()]
+display-name: testDoGet_AdminCanEditAny()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.OfferCRUDTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferCRUDTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_DeleteAction_DeletesUser()" classname="controller.UserCRUDTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.UserCRUDTest]/[method:testDoPost_DeleteAction_DeletesUser()]
+display-name: testDoPost_DeleteAction_DeletesUser()
+]]></system-out>
+</testcase>
+<testcase name="testGetNumberOfRoomsInAccommodation()" classname="dao.RoomDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.RoomDAOImpTest]/[method:testGetNumberOfRoomsInAccommodation()]
+display-name: testGetNumberOfRoomsInAccommodation()
+]]></system-out>
+</testcase>
+<testcase name="testGetters()" classname="model.AccommodationTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AccommodationTest]/[method:testGetters()]
+display-name: testGetters()
+]]></system-out>
+</testcase>
+<testcase name="testAllRulesNotAllowed()" classname="model.HouseRulesTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.HouseRulesTest]/[method:testAllRulesNotAllowed()]
+display-name: testAllRulesNotAllowed()
+]]></system-out>
+</testcase>
+<testcase name="testSetters()" classname="model.BookingTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.BookingTest]/[method:testSetters()]
+display-name: testSetters()
+]]></system-out>
+</testcase>
+<testcase name="testCreateTransaction()" classname="dao.TransactionDAOImpTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.TransactionDAOImpTest]/[method:testCreateTransaction()]
+display-name: testCreateTransaction()
+]]></system-out>
+</testcase>
+<testcase name="testUpdate()" classname="model.UserTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.UserTest]/[method:testUpdate()]
+display-name: testUpdate()
+]]></system-out>
+</testcase>
+<testcase name="testOfferCreation()" classname="model.OfferTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.OfferTest]/[method:testOfferCreation()]
+display-name: testOfferCreation()
+]]></system-out>
+</testcase>
+<testcase name="testSetName()" classname="model.AmenityTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AmenityTest]/[method:testSetName()]
+display-name: testSetName()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_VeryLongEmail_CreatesUser()" classname="controller.RegisterEdgeCaseTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.RegisterEdgeCaseTest]/[method:testDoPost_VeryLongEmail_CreatesUser()]
+display-name: testDoPost_VeryLongEmail_CreatesUser()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_PictureForm_HandlesPictures()" classname="controller.AddAccommodationTest" time="0.02">
+<failure message="
+Wanted but not invoked:
+request.getParts();
+-&gt; at controller.AddAccommodationTest.testDoPost_PictureForm_HandlesPictures(AddAccommodationTest.java:209)
+
+However, there were exactly 5 interactions with this mock:
+request.getSession();
+-&gt; at controller.AddAccommodation.doPost(AddAccommodation.java:106)
+
+request.getParameter(&quot;form&quot;);
+-&gt; at controller.AddAccommodation.doPost(AddAccommodation.java:113)
+
+request.getContentType();
+-&gt; at controller.AddAccommodation.doPost(AddAccommodation.java:184)
+
+request.getContentType();
+-&gt; at controller.AddAccommodation.doPost(AddAccommodation.java:184)
+
+request.getRequestDispatcher(
+    &quot;/WEB-INF/accommodation/addAccommodation.jsp&quot;
+);
+-&gt; at controller.AddAccommodation.doPost(AddAccommodation.java:234)
+
+" type="org.mockito.exceptions.verification.WantedButNotInvoked"><![CDATA[Wanted but not invoked:
+request.getParts();
+-> at controller.AddAccommodationTest.testDoPost_PictureForm_HandlesPictures(AddAccommodationTest.java:209)
+
+However, there were exactly 5 interactions with this mock:
+request.getSession();
+-> at controller.AddAccommodation.doPost(AddAccommodation.java:106)
+
+request.getParameter("form");
+-> at controller.AddAccommodation.doPost(AddAccommodation.java:113)
+
+request.getContentType();
+-> at controller.AddAccommodation.doPost(AddAccommodation.java:184)
+
+request.getContentType();
+-> at controller.AddAccommodation.doPost(AddAccommodation.java:184)
+
+request.getRequestDispatcher(
+    "/WEB-INF/accommodation/addAccommodation.jsp"
+);
+-> at controller.AddAccommodation.doPost(AddAccommodation.java:234)
+
+
+	at controller.AddAccommodationTest.testDoPost_PictureForm_HandlesPictures(AddAccommodationTest.java:209)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddAccommodationTest]/[method:testDoPost_PictureForm_HandlesPictures()]
+display-name: testDoPost_PictureForm_HandlesPictures()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.AccommodationCRUDTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AccommodationCRUDTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_EditUserNotAuthorized_ShowsError()" classname="controller.RegisterTest" time="0.009">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.RegisterTest]/[method:testDoGet_EditUserNotAuthorized_ShowsError()]
+display-name: testDoGet_EditUserNotAuthorized_ShowsError()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_ValidFilename_ServesImage()" classname="controller.ImgServTest" time="0">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ImgServTest.setUp(ImgServTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testDoGet_ValidFilename_ServesImage()]
+display-name: testDoGet_ValidFilename_ServesImage()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.AddAccommodationTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddAccommodationTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testGetTransaction()" classname="dao.TransactionDAOImpTest" time="0.114">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.TransactionDAOImpTest]/[method:testGetTransaction()]
+display-name: testGetTransaction()
+]]></system-out>
+</testcase>
+<testcase name="testDeleteUser()" classname="dao.UserDAOImpTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.UserDAOImpTest]/[method:testDeleteUser()]
+display-name: testDeleteUser()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.UserCRUDTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.UserCRUDTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testToString()" classname="model.AddressTest" time="0.019">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AddressTest]/[method:testToString()]
+display-name: testToString()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_AddBedroom_WithBeds()" classname="controller.AddRoomsTest" time="0.019">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddRoomsTest]/[method:testDoPost_AddBedroom_WithBeds()]
+display-name: testDoPost_AddBedroom_WithBeds()
+]]></system-out>
+</testcase>
+<testcase name="testGetLastOffer()" classname="dao.OfferDAOImpTest" time="0.107">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.OfferDAOImpTest]/[method:testGetLastOffer()]
+display-name: testGetLastOffer()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_SuccessfulBooking_CreatesBooking()" classname="controller.OfferTest" time="0.052">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferTest]/[method:testDoPost_SuccessfulBooking_CreatesBooking()]
+display-name: testDoPost_SuccessfulBooking_CreatesBooking()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoUserInSession_RedirectsToLogin()" classname="controller.BookingCRUDTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.BookingCRUDTest]/[method:testDoGet_NoUserInSession_RedirectsToLogin()]
+display-name: testDoGet_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testAmenityWithEmptyName()" classname="model.AmenityTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AmenityTest]/[method:testAmenityWithEmptyName()]
+display-name: testAmenityWithEmptyName()
+]]></system-out>
+</testcase>
+<testcase name="testUpdateHouseRules()" classname="dao.HouseRulesDAOImpTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.HouseRulesDAOImpTest]/[method:testUpdateHouseRules()]
+display-name: testUpdateHouseRules()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UpdateExistingOffer()" classname="controller.AddOfferEdgeCaseTest" time="0.009">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddOfferEdgeCaseTest]/[method:testDoPost_UpdateExistingOffer()]
+display-name: testDoPost_UpdateExistingOffer()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NullAmount_HandlesException()" classname="controller.WalletEdgeCaseTest" time="0.002">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:testDoPost_NullAmount_HandlesException()]
+display-name: testDoPost_NullAmount_HandlesException()
+]]></system-out>
+</testcase>
+<testcase name="testSetUrlWithPath()" classname="model.PictureTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.PictureTest]/[method:testSetUrlWithPath()]
+display-name: testSetUrlWithPath()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.AddRoomsTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddRoomsTest]/[method:testConstructor()]
+display-name: testConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_MissingParameters_RedirectsToHome()" classname="controller.DisplaySearchTest" time="0.006">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:testDoGet_MissingParameters_RedirectsToHome()]
+display-name: testDoGet_MissingParameters_RedirectsToHome()
+]]></system-out>
+</testcase>
+<testcase name="testToString()" classname="model.HouseRulesTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.HouseRulesTest]/[method:testToString()]
+display-name: testToString()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoAccommodations_ShowsWarning()" classname="controller.AddRoomsTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddRoomsTest]/[method:testDoGet_NoAccommodations_ShowsWarning()]
+display-name: testDoGet_NoAccommodations_ShowsWarning()
+]]></system-out>
+</testcase>
+<testcase name="testChangeName()" classname="dao.UserDAOImpTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:dao.UserDAOImpTest]/[method:testChangeName()]
+display-name: testChangeName()
+]]></system-out>
+</testcase>
+<testcase name="testNoArgsConstructor()" classname="model.AmenityTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.AmenityTest]/[method:testNoArgsConstructor()]
+display-name: testNoArgsConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NoUserInSession_RedirectsToLogin()" classname="controller.OfferCRUDTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferCRUDTest]/[method:testDoGet_NoUserInSession_RedirectsToLogin()]
+display-name: testDoGet_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_NullFilename_DoesNotServe()" classname="controller.ImgServTest" time="0.008">
+<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
+	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
+	at controller.ImgServTest.setUp(ImgServTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testDoGet_NullFilename_DoesNotServe()]
+display-name: testDoGet_NullFilename_DoesNotServe()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NoUserInSession_RedirectsToLogin()" classname="controller.UserCRUDTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.UserCRUDTest]/[method:testDoPost_NoUserInSession_RedirectsToLogin()]
+display-name: testDoPost_NoUserInSession_RedirectsToLogin()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_NoUserInSession_RedirectsToLogin()" classname="controller.AccommodationCRUDTest" time="0.007">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AccommodationCRUDTest]/[method:testDoPost_NoUserInSession_RedirectsToLogin()]
+display-name: testDoPost_NoUserInSession_RedirectsToLogin()
 ]]></system-out>
 </testcase>
 <testcase name="testDoGet_NoUserInSession_RedirectsToLogin()" classname="controller.WalletTest" time="0">
@@ -157,85 +1626,79 @@ unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoGe
 display-name: testDoGet_NoUserInSession_RedirectsToLogin()
 ]]></system-out>
 </testcase>
-<testcase name="testDoGet_ValidFilename_ServesImage()" classname="controller.ImgServTest" time="0.007">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ImgServTest.setUp(ImgServTest.java:47)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testGetAccommodation()" classname="dao.AccommodationDAOImpTest" time="0">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testDoGet_ValidFilename_ServesImage()]
-display-name: testDoGet_ValidFilename_ServesImage()
+unique-id: [engine:junit-jupiter]/[class:dao.AccommodationDAOImpTest]/[method:testGetAccommodation()]
+display-name: testGetAccommodation()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_UpdateAllInfoFields()" classname="controller.ProfileEdgeCaseTest" time="0.015">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testDoPost_ExactBalance_SucceedsBooking()" classname="controller.OfferEdgeCaseTest" time="3.031">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ProfileEdgeCaseTest]/[method:testDoPost_UpdateAllInfoFields()]
-display-name: testDoPost_UpdateAllInfoFields()
+unique-id: [engine:junit-jupiter]/[class:controller.OfferEdgeCaseTest]/[method:testDoPost_ExactBalance_SucceedsBooking()]
+display-name: testDoPost_ExactBalance_SucceedsBooking()
 ]]></system-out>
 </testcase>
-<testcase name="testDoGet_ExternalUser_ShowsExternalProfile()" classname="controller.ProfileTest" time="0.007">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ProfileTest.setUp(ProfileTest.java:60)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testRoomWithDifferentTypes()" classname="model.RoomTest" time="0">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoGet_ExternalUser_ShowsExternalProfile()]
-display-name: testDoGet_ExternalUser_ShowsExternalProfile()
+unique-id: [engine:junit-jupiter]/[class:model.RoomTest]/[method:testRoomWithDifferentTypes()]
+display-name: testRoomWithDifferentTypes()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_MissingParameters_HandlesException()" classname="controller.ProfileTest" time="0.009">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ProfileTest.setUp(ProfileTest.java:60)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testNoArgsConstructor()" classname="model.PictureTest" time="0.001">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_MissingParameters_HandlesException()]
-display-name: testDoPost_MissingParameters_HandlesException()
+unique-id: [engine:junit-jupiter]/[class:model.PictureTest]/[method:testNoArgsConstructor()]
+display-name: testNoArgsConstructor()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_NoChanges_DoesNotUpdate()" classname="controller.ProfileEdgeCaseTest" time="0">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testDoGet_EditUserNotFound_ShowsWarning()" classname="controller.RegisterTest" time="0.006">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ProfileEdgeCaseTest]/[method:testDoPost_NoChanges_DoesNotUpdate()]
-display-name: testDoPost_NoChanges_DoesNotUpdate()
+unique-id: [engine:junit-jupiter]/[class:controller.RegisterTest]/[method:testDoGet_EditUserNotFound_ShowsWarning()]
+display-name: testDoGet_EditUserNotFound_ShowsWarning()
 ]]></system-out>
 </testcase>
-<testcase name="testConstructor()" classname="controller.ImgServTest" time="0.007">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ImgServTest.setUp(ImgServTest.java:47)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testGetAllUser()" classname="dao.UserDAOImpTest" time="0">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testConstructor()]
-display-name: testConstructor()
+unique-id: [engine:junit-jupiter]/[class:dao.UserDAOImpTest]/[method:testGetAllUser()]
+display-name: testGetAllUser()
 ]]></system-out>
 </testcase>
-<testcase name="testConstructor()" classname="controller.DisplaySearchTest" time="0.01">
+<testcase name="testDoPost_InsufficientBalance_ShowsError()" classname="controller.OfferTest" time="0.008">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.OfferTest]/[method:testDoPost_InsufficientBalance_ShowsError()]
+display-name: testDoPost_InsufficientBalance_ShowsError()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_BedroomWithOnlySingleBeds()" classname="controller.AddRoomsEdgeCaseTest" time="0.009">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddRoomsEdgeCaseTest]/[method:testDoPost_BedroomWithOnlySingleBeds()]
+display-name: testDoPost_BedroomWithOnlySingleBeds()
+]]></system-out>
+</testcase>
+<testcase name="testDoGet_EditOfferNotFound_ShowsWarning()" classname="controller.AddOfferTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddOfferTest]/[method:testDoGet_EditOfferNotFound_ShowsWarning()]
+display-name: testDoGet_EditOfferNotFound_ShowsWarning()
+]]></system-out>
+</testcase>
+<testcase name="testBookingPriceChange()" classname="model.BookingTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:model.BookingTest]/[method:testBookingPriceChange()]
+display-name: testBookingPriceChange()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_AddKitchen()" classname="controller.AddRoomsTest" time="0.008">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.AddRoomsTest]/[method:testDoPost_AddKitchen()]
+display-name: testDoPost_AddKitchen()
+]]></system-out>
+</testcase>
+<testcase name="testDoPost_UserAlreadyExists_ShowsWarning()" classname="controller.RegisterTest" time="0.007">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:controller.RegisterTest]/[method:testDoPost_UserAlreadyExists_ShowsWarning()]
+display-name: testDoPost_UserAlreadyExists_ShowsWarning()
+]]></system-out>
+</testcase>
+<testcase name="testConstructor()" classname="controller.DisplaySearchTest" time="0.013">
 <error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
 	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
 	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
@@ -248,176 +1711,55 @@ unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:t
 display-name: testConstructor()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_CallsDoGet()" classname="controller.ImgServTest" time="0.238">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ImgServTest.setUp(ImgServTest.java:47)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testGetAllOffer()" classname="dao.OfferDAOImpTest" time="0.005">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testDoPost_CallsDoGet()]
-display-name: testDoPost_CallsDoGet()
+unique-id: [engine:junit-jupiter]/[class:dao.OfferDAOImpTest]/[method:testGetAllOffer()]
+display-name: testGetAllOffer()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_AmountWithSpaces_HandlesException()" classname="controller.WalletEdgeCaseTest" time="0.006">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testTransactionWithDifferentAmounts()" classname="model.TransactionTest" time="0.002">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:testDoPost_AmountWithSpaces_HandlesException()]
-display-name: testDoPost_AmountWithSpaces_HandlesException()
+unique-id: [engine:junit-jupiter]/[class:model.TransactionTest]/[method:testTransactionWithDifferentAmounts()]
+display-name: testTransactionWithDifferentAmounts()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_NegativeAmount_CreditsNegative()" classname="controller.WalletTest" time="0.01">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.WalletTest.setUp(WalletTest.java:55)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testDoPost_SpecialCharactersInName_CreatesUser()" classname="controller.RegisterEdgeCaseTest" time="0.005">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoPost_NegativeAmount_CreditsNegative()]
-display-name: testDoPost_NegativeAmount_CreditsNegative()
+unique-id: [engine:junit-jupiter]/[class:controller.RegisterEdgeCaseTest]/[method:testDoPost_SpecialCharactersInName_CreatesUser()]
+display-name: testDoPost_SpecialCharactersInName_CreatesUser()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_ZeroAmount_Credits()" classname="controller.WalletTest" time="0.005">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.WalletTest.setUp(WalletTest.java:55)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testDoGet_EditOfferNotAuthorized_ShowsError()" classname="controller.AddOfferTest" time="0.002">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoPost_ZeroAmount_Credits()]
-display-name: testDoPost_ZeroAmount_Credits()
+unique-id: [engine:junit-jupiter]/[class:controller.AddOfferTest]/[method:testDoGet_EditOfferNotAuthorized_ShowsError()]
+display-name: testDoGet_EditOfferNotAuthorized_ShowsError()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_NullAmount_HandlesException()" classname="controller.WalletEdgeCaseTest" time="0.003">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testCreateRoom()" classname="dao.RoomDAOImpTest" time="0">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:testDoPost_NullAmount_HandlesException()]
-display-name: testDoPost_NullAmount_HandlesException()
+unique-id: [engine:junit-jupiter]/[class:dao.RoomDAOImpTest]/[method:testCreateRoom()]
+display-name: testCreateRoom()
 ]]></system-out>
 </testcase>
-<testcase name="testDoGet_ValidSearch_DisplaysOffers()" classname="controller.DisplaySearchTest" time="0.013">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testDoGet_AdminUser_ShowsSearchPage()" classname="controller.AdminSearchTest" time="0.006">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:testDoGet_ValidSearch_DisplaysOffers()]
-display-name: testDoGet_ValidSearch_DisplaysOffers()
+unique-id: [engine:junit-jupiter]/[class:controller.AdminSearchTest]/[method:testDoGet_AdminUser_ShowsSearchPage()]
+display-name: testDoGet_AdminUser_ShowsSearchPage()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_InvalidAmount_HandlesException()" classname="controller.WalletTest" time="0.006">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.WalletTest.setUp(WalletTest.java:55)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testDebit()" classname="dao.UserDAOImpTest" time="0.004">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoPost_InvalidAmount_HandlesException()]
-display-name: testDoPost_InvalidAmount_HandlesException()
+unique-id: [engine:junit-jupiter]/[class:dao.UserDAOImpTest]/[method:testDebit()]
+display-name: testDebit()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_DecimalAmount_CreditsExactly()" classname="controller.WalletEdgeCaseTest" time="0.012">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testDefaultConstructor()" classname="model.RoomTest" time="0">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:testDoPost_DecimalAmount_CreditsExactly()]
-display-name: testDoPost_DecimalAmount_CreditsExactly()
+unique-id: [engine:junit-jupiter]/[class:model.RoomTest]/[method:testDefaultConstructor()]
+display-name: testDefaultConstructor()
 ]]></system-out>
 </testcase>
-<testcase name="testDoGet_UserInSession_ShowsProfile()" classname="controller.ProfileTest" time="0.015">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ProfileTest.setUp(ProfileTest.java:60)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoGet_UserInSession_ShowsProfile()]
-display-name: testDoGet_UserInSession_ShowsProfile()
-]]></system-out>
-</testcase>
-<testcase name="testDoPost_UnknownType_DoesNothing()" classname="controller.ProfileEdgeCaseTest" time="0.003">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ProfileEdgeCaseTest]/[method:testDoPost_UnknownType_DoesNothing()]
-display-name: testDoPost_UnknownType_DoesNothing()
-]]></system-out>
-</testcase>
-<testcase name="testDoGet_EmptyCity_RedirectsToHome()" classname="controller.DisplaySearchTest" time="3.242">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:testDoGet_EmptyCity_RedirectsToHome()]
-display-name: testDoGet_EmptyCity_RedirectsToHome()
-]]></system-out>
-</testcase>
-<testcase name="testDoGet_MissingParameters_RedirectsToHome()" classname="controller.DisplaySearchTest" time="0.011">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:testDoGet_MissingParameters_RedirectsToHome()]
-display-name: testDoGet_MissingParameters_RedirectsToHome()
-]]></system-out>
-</testcase>
-<testcase name="testDoGet_ImageExtension_SetsCorrectMimeType()" classname="controller.ImgServTest" time="0.009">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ImgServTest.setUp(ImgServTest.java:47)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testDoGet_ImageExtension_SetsCorrectMimeType()]
-display-name: testDoGet_ImageExtension_SetsCorrectMimeType()
-]]></system-out>
-</testcase>
-<testcase name="testDoGet_UserInSession_ShowsWallet()" classname="controller.WalletTest" time="0.008">
+<testcase name="testDoGet_UserInSession_ShowsWallet()" classname="controller.WalletTest" time="0.002">
 <error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
 	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
 	at controller.WalletTest.setUp(WalletTest.java:55)
@@ -430,95 +1772,35 @@ unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testDoGe
 display-name: testDoGet_UserInSession_ShowsWallet()
 ]]></system-out>
 </testcase>
-<testcase name="testConstructor()" classname="controller.WalletTest" time="0.005">
+<testcase name="testDoGet_ImageExtension_SetsCorrectMimeType()" classname="controller.ImgServTest" time="0">
 <error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
 	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.WalletTest.setUp(WalletTest.java:55)
+	at controller.ImgServTest.setUp(ImgServTest.java:47)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ]]></error>
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.WalletTest]/[method:testConstructor()]
-display-name: testConstructor()
+unique-id: [engine:junit-jupiter]/[class:controller.ImgServTest]/[method:testDoGet_ImageExtension_SetsCorrectMimeType()]
+display-name: testDoGet_ImageExtension_SetsCorrectMimeType()
 ]]></system-out>
 </testcase>
-<testcase name="testDoGet_InvalidCapacity_HandlesException()" classname="controller.DisplaySearchTest" time="0.009">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.DisplaySearchTest.setUp(DisplaySearchTest.java:53)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testBookingWithDifferentNumberOfPersons()" classname="model.BookingTest" time="0.001">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.DisplaySearchTest]/[method:testDoGet_InvalidCapacity_HandlesException()]
-display-name: testDoGet_InvalidCapacity_HandlesException()
+unique-id: [engine:junit-jupiter]/[class:model.BookingTest]/[method:testBookingWithDifferentNumberOfPersons()]
+display-name: testBookingWithDifferentNumberOfPersons()
 ]]></system-out>
 </testcase>
-<testcase name="testDoPost_UpdateInfo_ChangesFirstname()" classname="controller.ProfileTest" time="0.013">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ProfileTest.setUp(ProfileTest.java:60)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testAmenityCreation()" classname="model.AmenityTest" time="0">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_UpdateInfo_ChangesFirstname()]
-display-name: testDoPost_UpdateInfo_ChangesFirstname()
+unique-id: [engine:junit-jupiter]/[class:model.AmenityTest]/[method:testAmenityCreation()]
+display-name: testAmenityCreation()
 ]]></system-out>
 </testcase>
-<testcase name="testDoGet_ExternalUserNotFound_HandlesGracefully()" classname="controller.ProfileEdgeCaseTest" time="0.01">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ProfileEdgeCaseTest.setUp(ProfileEdgeCaseTest.java:64)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
+<testcase name="testUpdate()" classname="model.HouseRulesTest" time="0">
 <system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ProfileEdgeCaseTest]/[method:testDoGet_ExternalUserNotFound_HandlesGracefully()]
-display-name: testDoGet_ExternalUserNotFound_HandlesGracefully()
-]]></system-out>
-</testcase>
-<testcase name="testDoPost_UpdateInfo_ChangesPhone()" classname="controller.ProfileTest" time="0.018">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ProfileTest.setUp(ProfileTest.java:60)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testDoPost_UpdateInfo_ChangesPhone()]
-display-name: testDoPost_UpdateInfo_ChangesPhone()
-]]></system-out>
-</testcase>
-<testcase name="testConstructor()" classname="controller.ProfileTest" time="0.005">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.ProfileTest.setUp(ProfileTest.java:60)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.ProfileTest]/[method:testConstructor()]
-display-name: testConstructor()
-]]></system-out>
-</testcase>
-<testcase name="testDoPost_EmptyAmount_HandlesException()" classname="controller.WalletEdgeCaseTest" time="0.015">
-<error message="ServletConfig has not been initialized" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: ServletConfig has not been initialized
-	at javax.servlet.GenericServlet.getServletContext(GenericServlet.java:197)
-	at controller.WalletEdgeCaseTest.setUp(WalletEdgeCaseTest.java:60)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
-<system-out><![CDATA[
-unique-id: [engine:junit-jupiter]/[class:controller.WalletEdgeCaseTest]/[method:testDoPost_EmptyAmount_HandlesException()]
-display-name: testDoPost_EmptyAmount_HandlesException()
+unique-id: [engine:junit-jupiter]/[class:model.HouseRulesTest]/[method:testUpdate()]
+display-name: testUpdate()
 ]]></system-out>
 </testcase>
 <system-out><![CDATA[

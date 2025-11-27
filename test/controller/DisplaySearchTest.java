@@ -9,6 +9,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -40,18 +41,22 @@ class DisplaySearchTest {
 	@Mock
 	private ServletContext servletContext;
 	
+	@Mock
+	private ServletConfig servletConfig;
+	
 	@InjectMocks
 	private DisplaySearch displaySearchServlet;
 	
 	private List<Offer> offers;
 	
 	@BeforeEach
-	void setUp() {
+	void setUp() throws ServletException {
 		MockitoAnnotations.openMocks(this);
 		offers = Arrays.asList(new Offer(), new Offer());
 		
-		when(displaySearchServlet.getServletContext()).thenReturn(servletContext);
+		when(servletConfig.getServletContext()).thenReturn(servletContext);
 		when(servletContext.getRequestDispatcher(anyString())).thenReturn(dispatcher);
+		displaySearchServlet.init(servletConfig);
 	}
 	
 	@Test

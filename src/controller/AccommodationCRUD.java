@@ -24,12 +24,11 @@ public class AccommodationCRUD extends HttpServlet {
 	@EJB
 	private AccommodationDAO accommodationDAO;
 	
-	private List<Accommodation> accommodations;
-	
     public AccommodationCRUD() {
         super();
     }
     
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		User user = (User)request.getSession().getAttribute("user");
 		
@@ -38,6 +37,7 @@ public class AccommodationCRUD extends HttpServlet {
 			return;
 		}
 		
+		List<Accommodation> accommodations;
 		if (user.getUserType().equals("Admin")) {
 			accommodations = accommodationDAO.getAllAccommodation();
 		} else {
@@ -48,12 +48,20 @@ public class AccommodationCRUD extends HttpServlet {
 		request.getRequestDispatcher("/WEB-INF/crud/accommodationCRUD.jsp").forward(request, response);
 	}
 
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		User user = (User)request.getSession().getAttribute("user");
 		
 		if (user == null) {
 			response.sendRedirect(request.getContextPath() + "/login?redirect=accommodationCRUD");
 			return;
+		}
+		
+		List<Accommodation> accommodations;
+		if (user.getUserType().equals("Admin")) {
+			accommodations = accommodationDAO.getAllAccommodation();
+		} else {
+			accommodations = accommodationDAO.getUserAccommodation(user);
 		}
 		
 		String index = request.getParameter("index");

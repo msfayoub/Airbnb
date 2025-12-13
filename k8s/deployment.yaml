@@ -13,14 +13,20 @@ spec:
     metadata:
       labels:
         app: airbnb-app
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9090"
+        prometheus.io/path: "/metrics"
     spec:
       containers:
       - name: airbnb-app
-        image: airbnb-booking-app:latest
+        image: airbnb-booking-app:metrics
         imagePullPolicy: Never
         ports:
         - containerPort: 8080
           name: http
+        - containerPort: 9090
+          name: metrics
         env:
         - name: DB_HOST
           value: "mysql"

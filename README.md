@@ -56,3 +56,5 @@ See the [LICENSE.md](https://github.com/maximenrb/BookingApp_JavaEE/blob/master/
 <!-- Test webhook trigger -->
 
 <!-- Test webhook trigger -->
+
+<!-- Test webhook trigger -->

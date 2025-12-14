@@ -52,3 +52,5 @@ Ready to work with IntelliJ, just clone the git
 This project is licensed under the CC Attribution-NonCommercial-NoDerivatives 4.0 International Public License
 
 See the [LICENSE.md](https://github.com/maximenrb/BookingApp_JavaEE/blob/master/LICENSE.MD) file for details
+
+<!-- Test webhook trigger -->

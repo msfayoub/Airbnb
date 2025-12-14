@@ -54,3 +54,5 @@ This project is licensed under the CC Attribution-NonCommercial-NoDerivatives 4.
 See the [LICENSE.md](https://github.com/maximenrb/BookingApp_JavaEE/blob/master/LICENSE.MD) file for details
 
 <!-- Test webhook trigger -->
+
+<!-- Test webhook trigger -->
